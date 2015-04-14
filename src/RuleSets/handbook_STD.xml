@@ -178,9 +178,9 @@ The extension ".vhdl" is not permitted.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
+			<hb:GoodExample >STD_00200_good</hb:GoodExample>
 			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:BadExample >STD_00200_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -214,9 +214,9 @@ If several reset signals are used, each reset is identified with a different nam
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
+			<hb:GoodExample >STD_00300_good</hb:GoodExample>
 			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:BadExample >STD_00300_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -247,9 +247,9 @@ If several reset signals are used, each reset is identified with a different nam
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
+			<hb:GoodExample >STD_00400_good</hb:GoodExample>
 			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:BadExample >STD_00400_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -285,9 +285,9 @@ For example a control signal (chip-select, write enable, read/output enable), an
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
+			<hb:GoodExample >STD_00500_good</hb:GoodExample>
 			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:BadExample >STD_00500_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -322,9 +322,9 @@ It is a best practise for other signals not to change their name if they are not
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
+			<hb:GoodExample >STD_00700_good</hb:GoodExample>
 			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:BadExample >STD_00700_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -359,9 +359,9 @@ It is a best practise for other signals not to change their name if they are not
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
+			<hb:GoodExample >STD_01100_good</hb:GoodExample>
 			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:BadExample >STD_01100_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -394,9 +394,9 @@ It is a best practise for other signals not to change their name if they are not
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
+			<hb:GoodExample >STD_01200_good</hb:GoodExample>
 			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:BadExample >STD_01200_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -429,9 +429,9 @@ It is a best practise for other signals not to change their name if they are not
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
+			<hb:GoodExample >STD_01300_good</hb:GoodExample>
 			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:BadExample >STD_01300_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -470,9 +470,9 @@ This rule does not apply to instantiations made within IP cores would they be co
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
+			<hb:GoodExample >STD_01400_good</hb:GoodExample>
 			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:BadExample >STD_01400_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -508,9 +508,9 @@ This rule does not apply to instantiations made within IP cores would they be co
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
+			<hb:GoodExample >STD_01000_good</hb:GoodExample>
 			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:BadExample >STD_01000_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -543,9 +543,9 @@ This rule does not apply to instantiations made within IP cores would they be co
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
+			<hb:GoodExample >STD_01900_good</hb:GoodExample>
 			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:BadExample >STD_01900_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -581,9 +581,9 @@ This rule does not apply to instantiations made within IP cores would they be co
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
+			<hb:GoodExDesc></hb:GoodExDesc>
 			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
+			<hb:BadExDesc></hb:BadExDesc>
 			<hb:BadExample />
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -615,11 +615,11 @@ This rule does not apply to instantiations made within IP cores would they be co
 			<hb:LongDesc>This convention deals with the way the ports of an entity are sorted:  by direction, interface, special signals...</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
+			<hb:GoodExDesc></hb:GoodExDesc>
 			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
+			<hb:BadExDesc></hb:BadExDesc>
 			<hb:BadExample />
-			<hb:FigureDesc />
+			<hb:FigureDesc ></hb:FigureDesc>
 			<hb:Figure />
 		</hb:RuleDesc>
 	</hb:Rule>
@@ -692,9 +692,9 @@ Within an interface group, ports could then be sorted by direction (input, outpu
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
+			<hb:GoodExample >STD_01700_good</hb:GoodExample>
 			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:BadExample >STD_01700_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -859,9 +859,9 @@ Large VHDL project could use version control document software (like SVN), if th
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
+			<hb:GoodExample >STD_02200_good</hb:GoodExample>
 			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:BadExample >STD_02200_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -965,9 +965,9 @@ Large VHDL project could use version control document software (like SVN), if th
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
+			<hb:GoodExample >STD_02900_good</hb:GoodExample>
 			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:BadExample >STD_02900_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -1002,9 +1002,9 @@ Large VHDL project could use version control document software (like SVN), if th
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
+			<hb:GoodExample >STD_03000_good</hb:GoodExample>
 			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:BadExample >STD_03000_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -1079,9 +1079,9 @@ Nevertheless, never mix these two library families.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
+			<hb:GoodExample >STD_03100_good</hb:GoodExample>
 			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:BadExample >STD_03100_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -1115,9 +1115,9 @@ Nevertheless, never mix these two library families.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
+			<hb:GoodExample >STD_03200_good</hb:GoodExample>
 			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:BadExample >STD_03200_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>

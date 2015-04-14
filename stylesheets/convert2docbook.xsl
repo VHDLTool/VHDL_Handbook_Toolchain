@@ -11,14 +11,14 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:hb="HANDBOOK"
 	xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:d="http://docbook.org/ns/docbook">
 
-   	<xsl:import href="../stylesheets/docbook-xsl-ns-1.78.1/fo/docbook.xsl" />
+   <xsl:import href="../stylesheets/docbook-xsl-ns-1.78.1/fo/docbook.xsl" />
 	<xsl:import href="../stylesheets/docbook-xsl-ns-1.78.1/fo/highlight.xsl" />
 
 	<xsl:key name="cat" match="hb:RuleSet/hb:Rule" use="hb:RuleContent/hb:Category" />
 	<xsl:key name="subcat" match="hb:RuleSet/hb:Rule" use="hb:RuleContent/hb:SubCategory" />
-   	<xsl:key name="parent_uid" match="hb:RuleSet/hb:Rule" use="hb:RuleContent/hb:ParentUID" /> 
-   	<xsl:key name="uid" match="hb:RuleSet/hb:Rule" use="hb:RuleUID" /> 
-   	<xsl:key name="son" match="hb:RuleSet/hb:Rule" use="hb:RuleContent/hb:IsSon" />  
+   <xsl:key name="parent_uid" match="hb:RuleSet/hb:Rule" use="hb:RuleContent/hb:ParentUID" /> 
+   <xsl:key name="uid" match="hb:RuleSet/hb:Rule" use="hb:RuleUID" /> 
+   <xsl:key name="son" match="hb:RuleSet/hb:Rule" use="hb:RuleContent/hb:IsSon" />  
 	
 	<!-- Parameters defined by apache ant -->
 	<xsl:param name="VHDL_folder">parameter given by apache ant</xsl:param>
@@ -27,6 +27,7 @@
 	<xsl:param name="Standart_to_pdf">parameter given by apache ant</xsl:param>
 	<xsl:param name="Custom_to_pdf">parameter given by apache ant</xsl:param>
 	<xsl:param name="Subtitle">parameter given by apache ant</xsl:param>
+	<xsl:param name="VHDL_tag">parameter given by apache ant</xsl:param>
 	
 	<xsl:output indent="yes" method="xml" />
 
@@ -718,7 +719,11 @@
 		<xsl:processing-instruction name="linebreak" />
 		<!-- Display the example -->
 		<xsl:if test=".//hb:GoodExample!=''">
-			<d:programlisting><xsl:value-of select="unparsed-text(concat($VHDL_folder, $vhdlGoodFileName, '.txt'), 'UTF-8')"/></d:programlisting><!-- file reference name is in the xml -->
+			<d:programlisting>
+			   <xsl:variable name="VHDLcodeGood"><xsl:value-of select="unparsed-text(concat($VHDL_folder, $vhdlGoodFileName, '.vhd'), 'UTF-8')" /></xsl:variable>
+            <xsl:variable name="VHDLextractGood"><xsl:value-of select="substring-before(substring-after($VHDLcodeGood, $VHDL_tag), $VHDL_tag)"></xsl:value-of></xsl:variable>
+            <xsl:value-of select="$VHDLextractGood"></xsl:value-of>
+			</d:programlisting><!-- file reference name is in the xml -->
 		</xsl:if>
 	</xsl:template>
 
@@ -729,10 +734,12 @@
 		<xsl:processing-instruction name="linebreak" />
 		<!-- Display the example -->
 		<xsl:if test=".//hb:BadExample!=''">
-			<d:literallayout>
-				<d:programlisting><xsl:value-of select="unparsed-text(concat($VHDL_folder, $vhdlBadFileName, '.txt'), 'UTF-8')" /></d:programlisting><!-- file reference name is in the xml -->
-			</d:literallayout>
-		  </xsl:if>
+			<d:programlisting>
+			   <xsl:variable name="VHDLcodeBad"><xsl:value-of select="unparsed-text(concat($VHDL_folder, $vhdlBadFileName, '.vhd'), 'UTF-8')" /></xsl:variable>
+            <xsl:variable name="VHDLextractBad"><xsl:value-of select="substring-before(substring-after($VHDLcodeBad, $VHDL_tag), $VHDL_tag)"></xsl:value-of></xsl:variable>
+            <xsl:value-of select="$VHDLextractBad"></xsl:value-of>
+			</d:programlisting><!-- file reference name is in the xml -->
+		</xsl:if>
 	</xsl:template>
 		
 	<xsl:template name="Figure">

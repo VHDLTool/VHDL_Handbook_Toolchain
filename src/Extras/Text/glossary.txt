@@ -1,0 +1,18 @@
+ASIC :	Application Specific Integrated Circuit
+
+CNES :	Centre National d'Etude Spatial (French Space Agency)
+CNE  :	Label for CNES rules
+
+FF   :	On figure, it means Flip-Flop
+FOP  :	Formatting Objects Processor
+FPGA :	Field Programmable Gate Array
+
+PDF  :	Portable Document Format
+
+STD  :	Label for Standard Rules
+
+VLSI :	Very Large Scale Integration
+VHDL :	VHSIC Hardware Description Language
+
+XML  :	eXtensible Markup Language
+XSLT :	eXtensible Stylesheet Language Transformations

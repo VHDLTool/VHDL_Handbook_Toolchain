@@ -28,7 +28,7 @@
 			<hb:Rationale>Same extension for each source file improves search and 
 				scripted automated actions.</hb:Rationale>
 			<hb:ShortDesc>The extension of VHDL source file is .vhd</hb:ShortDesc>
-			<hb:LongDesc>The extension of the VHDL file is ".vhd". The extension ".v" is reserved for verilog language. 
+			<hb:LongDesc>The extension of the VHDL file is ".vhd". The extension ".v" is reserved for the Verilog language. 
 The extension ".vhdl" is not permitted.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
@@ -62,7 +62,7 @@ The extension ".vhdl" is not permitted.</hb:LongDesc>
 			<hb:Category>Formatting</hb:Category>
 			<hb:SubCategory>Naming</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>File name coherency improves search and scripted 
+			<hb:Rationale>File name coherence improves search and scripted 
 				automated actions.</hb:Rationale>
 			<hb:ShortDesc>File name uses an unique and specific naming convention
 				within a design.</hb:ShortDesc>
@@ -99,7 +99,7 @@ The extension ".vhdl" is not permitted.</hb:LongDesc>
 			<hb:SubCategory>Naming</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
 			<hb:Rationale>The match between file name and entity name improves
-				the research for an entity inside a project.</hb:Rationale>
+				the search for an entity inside a project.</hb:Rationale>
 			<hb:ShortDesc>The file name for an entity VHDL file includes at least
 				the entity name.</hb:ShortDesc>
 			<hb:LongDesc>File name of an entity called MyEntity is :
@@ -137,9 +137,9 @@ The extension ".vhdl" is not permitted.</hb:LongDesc>
 			<hb:Severity>Major</hb:Severity>
 			<hb:Rationale>VHDL Object naming convention improves readability 
 				and reuse.</hb:Rationale>
-			<hb:ShortDesc>VHDL Object name definition use an unique and 
+			<hb:ShortDesc>VHDL Object name definition uses an unique and 
 				specific naming convention.</hb:ShortDesc>
-			<hb:LongDesc>This convention can address the naming of any the VHDL objects like signals, variables, constants, generic, labels, modules, entity....</hb:LongDesc>
+			<hb:LongDesc>This convention can address the naming of any VHDL objects like signals, variables, constants, generic, labels, modules, entity....</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc />
@@ -313,12 +313,12 @@ For example a control signal (chip-select, write enable, read/output enable), an
 			<hb:Category>Formatting</hb:Category>
 			<hb:SubCategory>Naming</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>There is no needs to change a name of a signal if this signal doesn't	change.
-        Renaming of important signal (like clock or reset) can lead to simulation mismatch. 
-        Moreover, changing a name of a signal which is not altered makes the understanding of the code more difficult.</hb:Rationale>
+			<hb:Rationale>There is no need to change a signal name if this signal isn't modified.
+        Renaming important signals (like clock or reset) can lead to simulation mismatch. 
+        Moreover, changing a signal name which is not altered makes the understanding of the code more difficult.</hb:Rationale>
 			<hb:ShortDesc>A non modified signal keeps its name through hierarchy levels.</hb:ShortDesc>
 			<hb:LongDesc>Important signals like reset or clock have to keep their name across hierarchy. 
-It is a best practise for other signals not to change their name if they are not altered by any kind of logic.</hb:LongDesc>
+It is best practice for other signals not to change their name if they are not altered by any kind of logic.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
@@ -352,7 +352,7 @@ It is a best practise for other signals not to change their name if they are not
 			<hb:Severity>Major</hb:Severity>
 			<hb:Rationale>When the design is synthesized, only one architecture
 				is synthesized for each synthesized entity.
-				Including only one architecture per file reduce a potential architecture
+				Including only one architecture per file reduces a potential architecture
 				selection error at synthesis level.</hb:Rationale>
 			<hb:ShortDesc>Each VHDL file includes only one architecture per file.</hb:ShortDesc>
 			<hb:LongDesc>No additional information.</hb:LongDesc>
@@ -389,7 +389,7 @@ It is a best practise for other signals not to change their name if they are not
 			<hb:Severity>Major</hb:Severity>
 			<hb:Rationale>A single statement per line improves readability and
 				maintainability.</hb:Rationale>
-			<hb:ShortDesc>A line includes only one statement.</hb:ShortDesc>
+			<hb:ShortDesc>Each line includes only one statement.</hb:ShortDesc>
 			<hb:LongDesc>A statement could be an affectation sequence, a conditional test, a declaration or a VHDL beginning sequence like case, process...).</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
@@ -424,7 +424,7 @@ It is a best practise for other signals not to change their name if they are not
 			<hb:SubCategory>FileStructure</hb:SubCategory>
 			<hb:Severity>Major</hb:Severity>
 			<hb:Rationale>A single port declaration per line improves readability.</hb:Rationale>
-			<hb:ShortDesc>A line includes only one port definition or mapping.</hb:ShortDesc>
+			<hb:ShortDesc>Each line includes only one port definition or mapping.</hb:ShortDesc>
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
@@ -466,7 +466,7 @@ It is a best practise for other signals not to change their name if they are not
 			</hb:Rationale>
 			<hb:ShortDesc>The instantiation of components is made by name.</hb:ShortDesc>
 			<hb:LongDesc>Since instantiation is made by name, the instantiation by position is prohibited.
-This rule does not apply to instantiations made within IP cores would they be coming auto generated from a tool or provided by any IP core	provider.</hb:LongDesc>
+This rule does not apply to instantiations made within IP cores would they be coming auto generated from a tool or provided by any IP core provider.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
@@ -501,7 +501,7 @@ This rule does not apply to instantiations made within IP cores would they be co
 			<hb:Severity>Major</hb:Severity>
 			<hb:Rationale>
 				A single entity by file avoids compilation or synthesis ordering problems.
-				It improves search of the file including a specific entity.
+				It improves search for the file including a specific entity.
 			</hb:Rationale>
 			<hb:ShortDesc>Each source file contains only one VHDL entity.</hb:ShortDesc>
 			<hb:LongDesc>No additional information.</hb:LongDesc>
@@ -574,7 +574,7 @@ This rule does not apply to instantiations made within IP cores would they be co
 			<hb:Rationale>
 				Text editors display hard tabs differently.
 				When a designer uses only spaces, the sources code formatting is
-				independent of the text editors used.
+				independent of the text editor used.
 			</hb:Rationale>
 			<hb:ShortDesc>Indentation is made by a fixed number of blank spaces
 				instead of tabulation.</hb:ShortDesc>
@@ -612,7 +612,7 @@ This rule does not apply to instantiations made within IP cores would they be co
 			<hb:Severity>Major</hb:Severity>
 			<hb:Rationale>Ports declaration strategy allows readability and reuse.</hb:Rationale>
 			<hb:ShortDesc>Entity ports are organized with a dedicated convention.</hb:ShortDesc>
-			<hb:LongDesc>This convention deals with the way the ports of an entity are sorted:  by direction, interface, special signals...</hb:LongDesc>
+			<hb:LongDesc>This convention deals with the way the ports of an entity are sorted: by direction, interface, special signals...</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc></hb:GoodExDesc>
@@ -682,13 +682,13 @@ Within an interface group, ports could then be sorted by direction (input, outpu
 			<hb:SubCategory>FileStructure</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
 			<hb:Rationale>
-				These specials signals are important for the understanding of 
+				These special signals are important for the understanding of 
 				the module functionalities. 
 				Thus gathering them at the beginning of an entity improves 
 				readability.
 			</hb:Rationale>
 			<hb:ShortDesc>Special ports are the first group of an entity.</hb:ShortDesc>
-			<hb:LongDesc>Special input ports like clock(s), reset and global enable are the first to be written for an entity.</hb:LongDesc>
+			<hb:LongDesc>Special input ports like clock(s), reset and global enable are the first to be written in an entity.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
@@ -726,7 +726,7 @@ Within an interface group, ports could then be sorted by direction (input, outpu
 				Isolating these IP improves technology retargeting.
 			</hb:Rationale>
 			<hb:ShortDesc>Primitive are isolated in a wrapper entity defined in a dedicated VHDL file.</hb:ShortDesc>
-			<hb:LongDesc>When an IP core is used (memory inference/instantiation, primitives instantiations like PLLs, etc…), then the generated HDL code is manufacturer/technology specific.
+			<hb:LongDesc>When an IP core is used (memory inference/instantiation, primitives instantiations like PLLs, etc), then the generated HDL code is manufacturer/technology specific.
 It is best practice to separate this code from the general HDL code, which is not specific to the manufacturer/technology, by creating a	more generic wrapper which contains all those specific HDL codes.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
@@ -760,9 +760,9 @@ It is best practice to separate this code from the general HDL code, which is no
 			<hb:Category>Formatting</hb:Category>
 			<hb:SubCategory>FileStructure</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>Hand coded VHDL source files limited in size keep the module less 
+			<hb:Rationale>Hand coded VHDL source files limited in size keeps the module less 
 				complicated and thus easier to validate and read.
-More over, some tools do not handle well too many characters per lines.</hb:Rationale>
+Moreover, some tools do not handle well too many characters per lines.</hb:Rationale>
 			<hb:ShortDesc>Hand coded VHDL source files are limited in size.</hb:ShortDesc>
 			<hb:LongDesc>File limitation strategy might be implemented with a limit of lines, name characters, entity's names length, compact signal name,... </hb:LongDesc>
 		</hb:RuleContent>
@@ -799,8 +799,8 @@ More over, some tools do not handle well too many characters per lines.</hb:Rati
 			<hb:SubCategory>Versioning</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
 			<hb:Rationale>These information ensure that the VHDL file is not
-				reused, disclosed if it is not allowed.</hb:Rationale>
-			<hb:ShortDesc>Header of the file includes Copyright information.</hb:ShortDesc>
+				reused or disclosed if it is not allowed.</hb:Rationale>
+			<hb:ShortDesc>Header of the file includes copyright information.</hb:ShortDesc>
 			<hb:LongDesc>The copyright information includes:
 			  - A license restriction (if needed),
 			  - The name of the company owning the rights,
@@ -837,8 +837,8 @@ More over, some tools do not handle well too many characters per lines.</hb:Rati
 			<hb:SubCategory>Versioning</hb:SubCategory>
 			<hb:Severity>Major</hb:Severity>
 			<hb:Rationale>
-				Version control insures that development history is saved so that a new
-				developer could use it and avoid previous mistake or understand
+				Version control ensures that development history is saved so that a new
+				developer could use it and avoid previous mistakes or understand
 				previous choices.
 				Understanding the last modifications allows integrator to know if a bug was
 				corrected or if the modification will produce a problem.
@@ -855,7 +855,7 @@ More over, some tools do not handle well too many characters per lines.</hb:Rati
 			  - Impacts of modification,
 			  - The file creation date,
 			  - Current version number.
-Large VHDL project could use version control document software (like SVN), if this is the case a tag identifying the version is also included.</hb:LongDesc>
+Large VHDL project could use version control software (like SVN). If this is the case a tag identifying the version is also included.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
@@ -925,7 +925,7 @@ Large VHDL project could use version control document software (like SVN), if th
 			<hb:Severity>Minor</hb:Severity>
 			<hb:Rationale>Relevant comments increase readability of the code.</hb:Rationale>
 			<hb:ShortDesc>The VHDL code includes comments.</hb:ShortDesc>
-			<hb:LongDesc>The VHDL code comments need to explain the purposes and objectives of the code as much as possible, but not describe the code.</hb:LongDesc>
+			<hb:LongDesc>The VHDL code comments need to explain the purposes and objectives of the code as much as possible, but should not describe it.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc />
@@ -995,9 +995,9 @@ Large VHDL project could use version control document software (like SVN), if th
 			<hb:SubCategory>Reuse</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
 			<hb:Rationale>Accurate and up-to-date comments increase readability,
-				reuse and understanding</hb:Rationale>
+				reusability and understanding</hb:Rationale>
 			<hb:ShortDesc>Each process, group of instructions and objects declaration
-				are	commented</hb:ShortDesc>
+				are commented</hb:ShortDesc>
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
@@ -1032,13 +1032,13 @@ Large VHDL project could use version control document software (like SVN), if th
 			<hb:SubCategory>Reuse</hb:SubCategory>
 			<hb:Severity>Major</hb:Severity>
 			<hb:Rationale>
-				Using standardized libraries by IEEE improves code portability.
+				Using libraries standardized by the IEEE improves code portability.
 				"std_logic_arith", "std_logic_signed" and "std_logic_unsigned"
 				libraries are not standardized.
 			</hb:Rationale>
 			<hb:ShortDesc>Use the following IEEE libraries : "std_logic_1164" and
 				"numeric_std"</hb:ShortDesc>
-			<hb:LongDesc>Do not use deprecated Synopsis libraries "std_logic_arith", "std_logic_signed" and "std_logic_unsigned" except if you are targeting specifically a Synopsys synthesizer (like for ASIC for instance).
+			<hb:LongDesc>Do not use deprecated Synopsis libraries "std_logic_arith", "std_logic_signed" and "std_logic_unsigned" except if you are targeting specifically a Synopsys synthesizer (like for an ASIC for instance).
 Nevertheless, never mix these two library families.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
@@ -1072,10 +1072,10 @@ Nevertheless, never mix these two library families.</hb:LongDesc>
 			<hb:Category>Traceability</hb:Category>
 			<hb:SubCategory>Requirement</hb:SubCategory>
 			<hb:Severity>Major</hb:Severity>
-			<hb:Rationale>Unnecessary portions of code deleted improve code
+			<hb:Rationale>Deleting unnecessary portions of code improve code
 				coverage results and make the design more robust.</hb:Rationale>
-			<hb:ShortDesc>Unnecessary portions of code is deleted</hb:ShortDesc>
-			<hb:LongDesc>Unused declared signals and constants are deleted.	Inactive or wrong code are deleted.	Pieces of code commented out doesn't appear in HDL sources.</hb:LongDesc>
+			<hb:ShortDesc>Unnecessary portions of code are deleted</hb:ShortDesc>
+			<hb:LongDesc>Unused declared signals and constants are deleted. Inactive or wrong code is deleted. Pieces of code commented out doesn't appear in HDL sources.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
@@ -1150,7 +1150,7 @@ Nevertheless, never mix these two library families.</hb:LongDesc>
 				usage because buffers may give some problems during synthesis.
 			</hb:Rationale>
 			<hb:ShortDesc>"Buffer" port in an entity is forbidden.</hb:ShortDesc>
-			<hb:LongDesc>Reading an output signal inside an entity can be achieved by created an internal signal.</hb:LongDesc>
+			<hb:LongDesc>Reading an output signal inside an entity can be achieved by creating an internal signal.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
@@ -1253,7 +1253,7 @@ Nevertheless, never mix these two library families.</hb:LongDesc>
 			<hb:Category>Design</hb:Category>
 			<hb:SubCategory>Reset</hb:SubCategory>
 			<hb:Severity>Major</hb:Severity>
-			<hb:Rationale>In an FPGA, the reset signal is usually a high fan-out signal routed using a dedicated global signal routing track. 
+			<hb:Rationale>In a FPGA, the reset signal is usually a high fan-out signal routed using a dedicated global signal routing track. 
       Using both levels of the reset signal to asynchronously reset the flip-flops of the design results in the synthesis of the reset signal itself 
       and its inverted version, which leads to the usage of 2 global dedicated routing tracks versus a single one, with one of the reset signal passing through an inverter 
       in the FPGA fabric rendering the reset recovery timings closure harder to meet for the FPGA EDA tools.</hb:Rationale>
@@ -1295,7 +1295,7 @@ Nevertheless, never mix these two library families.</hb:LongDesc>
 				registers in a same clock domain leave the reset state at 
 				the same time. 
 				Asynchronous assertion ensures that the design could be 
-				resetted event if the input clock is not yet functional.
+				reset even if the input clock is not yet functional.
 				Synchronous deassertion ensures that the component startup 
 				sequence is reproducible.</hb:Rationale>
 			<hb:ShortDesc>Internal reset is asserted asynchronously and 
@@ -1334,19 +1334,19 @@ Nevertheless, never mix these two library families.</hb:LongDesc>
 			<hb:Category>Design</hb:Category>
 			<hb:SubCategory>Reset</hb:SubCategory>
 			<hb:Severity>Major</hb:Severity>
-			<hb:Rationale>Initialisation of synchronous elements contribute to deterministic reset behaviour and simulation match between functional and Post-Place and Route.</hb:Rationale>
+			<hb:Rationale>Initialization of synchronous elements contribute to deterministic reset behaviour and simulation match between functional and Post-Place and Route.</hb:Rationale>
 			<hb:ShortDesc>All synchronous elements (such as registers, counters
 				and FSM states...) are initialized by a reset.</hb:ShortDesc>
 			<hb:LongDesc>Sometimes special features do not stand for reset (like datapath, divisor, MAC IP...), this have to be justified.
       
-For example, if all sequencing registers are reseted, it is not mandatory to reset registers of the datapath.
-Indeed, Fabricant recommends removing resets or changing them to synchronous where possible.
-Benefits for removing resets :
+For example, if all sequencing registers are reset, it is not mandatory to reset registers of the datapath.
+Indeed, manufacturers recommend removing resets or changing them to synchronous where possible.
+Benefits of removing resets :
 - Fewer timing paths
 - Performance
 - Routing
 - Inferencing
-Benefits for changing resets to synchronous :
+Benefits of changing resets to synchronous :
 - Improved use of dedicated register functions
 - More flexible register placement
 - More predictable timing and circuit operation</hb:LongDesc>
@@ -1384,7 +1384,7 @@ Benefits for changing resets to synchronous :
 			<hb:Rationale>Enumerated type to encode FSM states allows readability
 				and reuse.</hb:Rationale>
 			<hb:ShortDesc>FSM states are encoded using enumerated type.</hb:ShortDesc>
-			<hb:LongDesc>Others type of state machine definition like vectors or integer are forbidden.</hb:LongDesc>
+			<hb:LongDesc>Other type of state machine definition like vectors or integer are forbidden.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
@@ -1454,13 +1454,13 @@ Benefits for changing resets to synchronous :
 			<hb:SubCategory>Clocking</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
 			<hb:Rationale>
-				Use of a single clock sensitive edge allows efficient timing analysis.
-				Using only one edge of a clock allows to avoid over-constrain static
+				Usage of a single clock sensitive edge allows efficient timing analysis.
+				Using only one edge of a clock allows to avoid over-constraining static
 				timing analysis.
 				Moreover, the design isn't duty cycle sensitive.
 			</hb:Rationale>
-			<hb:ShortDesc>A unique single sensitive edge is used to clock all
-				Flip-Flop in the same clock domain.</hb:ShortDesc>
+			<hb:ShortDesc>An unique single sensitive edge is used to clock all
+				flip-flop in the same clock domain.</hb:ShortDesc>
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
@@ -1494,9 +1494,9 @@ Benefits for changing resets to synchronous :
 			<hb:Category>Design</hb:Category>
 			<hb:SubCategory>Clocking</hb:SubCategory>
 			<hb:Severity>Major</hb:Severity>
-			<hb:Rationale>Changing clock domains can lead data incoherency 
+			<hb:Rationale>Changing clock domains can lead to data incoherency 
 			or data loss due to metastability. These effects will mainly be seen on the integrated system. 
-      The use of a validated clock domain change mechanism reduce the risk of discrepancies.</hb:Rationale>
+      The use of a validated clock domain change mechanism reduces the risk of discrepancies.</hb:Rationale>
 			<hb:ShortDesc>All data exchanges between different clock domains are done
 				with specific approved mechanism.</hb:ShortDesc>
 			<hb:LongDesc>No additional information.</hb:LongDesc>
@@ -1534,11 +1534,11 @@ Benefits for changing resets to synchronous :
 			<hb:Severity>Note</hb:Severity>
 			<hb:Rationale>Using the proper clock domain crossing technique to
 				pass a data bus from one clock domain to another is critical in order to ensure a proper
-				behaviour	of the design under any circumstances.
-				When the data to synchronize is	a data bus or can be considered as one,
-				and that the high latency of the handshaked based synchronizer can be
-				tolerated, then	dual handshaked synchronizer technique is appropriate.</hb:Rationale>
-			<hb:ShortDesc>Clock domain crosses uses a handshaked based synchronizer.</hb:ShortDesc>
+				behaviour of the design under any circumstances.
+				When the data to synchronize is a data bus or can be considered as one,
+				and that the high latency of the handshake based synchronizer can be
+				tolerated, then dual handshake synchronizer technique is appropriate.</hb:Rationale>
+			<hb:ShortDesc>Clock domain crosses uses a handshake based synchronizer.</hb:ShortDesc>
 			<hb:LongDesc>In the source clock domain, when the source data is ready for synchronization, a "transmit request" control signal is activated. The source data stability has to be guaranteed until reception of a "receipt acknowledge".
 In the destination clock domain, the "transmit request" control signal is synchronized using a double or triple register synchronization technique.
 It is then used to sample the data to synchronize in the destination clock domain. A "receipt acknowledge" is then sent back to the source clock domain. In the source clock domain, the "receipt acknowledge" is synchronized using a double or triple register synchronization technique.
@@ -1548,7 +1548,7 @@ The source data can now be changed and another synchronization handshake can be 
 Source data stability:
 			  - The source data must be present when "transmit request" is asserted	on the destination and remain stable until the "receipt acknowledge" is generated.
 The source clock domain should continue to assert the "transmit request" control signal until "receipt acknowledge" is asserted at the source clock domain.
-The sender should not assert a new "transmit request" until the acknowledgement for the previous transfer is de-asserted in the source clock domain.</hb:LongDesc>
+The sender should not assert a new "transmit request" until the acknowledgement for the previous transfer is deasserted in the source clock domain.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
@@ -1581,15 +1581,15 @@ The sender should not assert a new "transmit request" until the acknowledgement 
 			<hb:Category>Design</hb:Category>
 			<hb:SubCategory>Clocking</hb:SubCategory>
 			<hb:Severity>Note</hb:Severity>
-			<hb:Rationale>Utilizing the proper clock domain crossing technique to
+			<hb:Rationale>Using the proper clock domain crossing technique to
 				pass a data bus from one clock domain to another is critical in order to ensure a proper
-				behaviour	of the design under any circumstances.
-				When the data to synchronize is	a data bus or can be considered as one,
+				behaviour of the design under any circumstances.
+				When the data to synchronize is a data bus or can be considered as one,
 				that the synchronization rate is fast, and that the high latency of a
-				handshaked based synchronizer cannot be tolerated, then dual clock
+				handshake based synchronizer cannot be tolerated, then dual clock
 				FIFO synchronizer	technique (if available in the component) is appropriate.
-				The FIFO implementation ensures data order and data	content preservation.</hb:Rationale>
-			<hb:ShortDesc>Clock domain crosses uses a dual clock FIFO based	synchronizer.</hb:ShortDesc>
+				The FIFO implementation ensures data order and data content preservation.</hb:Rationale>
+			<hb:ShortDesc>Clock domain crossing uses a dual clock FIFO based synchronizer.</hb:ShortDesc>
 			<hb:LongDesc>There are many "dual clock FIFO synchronizer" implementation variations. The FIFO size has to be carefully chosen to cope with clock frequencies differences, read and write rates, read and write methods (continuous vs burst).
 As a general rule, the data is written into a dual-port RAM block from the source clock domain and the RAM is read in the destination clock domain.
 Gray-coded read and write pointers are passed into the alternate clock domain (using two m-registers synchronizers) to generate the following most common status flags:
@@ -1680,15 +1680,15 @@ Here is a list of possible assertion checks for a FIFO design:
 			<hb:Severity>Minor</hb:Severity>
 			<hb:Rationale>
 				Reducing the number of clock domain in a design is
-				critical in order to keep the number of clock domains crossing
+				critical in order to keep the number of clock domain crossing
 				resolutions to few manageable cases.
 				Doing so limits the chance for clock domain crossing design issues, limits the number of nets not
 				covered with static timing analysis and simplifies greatly the
 				synthesis scripts.
-				For those reasons, usage of a single clock domain	is strongly recommended.</hb:Rationale>
+				For those reasons, usage of a single clock domain is strongly recommended.</hb:Rationale>
 			<hb:ShortDesc>One clock domain is used in the design.</hb:ShortDesc>
-			<hb:LongDesc>The number of timing domains is reduced as far as reasonably possible : one single clock domain design is the target.
-When a slower clock version is needed use an enable signal instead of a derived clock to throttle the resulting clock rate.
+			<hb:LongDesc>The number of timing domain is reduced as far as reasonably possible : one single clock domain design is the target.
+When a slower clock version is needed, use an enable signal instead of a derived clock to throttle the resulting clock rate.
 When a faster clock version is needed, promote that faster clock as the single clock domain used if the design and or re-design consequences are not prohibitive prior to creating a derived clock domain.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
@@ -1727,11 +1727,11 @@ When a faster clock version is needed, promote that faster clock as the single c
 				the data flow understanding and most importantly allows fast tracing of
 				the clock domain crossing signals that
 				need special design and static timing analysis considerations while
-				enabling better design reuse.</hb:Rationale>
+				allowing better design reuse.</hb:Rationale>
 			<hb:ShortDesc>Each module in the design handle only one clock.</hb:ShortDesc>
 			<hb:LongDesc>Entity that is linked between entities can have several clocks at input but do not manage processes on those clocks.
-The only module that can handle several clocks are the clock management modules and the reset management module.
-Others module can includes different clocks but the data exchange between them is done through the approved clock domain crossing module.</hb:LongDesc>
+The only module that can handle several clocks are the clock management module and the reset management module.
+Other modules can include different clocks but the data exchange between them is done through the approved clock domain crossing module.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
@@ -1766,7 +1766,7 @@ Others module can includes different clocks but the data exchange between them i
 			<hb:Rationale>Synchronous process with any extra signals added to sensitivity list may become asynchronous.
 				Moreover, this practice risks adding combinational blocks on clock and reset trees.</hb:Rationale>
 			<hb:ShortDesc>A synchronous process needs only the clock and reset
-				signals in the sensitivity list.</hb:ShortDesc>
+				signals in its sensitivity list.</hb:ShortDesc>
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
@@ -1805,9 +1805,9 @@ Others module can includes different clocks but the data exchange between them i
     Thus, an asynchronous signal is synchronized to the clock domain where it is used using a two or three Flip-Flops synchronizer.
     Doing so ensures that all the Flip-Flops of the sampling timing domain samples the very same value of a given asynchronous signal, 
     as this techniques resolves the metastability issue, caused by setup or hold time violations, at the synchronizer level.
-    Not doing so causes  issues in Finite State Machines ,For example, the FSM can see the condition 
+    Not doing so causes issues in Finite State Machines. For example, the FSM can see the condition 
     to exit a state true while the condition to enter the next state may still be seen false. This might lead the FSM to a wrong state transition. 
-    In the case of one hot state encoded FSMs this issue may cause the FSM to have no more state active which causes the FSM to fail.</hb:Rationale>
+    In the case of one hot state encoded FSMs this issue may cause the FSM to have no more active state which causes the FSM to fail.</hb:Rationale>
 			<hb:ShortDesc>Asynchronous input signals are synchronized with at
 				least a two Flip-Flops synchronizer.</hb:ShortDesc>
 			<hb:LongDesc>Asynchronous inputs signals are defined as the following : 
@@ -1845,14 +1845,14 @@ signals generated without clock and signals generated in another time domain.</h
 			<hb:Category>Design</hb:Category>
 			<hb:SubCategory>Synchronous</hb:SubCategory>
 			<hb:Severity>Major</hb:Severity>
-			<hb:Rationale>Flip flops clock input is dedicated to a clock signal.
+			<hb:Rationale>Flip-Flops clock input is dedicated to a clock signal.
 				Thus, using it as a way to detect a signal edge (by using
 				rising_edge(...) or 'event attribute) may lead to the creation of a
 				new clock domain for each signal edge detection implemented in the
 				design: this is not the purpose.</hb:Rationale>
-			<hb:ShortDesc>Synchronous mechanisms are used for signal edge	detection.</hb:ShortDesc>
+			<hb:ShortDesc>Synchronous mechanisms are used for signal edge detection.</hb:ShortDesc>
 			<hb:LongDesc>A specific mechanism is used in order to detect rising or falling edge input signal.
-This mechanism involves a real design clock, at least one D-Flip flop to delay the signal, and combinatory gate(s) to select the edge.
+This mechanism involves a real design clock, at least one D Flip-Flop to delay the signal, and combinational gate(s) to select the edge.
 			</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
@@ -1888,17 +1888,17 @@ This mechanism involves a real design clock, at least one D-Flip flop to delay t
 			<hb:SubCategory>Synchronous</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
 			<hb:Rationale>All outputs of a design are coming from output
-				registers whenever possible and from regular registers when not	possible.
-				The clock used is the same one as the one used in the signal source
+				registers whenever possible and from regular registers when not possible.
+				The clock used is the same as the one used in the signal source
 				clock domain.
 				Doing so suppresses all glitches on the outputs	whenever a signal level change occurs and enables control of the
-				clocks to outputs delays of the design so that the time borrowed by	any signal to propagate from its respective
-				launching clock edge to its assigned device output is controlled and less	than a given maximum allowed time.
-				With controlled clocks to outputs	delays, enough PCB propagation time and inputs to clocks delays is
+				clocks to outputs delays of the design so that the time borrowed by any signal to propagate from its respective
+				launching clock edge to its assigned device output is controlled and less than a given maximum allowed time.
+				With controlled clocks to outputs delays, enough PCB propagation time and inputs to clocks delays is
 				left for those outputs to be captured using the same clock in a remote device.</hb:Rationale>
 			<hb:ShortDesc>All outputs signal from an entity are registered.</hb:ShortDesc>
 			<hb:LongDesc>Combinational outputs are forbidden. Outputs belong to the timing domain in which they are generated at top and modules level. Whenever it is possible, use I/O blocks register instead of internal register for top level outputs.
-Unless specified and approved, a combinatorial signal is never used directly as an output.</hb:LongDesc>
+Unless specified and approved, a combinational signal is never used directly as an output.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
@@ -1973,10 +1973,10 @@ Unless specified and approved, a combinatorial signal is never used directly as 
 			<hb:Severity>Major</hb:Severity>
 			<hb:Rationale>Inferring latches in synchronous designs is not a good design practice.
 				Even though a behavioural simulation shows that the design simulates
-				correctly, it is only after a great deal of	effort in synthesis place and route and static 
-        timing analysis and even back annotated simulations that the design
+				correctly, it is only after a great deal of effort in synthesis, place and route, static 
+        timing analysis, and even back annotated simulations that the design
 				executes correctly on the targeted technology. This is because of the clock
-				and signals timing delays which	very easily lead to a data crossing two latches 
+				and signals timing delays which very easily lead to a data crossing two latches 
         at once when only one at once is desired.</hb:Rationale>
 			<hb:ShortDesc>The design does not use latches on purpose.</hb:ShortDesc>
 			<hb:LongDesc>No additional information.</hb:LongDesc>
@@ -2018,17 +2018,16 @@ Unless specified and approved, a combinatorial signal is never used directly as 
 				practice.
 				Even though a behavioural simulation shows that the design
 				simulates correctly, there is no guaranty that the design works
-				properly on the targeted component. Indeed, every step of the way
-				through the backend steps the timing loops provoked
+				properly on the targeted component. Indeed, at every step of the way
+				through the backend, the timing loops provoked
 				by these combinatorial feedbacks are broken so that the tool can
 				proceed further. With doing so, all of the timing arcs
-				proceed further. With doing so, all of the timing arcs
-				passing through those combinatorial feedbacks are not analysed, leaving
+				passing through those combinatorial feedbacks are not analyzed, leaving
 				room for all sorts of timing violations thus a non working
 				component.
 			</hb:Rationale>
 			<hb:ShortDesc>The design does not use combinatorial feedback.</hb:ShortDesc>
-			<hb:LongDesc>When synthesis reports that a timing loop is broken in a combinatorial process, check your design for asynchronous signals appearing on both sides of an combinatorial assignment statement. Once isolated break the timing loop.</hb:LongDesc>
+			<hb:LongDesc>When synthesis reports that a timing loop is broken in a combinational process, check your design for asynchronous signals appearing on both sides of a combinational assignment statement. Once isolated break the timing loop.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
@@ -2068,14 +2067,14 @@ Unless specified and approved, a combinatorial signal is never used directly as 
 				Freezing the clock reduce the power consumption from transistors 
 				toggle and clock tree propagation.
 				This great power saving comes at the expense of the design of 
-				the clock gating logic, which can be easily  implemented with 
+				the gated clock logic, which can be easily implemented with 
 				dedicated gates inside an ASIC but might not be available inside 
-				an FPGA.
+				a FPGA.
 				Thus, gated clock usage is prohibited inside FPGA.
 			</hb:Rationale>
 			<hb:ShortDesc>The design does not use gated clock.</hb:ShortDesc>
 			<hb:LongDesc>Intentionally inferring gated clock in FPGA is prohibited; use the Flip-Flops clock enable instead.
-When the synthesis reports that a gated clock was created, turn off the synthesis tool "auto convert gated clock" option. So that the tool uses the Flip-Flops clock enable instead.</hb:LongDesc>
+When the synthesis reports that a gated clock was created, turn off the synthesis tool "auto convert gated clock" option, so that the tool uses the Flip-Flops clock enable instead.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
@@ -2113,11 +2112,11 @@ When the synthesis reports that a gated clock was created, turn off the synthesi
 				Best design practices call for design reuse. 
 				Inferring internal tristate goes against it as not every FPGA and every ASIC
 				include this functionality.
-				For that reason, inferring internal tristate is prohibited.
+				For that reason, it is prohibited.
 			</hb:Rationale>
-			<hb:ShortDesc>Internal tri-states drivers are forbidden inside VLSI.</hb:ShortDesc>
-			<hb:LongDesc>When an internal tri-state solution would satisfy the functionality to model, use a multiplexer-based solution instead.
-Do not hesitate to pipeline the structure according to the targeted	clock frequency and targeted technology.</hb:LongDesc>
+			<hb:ShortDesc>Internal tristates drivers are forbidden in VLSI.</hb:ShortDesc>
+			<hb:LongDesc>When an internal tristate solution would satisfy the functionality to model, use a multiplexer-based solution instead.
+Do not hesitate to pipeline the structure according to the targeted clock frequency and targeted technology.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
@@ -2151,7 +2150,7 @@ Do not hesitate to pipeline the structure according to the targeted	clock freque
 			<hb:SubCategory>Type</hb:SubCategory>
 			<hb:Severity>Major</hb:Severity>
 			<hb:Rationale>
-				Usage of "range" keyword constraints synthesis optimization effort.
+				Usage of "range" keyword constrains synthesis optimization effort.
 				It avoids mismatches between simulation and board.
 			</hb:Rationale>
 			<hb:ShortDesc>Integer type are constrained using the keyword "range".</hb:ShortDesc>
@@ -2187,7 +2186,7 @@ Do not hesitate to pipeline the structure according to the targeted	clock freque
 			<hb:Category>Design</hb:Category>
 			<hb:SubCategory>Type</hb:SubCategory>
 			<hb:Severity>Major</hb:Severity>
-			<hb:Rationale>This is an convention to improve use of
+			<hb:Rationale>This is a convention to improve use of
 				arrays.</hb:Rationale>
 			<hb:ShortDesc>"Array" type declaration uses increasing index with
 				"to" keyword.</hb:ShortDesc>
@@ -2224,7 +2223,7 @@ Do not hesitate to pipeline the structure according to the targeted	clock freque
 			<hb:Category>Design</hb:Category>
 			<hb:SubCategory>Type</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>This is an convention to improve use of
+			<hb:Rationale>This is a convention to improve use of
 				std_logic_vector.</hb:Rationale>
 			<hb:ShortDesc>"Std_logic_vector" type declaration uses decreasing
 				index with "downto" keyword.</hb:ShortDesc>
@@ -2261,10 +2260,10 @@ Do not hesitate to pipeline the structure according to the targeted	clock freque
 			<hb:SubCategory>Type</hb:SubCategory>
 			<hb:Severity>Major</hb:Severity>
 			<hb:Rationale>VHDL language provides many different types. 
-			These types have not got any physical match inside a physical component but are only used for simulation purpose.</hb:Rationale>
+			These types do not all have a physical match with a physical component. Some of them are only used in simulation.</hb:Rationale>
 			<hb:ShortDesc>Only synthesizable types are allowed in RTL design.</hb:ShortDesc>
 			<hb:LongDesc>Only the following types are allowed for RTL design : std_logic, std_logic_vector, integer, signed, unsigned and record/array of those.
-Enumerate  is allowed for FSMs and boolean for generics.</hb:LongDesc>
+Enumerate is allowed for FSMs and boolean for generics.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
@@ -2299,8 +2298,8 @@ Enumerate  is allowed for FSMs and boolean for generics.</hb:LongDesc>
 			<hb:Rationale>
 				VHDL signal is the object used to describe a electrical wire connection
 				or a register.
-				VHDL signal is the way to have a communication between VHDL processes.
-				Whereas variable is restricted inside a VHDL process. Its physical
+				VHDL signal is the way to have a communication between VHDL processes,
+				whereas variable is restricted inside a VHDL process. Its physical
 				implementation depends on the way of using it.
 				Using variable can lead to simulation and synthesis mismatch.
 			</hb:Rationale>
@@ -2338,7 +2337,7 @@ Enumerate  is allowed for FSMs and boolean for generics.</hb:LongDesc>
 			<hb:SubCategory>Type</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
 			<hb:Rationale>Using constant instead of hard coded numeric value inside
-			the VHDL improve the identification of these value. Thus, modification 
+			the VHDL code improves the identification of these values. Thus, modification 
 			of these values (if needed) will be easier.</hb:Rationale>
 			<hb:ShortDesc>Use VHDL constant as much as possible instead of hard
 				coded numeric values.</hb:ShortDesc>
@@ -2380,7 +2379,7 @@ Enumerate  is allowed for FSMs and boolean for generics.</hb:LongDesc>
 				mechanisms have to be approved.
 			</hb:Rationale>
 			<hb:ShortDesc>All mitigation mechanisms are done with a specific approved mechanism.</hb:ShortDesc>
-			<hb:LongDesc>In order to mitigate errors due to radiation, mechanisms(EDAC,ECC,parity,srubbing,triplication...) can be implemented in the FPGA if needed.</hb:LongDesc>
+			<hb:LongDesc>In order to mitigate errors due to radiation, mechanisms(EDAC, ECC, parity, srubbing, triplication...) can be implemented in the FPGA if needed.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc />
@@ -2420,7 +2419,7 @@ Enumerate  is allowed for FSMs and boolean for generics.</hb:LongDesc>
 			</hb:Rationale>
 			<hb:ShortDesc>Use non strict comparison (&lt;= and &gt;=) for end of
 				counting comparison.</hb:ShortDesc>
-			<hb:LongDesc>When comparing a cyclic counter value against its end of count value, non strict comparison is used instead of strict	comparison.
+			<hb:LongDesc>When comparing a cyclic counter value against its end of count value, non strict comparison is used instead of strict comparison.
 For an up counter, use the greater than or equal to (&gt;=) comparison sign instead of the equals sign (=).
 For a down counter, use the less than or equal (&lt;=) comparison sign instead of the equals sign (=).</hb:LongDesc>
 		</hb:RuleContent>
@@ -2433,6 +2432,7 @@ For a down counter, use the less than or equal (&lt;=) comparison sign instead o
 			<hb:Figure />
 		</hb:RuleDesc>
 	</hb:Rule>
+	
 	<hb:Rule UID="STD_06700">
 		<hb:RuleUID>STD_06700</hb:RuleUID>
 		<hb:RuleHist>
@@ -2564,9 +2564,9 @@ For a down counter, use the less than or equal (&lt;=) comparison sign instead o
 			<hb:Category>Simulation</hb:Category>
 			<hb:SubCategory>Miscellaneous</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>Testbench are not made to be synthesized. Thus, VHDL not synthesizable features can be used inside testbenches.
+			<hb:Rationale>Testbenches are not made to be synthesized. Thus, not synthesizable VHDL features can be used inside testbenches.
 Functions and procedures in testbenches ensure saving time of development. 
-Moreover, the testbench is more compact because identical instructions aren't repeated which ensures better understanding and reduce the error number.</hb:Rationale>
+Moreover, the testbench is more compact because identical instructions aren't repeated, which ensures better understanding and reduces the error number.</hb:Rationale>
 			<hb:ShortDesc>Procedures and functions are recommended in testbenches.</hb:ShortDesc>
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
@@ -2601,12 +2601,12 @@ Moreover, the testbench is more compact because identical instructions aren't re
 			<hb:Category>Simulation</hb:Category>
 			<hb:SubCategory>Miscellaneous</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>Use of wait statement or "after" clause allows designer to not maintain a 
+			<hb:Rationale>Use of "wait" statement or "after" clause free the designer from maintaining a 
 				process sensitivity list while developing a testbench (sensitivity 
-				list is empty when a wait is used inside a process).
-				The testbench instruction inside a process is then sequential which 
+				list is empty when a "wait" is used inside a process).
+				The testbench instructions inside a process are then sequential which 
 				is coherent with most testbench stimulation sequences.</hb:Rationale>
-			<hb:ShortDesc>Testbench are scheduled with "wait" instruction and "after" clause instead
+			<hb:ShortDesc>Testbenches are scheduled with "wait" instruction and "after" clause instead
 				of combinational process.</hb:ShortDesc>
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
@@ -2641,13 +2641,13 @@ Moreover, the testbench is more compact because identical instructions aren't re
 			<hb:SubCategory>Miscellaneous</hb:SubCategory>
 			<hb:Severity>Major</hb:Severity>
 			<hb:Rationale> Limited duration for testbenches avoid useless 
-				simulation runs (beyond stimulus range) thus free  machine 
+				simulation runs (beyond stimulus range) thus freeing machine 
 				resources for other designers.
 				This allows the automatic sequencing of testbenches (during 
-				non regression test for instance).
+				non regression tests for instance).
 			</hb:Rationale>
-			<hb:ShortDesc>The simulation duration is terminated by an automatic	mechanism.</hb:ShortDesc>
-			<hb:LongDesc>The simulation stop automatically without any human action in the simulator. This can be done by external scripts, event starvations (like freezing the main clocks) in the testbench.</hb:LongDesc>
+			<hb:ShortDesc>The simulation duration is terminated by an automatic mechanism.</hb:ShortDesc>
+			<hb:LongDesc>The simulation stop automatically without any human action in the simulator. This can be done by external scripts, event starvation (like freezing the main clocks) in the testbench.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
@@ -2680,7 +2680,7 @@ Moreover, the testbench is more compact because identical instructions aren't re
 			<hb:Severity>Minor</hb:Severity>
 			<hb:Rationale>A common header format which gathers all important
 				information for each HDL file improves the understanding of 
-				vhdl background context	of the developed module.</hb:Rationale>
+				VHDL background context	of the developed module.</hb:Rationale>
 			<hb:ShortDesc>HDL file includes a header with specific information.</hb:ShortDesc>
 			<hb:LongDesc>Typical information that can be included in the header are: file name, author, creation date, project name, software context.</hb:LongDesc>
 		</hb:RuleContent>
@@ -2693,6 +2693,7 @@ Moreover, the testbench is more compact because identical instructions aren't re
 			<hb:Figure />
 		</hb:RuleDesc>
 	</hb:Rule>
+	
 	<hb:Rule UID="STD_02500">
 		<hb:RuleUID>STD_02500</hb:RuleUID>
 		<hb:RuleHist>
@@ -2712,8 +2713,8 @@ Moreover, the testbench is more compact because identical instructions aren't re
 			<hb:Category>Traceability</hb:Category>
 			<hb:SubCategory>Versioning</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>Functional information in the file header improves understanding of the code function while reviewing of reusing it.</hb:Rationale>
-			<hb:ShortDesc>Header of File includes information about code functionality.</hb:ShortDesc>
+			<hb:Rationale>Functional information in the file header improves understanding of the code function while reviewing or reusing it.</hb:Rationale>
+			<hb:ShortDesc>Header of file includes information about code functionality.</hb:ShortDesc>
 			<hb:LongDesc>Functional description could be, for example, a short description of the file functions, its limitations or a description of the naming convention used.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
@@ -2744,7 +2745,7 @@ Moreover, the testbench is more compact because identical instructions aren't re
 			<hb:Category>Design</hb:Category>
 			<hb:SubCategory>Clocking</hb:SubCategory>
 			<hb:Severity>Major</hb:Severity>
-			<hb:Rationale>Using of only one signal or one port for clock avoids multiple net names for the same clock signal will ease the fitter to match the clock network on the dedicated low skew resources.</hb:Rationale>
+			<hb:Rationale>Using only one signal or one port for clock avoids multiple net names for the same clock signal, which eases the fitter to match the clock network on the dedicated low skew resources.</hb:Rationale>
 			<hb:ShortDesc>Do not reassign a clock in a concurrent statement.</hb:ShortDesc>
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>

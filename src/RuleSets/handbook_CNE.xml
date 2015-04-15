@@ -24,8 +24,8 @@
 			<hb:Category>Formatting</hb:Category>
 			<hb:SubCategory>Naming</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>When a unique naming convention is applied to the whole sources files from the design, then the resulting code is	homogenized which increase readability.
-			With this convention, designer will be able to track synthesis of variable and especially identifies if a variable created some unwanted flipflops.
+			<hb:Rationale>When an unique naming convention is applied to the whole source files from the design, then the resulting code is homogenized which increases readability.
+With this convention, designer will be able to track synthesis of variable and especially identify if a variable created some unwanted flip-flops.
 			</hb:Rationale>
 			<hb:ShortDesc>The name of a variable use "v_" prefix.</hb:ShortDesc>
 			<hb:LongDesc>No additional information.</hb:LongDesc>
@@ -61,12 +61,12 @@
 			<hb:SubCategory>Naming</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
 			<hb:Rationale>When a unique naming convention is applied to the whole
-				sources files from the design, then the resulting code is
-				homogenized which increase readability.</hb:Rationale>
-			<hb:ShortDesc>Each words that composed signal name are clearly
+				source files from the design, then the resulting code is
+				homogenized which increases readability.</hb:Rationale>
+			<hb:ShortDesc>Each word that composes a signal name are clearly
 				identified with an underscore.</hb:ShortDesc>
-			<hb:LongDesc>In order to separate word in signal name the followed convention is applied is applied: Name_Of_The_Signal
-The separation by Uppercase (NameOfTheSignal) is not used.</hb:LongDesc>
+			<hb:LongDesc>In order to separate words in signal name the following convention is applied: Name_Of_The_Signal
+The separation by uppercase (NameOfTheSignal) is not used.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
@@ -98,13 +98,13 @@ The separation by Uppercase (NameOfTheSignal) is not used.</hb:LongDesc>
 			<hb:Category>Formatting</hb:Category>
 			<hb:SubCategory>Naming</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>When a unique naming convention is applied to the whole
-				sources files from the design, then the resulting code is
-				homogenized which increase readability.</hb:Rationale>
-			<hb:ShortDesc>Each words that composed constant name are clearly
+			<hb:Rationale>When an unique naming convention is applied to the whole
+				source files from the design, then the resulting code is
+				homogenized which increases readability.</hb:Rationale>
+			<hb:ShortDesc>Each word that composes a constant name are clearly
 				identified with an underscore.</hb:ShortDesc>
-			<hb:LongDesc>In order to separate word in constant name the followed convention is applied is applied:  Name_Of_The_Constant.
-The separation by Uppercase (NameOfTheConstant) is not used.</hb:LongDesc>
+			<hb:LongDesc>In order to separate words in a constant name the following convention is applied: Name_Of_The_Constant.
+The separation by uppercase (NameOfTheConstant) is not used.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
@@ -136,13 +136,13 @@ The separation by Uppercase (NameOfTheConstant) is not used.</hb:LongDesc>
 			<hb:Category>Formatting</hb:Category>
 			<hb:SubCategory>Naming</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>When a unique naming convention is applied to the whole
-				sources files from the design, then the resulting code is
-				homogenized which increase readability.</hb:Rationale>
-			<hb:ShortDesc>Each words that composed process name are clearly
+			<hb:Rationale>When an unique naming convention is applied to the whole
+				source files from the design, then the resulting code is
+				homogenized which increases readability.</hb:Rationale>
+			<hb:ShortDesc>Each word that composes a process name are clearly
 				identified with an underscore.</hb:ShortDesc>
-			<hb:LongDesc>In order to separate word in process name the followed convention is	applied is applied: Name_Of_The_Process.
-The separation by Uppercase (NameOfTheProcess) is not used.</hb:LongDesc>
+			<hb:LongDesc>In order to separate words in a process name the following convention is applied: Name_Of_The_Process.
+The separation by uppercase (NameOfTheProcess) is not used.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
@@ -174,13 +174,13 @@ The separation by Uppercase (NameOfTheProcess) is not used.</hb:LongDesc>
 			<hb:Category>Formatting</hb:Category>
 			<hb:SubCategory>Naming</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>When a unique naming convention is applied to the whole
-				sources files from the design, then the resulting code is
-				homogenized which increase readability.</hb:Rationale>
-			<hb:ShortDesc>Each words that composed generic port name are clearly
+			<hb:Rationale>When an unique naming convention is applied to the whole
+				source files from the design, then the resulting code is
+				homogenized which increases readability.</hb:Rationale>
+			<hb:ShortDesc>Each words that composes a generic port name are clearly
 				identified with an underscore.</hb:ShortDesc>
-			<hb:LongDesc>In order to separate word in generic port name the followed convention is applied is applied: Name_Of_The_Generic.
-The separation by Uppercase (NameOfTheGeneric) is not used.</hb:LongDesc>
+			<hb:LongDesc>In order to separate words in a generic port name the following convention is applied: Name_Of_The_Generic.
+The separation by uppercase (NameOfTheGeneric) is not used.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
@@ -212,13 +212,13 @@ The separation by Uppercase (NameOfTheGeneric) is not used.</hb:LongDesc>
 			<hb:Category>Formatting</hb:Category>
 			<hb:SubCategory>Naming</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>When a unique naming convention is applied to the whole
-				sources files from the design, then the resulting code is
-				homogenized which increase readability.</hb:Rationale>
-			<hb:ShortDesc>Each words that composed custom type are clearly
+			<hb:Rationale>When an unique naming convention is applied to the whole
+				source files from the design, then the resulting code is
+				homogenized which increases readability.</hb:Rationale>
+			<hb:ShortDesc>Each word that composes a custom type name are clearly
 				identified with an underscore.</hb:ShortDesc>
-			<hb:LongDesc>In order to separate word in custom type names the followed convention is applied is applied: Name_Of_The_Customtype.
-The separation by Uppercase (NameOfTheCustomtype) is not used.</hb:LongDesc>
+			<hb:LongDesc>In order to separate word in a custom type name the following convention is applied: Name_Of_The_Customtype.
+The separation by uppercase (NameOfTheCustomtype) is not used.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
@@ -250,8 +250,8 @@ The separation by Uppercase (NameOfTheCustomtype) is not used.</hb:LongDesc>
 			<hb:Category>Formatting</hb:Category>
 			<hb:SubCategory>Naming</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>Differentiating Generic port object with other vhdl
-				object name allows better readability and maintainability.
+			<hb:Rationale>Differentiating generic port object from other VHDL
+				objects name allows better readability and maintainability.
 			</hb:Rationale>
 			<hb:ShortDesc>Generic port name starts by a prefix: "g_".
 			</hb:ShortDesc>
@@ -287,7 +287,7 @@ The separation by Uppercase (NameOfTheCustomtype) is not used.</hb:LongDesc>
 			<hb:Category>Formatting</hb:Category>
 			<hb:SubCategory>Naming</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>Differentiating custom type with other vhdl object name
+			<hb:Rationale>Differentiating custom type from other VHDL objects name
 				allows better readability and maintainability.</hb:Rationale>
 			<hb:ShortDesc>Custom type name starts by a prefix: "t_".</hb:ShortDesc>
 			<hb:LongDesc>No additional information.</hb:LongDesc>
@@ -325,7 +325,7 @@ The separation by Uppercase (NameOfTheCustomtype) is not used.</hb:LongDesc>
 			<hb:Rationale>Identifying signal active level by reading its name
 				allows better readability and maintainability.</hb:Rationale>
 			<hb:ShortDesc>Active low signal ends by a suffix: "_n".</hb:ShortDesc>
-			<hb:LongDesc> By default, all signals are considered as active high	signals.</hb:LongDesc>
+			<hb:LongDesc> By default, all signals are considered as active high signals.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
@@ -359,7 +359,7 @@ The separation by Uppercase (NameOfTheCustomtype) is not used.</hb:LongDesc>
 			<hb:Severity>Minor</hb:Severity>
 			<hb:Rationale>A well defined prefix for package name improves identification of the origin of the element.</hb:Rationale>
 			<hb:ShortDesc>The prefix of package element name is "pkg_".</hb:ShortDesc>
-			<hb:LongDesc>Package elements considered are: the package name itself and all vhdl object declared and defined inside the package.</hb:LongDesc>
+			<hb:LongDesc>Package elements considered are: the package name itself and all VHDL object declared and defined inside the package.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
@@ -392,8 +392,8 @@ The separation by Uppercase (NameOfTheCustomtype) is not used.</hb:LongDesc>
 			<hb:SubCategory>Naming</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
 			<hb:Rationale>Identifying signal that represents the edge detection of another one by reading its name improves readability.</hb:Rationale>
-			<hb:ShortDesc>The suffix of signal that represents a rising edge of an other is: "_re".</hb:ShortDesc>
-			<hb:LongDesc>The detected signal is also included inside the signal	name. 
+			<hb:ShortDesc>The suffix of a signal that represents a rising edge of another one is: "_re".</hb:ShortDesc>
+			<hb:LongDesc>The detected signal is also included inside the signal name. 
 Thus, a signal that represents a rising edge of a signal named My_Sig is My_Sig_re.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
@@ -426,8 +426,8 @@ Thus, a signal that represents a rising edge of a signal named My_Sig is My_Sig_
 			<hb:SubCategory>Naming</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
 			<hb:Rationale>Identifying signal that represents the edge detection of another one by reading its name improves readability.</hb:Rationale>
-			<hb:ShortDesc>The suffix of signal that represents a falling edge of an other is: "_fe".</hb:ShortDesc>
-			<hb:LongDesc>The detected signal is also included inside the signal	name. 
+			<hb:ShortDesc>The suffix of a signal that represents a falling edge of another one is: "_fe".</hb:ShortDesc>
+			<hb:LongDesc>The detected signal is also included inside the signal name. 
 Thus, a signal that represents a falling edge of a signal named My_Sig is My_Sig_fe.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
@@ -461,12 +461,12 @@ Thus, a signal that represents a falling edge of a signal named My_Sig is My_Sig
 			<hb:SubCategory>Naming</hb:SubCategory>
 			<hb:Severity>Major</hb:Severity>
 			<hb:Rationale>Clock frequency can be changed during the development
-				(for power consumption reason...). It such a case, if the clock
+				(for power consumption reason...). In such a case, if the clock
 				signal name contains frequency value, it can lead to major code
-				modification to update this value or lead to misunderstanding.
+				modification to update this value, or lead to misunderstanding.
 			</hb:Rationale>
 			<hb:ShortDesc>The clock signal name does not contain the clock frequency value.</hb:ShortDesc>
-			<hb:LongDesc>The clock relation for derivative clock like mainclk_div2 for mainclk with a frequency divided by two is a good way to show relation between clocks.</hb:LongDesc>
+			<hb:LongDesc>The clock relation for derivative clock, like mainclk_div2 for mainclk with a frequency divided by two, is a good way to show relation between clocks.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
@@ -498,9 +498,9 @@ Thus, a signal that represents a falling edge of a signal named My_Sig is My_Sig
 			<hb:Category>Formatting</hb:Category>
 			<hb:SubCategory>Naming</hb:SubCategory>
 			<hb:Severity>Major</hb:Severity>
-			<hb:Rationale>Board layout optimisation can lead to FPGA/ASIC pins swapping. ASIC/FPGA development often needs several targets with pinout mismatching. It such a case, if the VHDL code contains signal with FPGA/ASIC pins number information, it can lead to major code modification to update this value or lead to misunderstanding.
+			<hb:Rationale>Board layout optimization can lead to FPGA/ASIC pins swapping. ASIC/FPGA development often needs several targets with pinout mismatching. In such a case, if the VHDL code contains signal with FPGA/ASIC pins number information, it can lead to major code modification to update this value or lead to misunderstanding.
 			</hb:Rationale>
-			<hb:ShortDesc>Signal name does not contain FPGA/ASIC pin number	value.</hb:ShortDesc>
+			<hb:ShortDesc>Signal name does not contain FPGA/ASIC pin number value.</hb:ShortDesc>
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
@@ -604,7 +604,7 @@ Thus, a signal that represents a falling edge of a signal named My_Sig is My_Sig
 			<hb:Category>Formatting</hb:Category>
 			<hb:SubCategory>Naming</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>Differentiating process label with other VHDL object improves readability.</hb:Rationale>
+			<hb:Rationale>Differentiating process label from other VHDL object improves readability.</hb:Rationale>
 			<hb:ShortDesc>Process label name starts by a prefix: "P_".</hb:ShortDesc>
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
@@ -638,7 +638,7 @@ Thus, a signal that represents a falling edge of a signal named My_Sig is My_Sig
 			<hb:Category>Formatting</hb:Category>
 			<hb:SubCategory>Naming</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>Differentiating constant object with other VHDL object improves readability.</hb:Rationale>
+			<hb:Rationale>Differentiating constant object from other VHDL object improves readability.</hb:Rationale>
 			<hb:ShortDesc>Constant name starts by a prefix: "c_".</hb:ShortDesc>
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
@@ -672,9 +672,9 @@ Thus, a signal that represents a falling edge of a signal named My_Sig is My_Sig
 			<hb:Category>Formatting</hb:Category>
 			<hb:SubCategory>Naming</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>Identifying signal that  clock delayed of of another one by reading its name improves readability.
+			<hb:Rationale>Identifying signal that is clock delayed of another one by reading its name improves readability.
 			</hb:Rationale>
-			<hb:ShortDesc>The suffix of signal that is a registration of another signal is: "_r".</hb:ShortDesc>
+			<hb:ShortDesc>The suffix of a signal that is a registration of another one is: "_r".</hb:ShortDesc>
 			<hb:LongDesc>The signal source is also included inside the signal name.
 Thus, a signal that is clock delayed of a signal named My_Signal is My_Signal_r.
 If a small number of registration of a same signal is used (less or equal to 3), SIGNAL_r can become SIGNAL_rx where x is the number of registration stage.
@@ -711,7 +711,7 @@ If a significant number of registration of a same signal is used, use an array f
 			<hb:SubCategory>Naming</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
 			<hb:Rationale>Meaningful architecture name helps managing simulation and implementation sources.</hb:Rationale>
-			<hb:ShortDesc>VHDL architecture are of type behavioral, RTL  or Simulation.</hb:ShortDesc>
+			<hb:ShortDesc>VHDL architecture are of type Behavioral, RTL or Simulation.</hb:ShortDesc>
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
@@ -743,7 +743,7 @@ If a significant number of registration of a same signal is used, use an array f
 			<hb:Category>Traceability</hb:Category>
 			<hb:SubCategory>Versioning</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>Current version of file in the header of file allows traceability and reuse.</hb:Rationale>
+			<hb:Rationale>Current version of file in the header of the file allows traceability and reuse.</hb:Rationale>
 			<hb:ShortDesc>Header of file includes current version of file.</hb:ShortDesc>
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
@@ -832,7 +832,7 @@ If a significant number of registration of a same signal is used, use an array f
 			<hb:Creation>2014-09-30</hb:Creation>
 			<hb:Modified>2015-02-17</hb:Modified>
 			<hb:Revision>V1 : 2014-09-30 : Creation
-			V2 : 2014-12-01 : Status ; Rationale ; Shortdesc ; LongDesc ; Severity 
+			V2 : 2014-12-01 : Status ; Rationale ; ShortDesc ; LongDesc ; Severity 
       V3 : 2015-02-17 : Technology</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -879,8 +879,8 @@ If a significant number of registration of a same signal is used, use an array f
 			<hb:Category>Design</hb:Category>
 			<hb:SubCategory>Clocking</hb:SubCategory>
 			<hb:Severity>Major</hb:Severity>
-			<hb:Rationale>Clock is one of the most critical signal in the design. Use of clock signal for other input than the  dedicated logic one can lead to moving the clock signal out of its low skew dedicated route. This can lead to timing mismatch on he device.</hb:Rationale>
-			<hb:ShortDesc>Clock signal is not used inside combinatory function like multiplexor or digital gate.</hb:ShortDesc>
+			<hb:Rationale>Clock is one of the most critical signal in the design. Use of a clock signal for other input than the dedicated logic one can lead to moving the clock signal out of its low skew dedicated route. This can lead to timing mismatch on the device.</hb:Rationale>
+			<hb:ShortDesc>Clock signal is not used inside combinational function like multiplexor or digital gate.</hb:ShortDesc>
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
@@ -1082,12 +1082,12 @@ If a significant number of registration of a same signal is used, use an array f
 			<hb:Category>Formatting</hb:Category>
 			<hb:SubCategory>FileStructure</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>Compact VHDL file reduce the complexity of the function
+			<hb:Rationale>Compact VHDL files reduce the complexity of the function
 				defined and thus the risk of a bug.
 				Too many lines inside a VHDL file might depict a badly designed module
 				or an architecture definition problem.</hb:Rationale>
 			<hb:ShortDesc>The HDL architectural code have a limited number of lines set to 450.</hb:ShortDesc>
-			<hb:LongDesc>HDL architectural code is the vhdl statements included between the begin statement and the end statement of the architecture. 
+			<hb:LongDesc>HDL architectural code are the VHDL statements included between the begin statement and the end statement of the architecture. 
 The definition area (for signals, constants components...) is not included in this area, nor are the comments lines.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
@@ -1119,7 +1119,7 @@ The definition area (for signals, constants components...) is not included in th
 			<hb:Category>Traceability</hb:Category>
 			<hb:SubCategory>Versioning</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>File name in the header insures that the header really applies to the current file and is not a copy/paste header.</hb:Rationale>
+			<hb:Rationale>File name in the header ensures that the header really applies to the current file and is not a copy/paste header.</hb:Rationale>
 			<hb:ShortDesc>Header of file includes the name of the file.</hb:ShortDesc>
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
@@ -1220,9 +1220,9 @@ The definition area (for signals, constants components...) is not included in th
 			<hb:SubCategory>Versioning</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
 			<hb:Rationale>Inserting information about the automatic tool used for VHDL file generation improves code review 
-			(as the reviewer doesn't want to check automatically generated code if not modified by hand) and reuse 
+			(as the reviewer doesn't want to check automatically generated code if not modified by hand) and reusability 
 			(as it can secure which software version has been used to create the file).</hb:Rationale>
-			<hb:ShortDesc>Header of file includes references of the automatic VHDL files generator.</hb:ShortDesc>
+			<hb:ShortDesc>Header of file includes references to the automatic VHDL files generator.</hb:ShortDesc>
 			<hb:LongDesc>When a VHDL code file is generated automatically by a software then the header of this file includes information about the software used and its version.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc> 
@@ -1287,7 +1287,7 @@ The definition area (for signals, constants components...) is not included in th
 			<hb:Category>Traceability</hb:Category>
 			<hb:SubCategory>Versioning</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>Listing of the author of the modification allows matching of	author coding style profile with the produced VHDL during code analysis.</hb:Rationale>
+			<hb:Rationale>Listing of the author of the modification allows matching of author coding style profile with the produced VHDL during code analysis.</hb:Rationale>
 			<hb:ShortDesc>Header of file includes the name of the author of the modification(s).</hb:ShortDesc>
 			<hb:LongDesc>This information is added for each new version of the file.</hb:LongDesc>
 		</hb:RuleContent>
@@ -1323,10 +1323,10 @@ The definition area (for signals, constants components...) is not included in th
 			<hb:Severity>Minor</hb:Severity>
 			<hb:Rationale>
 				Revision control improves IP integration time.
-				Understanding the last modifications allows integrator to know if a bug was	corrected or if the modification will produce a problem.
+				Understanding the last modifications allows integrator to know if a bug was corrected or if the modification will produce a problem.
 			</hb:Rationale>
 			<hb:ShortDesc>Header of file includes current and previous file version ID and date.</hb:ShortDesc>
-			<hb:LongDesc>The header file includes a version tag (like number, letters..) with a modification date that identifies the current and previous version of the code.</hb:LongDesc>
+			<hb:LongDesc>The header of the file includes a version tag (like number, letters..) with a modification date that identifies the current and previous version of the code.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc />
@@ -1393,7 +1393,7 @@ The definition area (for signals, constants components...) is not included in th
 			<hb:Severity>Minor</hb:Severity>
 			<hb:Rationale>Functional impact(s) in the versioning of file improves traceability.</hb:Rationale>
 			<hb:ShortDesc>Header of file includes the functional impacts of a modification.</hb:ShortDesc>
-			<hb:LongDesc>This information is added for each new version of the file. The functional impact could be,for example, a change of output signal activation from edge to level, a change of compatible technology (from Xilinx to Atmel FPGAs)....</hb:LongDesc>
+			<hb:LongDesc>This information is added for each new version of the file. The functional impact could be, for example, a change of output signal activation from edge to level, a change of compatible technology (from Xilinx to Atmel FPGAs)...</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc />
@@ -1424,7 +1424,7 @@ The definition area (for signals, constants components...) is not included in th
 			<hb:SubCategory>Versioning</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
 			<hb:Rationale>Revision control improves IP integration time.
-				Understanding the last modifications allows integrator to know if a bug was	corrected or if the modification will produce a problem.</hb:Rationale>
+				Understanding the last modifications allows integrator to know if a bug was corrected or if the modification will produce a problem.</hb:Rationale>
 			<hb:ShortDesc>Header of file includes a functional description of modifications.</hb:ShortDesc>
 			<hb:LongDesc>This information is added for each new version of the file.</hb:LongDesc>
 		</hb:RuleContent>
@@ -1457,8 +1457,8 @@ The definition area (for signals, constants components...) is not included in th
 			<hb:SubCategory>Versioning</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
 			<hb:Rationale>Writing license in the header informs a third party reader what can be done with the file.</hb:Rationale>
-			<hb:ShortDesc>Header of file includes a license in header of file.</hb:ShortDesc>
-			<hb:LongDesc>A license could be a GNU public one, all right reserved to the company owner or any additional information regarding the reuse, the transfer of the file by a third party to an other one.</hb:LongDesc>
+			<hb:ShortDesc>Header of file includes a license.</hb:ShortDesc>
+			<hb:LongDesc>The license could be a GNU public one, all right reserved to the company owner or any additional information regarding the reuse, the transfer of the file by a third party to an other one.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc />
@@ -1619,9 +1619,9 @@ The definition area (for signals, constants components...) is not included in th
 			<hb:Category>Traceability</hb:Category>
 			<hb:SubCategory>Versioning</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>Functional limitation information reduces the possibility of introducing a bug when doing an  update of the VHDL code.</hb:Rationale>
+			<hb:Rationale>Functional limitation information reduces the possibility of introducing a bug when doing an update of the VHDL code.</hb:Rationale>
 			<hb:ShortDesc>Header of file includes functional limitations of the entity.</hb:ShortDesc>
-			<hb:LongDesc>The limitation could be an assumption taken by designer regarding an unclear specification that leads to a specific implementation.</hb:LongDesc>
+			<hb:LongDesc>The limitation could be an assumption taken by the designer regarding an unclear specification that leads to a specific implementation.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc />
@@ -1652,7 +1652,7 @@ The definition area (for signals, constants components...) is not included in th
 			<hb:Category>Formatting</hb:Category>
 			<hb:SubCategory>Naming</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>Identification for configuration entity name improves the identification of this file inside the project.</hb:Rationale>
+			<hb:Rationale>Identification of configuration entity name improves the identification of this file inside the project.</hb:Rationale>
 			<hb:ShortDesc>The suffix of configuration entity name is "_cfg".</hb:ShortDesc>
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
@@ -1814,10 +1814,10 @@ The definition area (for signals, constants components...) is not included in th
 			<hb:Category>Design</hb:Category>
 			<hb:SubCategory>Reset</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>Registers which are not resetted, will cause Post layout simulation mismatch. Thus these signals will have to be handled with a special attention. 
-Isolated them from resetted signal improves identification of these signals while reading vhdl code, or within the netlist (if label are used for the process).</hb:Rationale>
-			<hb:ShortDesc>Do not assign in same process initialized signals with non initialized ones.</hb:ShortDesc>
-			<hb:LongDesc>Signal registers which are not initialized (by a reset signal) within a synchronous process are not located in the same process as resetted registers signals.</hb:LongDesc>
+			<hb:Rationale>Registers which are not reset, will cause Post layout simulation mismatch. Thus these signals will have to be handled with a special attention. 
+Isolating them from initialized signal improves identification of these signals while reading VHDL code, or within the netlist (if label are used for the process).</hb:Rationale>
+			<hb:ShortDesc>Do not assign in the same process initialized signals with non-initialized ones.</hb:ShortDesc>
+			<hb:LongDesc>Signal registers which are not initialized (by a reset signal) within a synchronous process are not located in the same process as initialized register signals.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
@@ -1848,10 +1848,10 @@ Isolated them from resetted signal improves identification of these signals whil
 			<hb:SubCategory>Naming</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
 			<hb:Rationale>
-			Change of name through affectation of a signal to an other one without any logical modification can lead to simulation mismatch as this affectation take an addditionnal simulator tick to be proceeded. </hb:Rationale>
+			Change of name through affectation of a signal to another one without any logical modification can lead to simulation mismatch as this affectation take an additional simulator tick to be processed. </hb:Rationale>
 			<hb:ShortDesc>Clock signal keeps its name through hierarchy levels.</hb:ShortDesc>
 			<hb:LongDesc>Clock signal is not renamed inside an entity through signal affectation. 
-It is also a best practice to keep the clock name the same between entity ports within a project.</hb:LongDesc>
+It is also best practice to keep the clock name the same between entity ports within a project.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
@@ -1882,11 +1882,11 @@ It is also a best practice to keep the clock name the same between entity ports 
 			<hb:SubCategory>Naming</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
 			<hb:Rationale>
-			Change of name through affectation of a signal to an other one without any logical modification can lead to simulation mismatch as this affectation take an addditionnal simulator tick to be proceeded. Moreover, for a reset signal, renaming a reset signal can lead to break the reset tree.
+			Change of name through affectation of a signal to another one without any logical modification can lead to simulation mismatch as this affectation take an additional simulator tick to be processed. Moreover, renaming a reset signal can lead to break the reset tree.
 			</hb:Rationale>
 			<hb:ShortDesc>Reset signal keeps its name through hierarchy levels.</hb:ShortDesc>
 			<hb:LongDesc>Reset signal is not renamed inside an entity through signal affectation. 
-It is also a best practice to keep the reset name the same between entity ports within a project.</hb:LongDesc>
+It is also best practice to keep the reset name the same between entity ports within a project.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
 			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>

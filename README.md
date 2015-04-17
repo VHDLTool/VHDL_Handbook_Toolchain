@@ -98,41 +98,42 @@ A rule has the following template :
 
 ```XML
 <hb:Rule UID="LLL_DDD">
-		<hb:RuleUID>LLL_DDDDD</hb:RuleUID>
-		<hb:RuleHist>
-			<hb:Status>Status</hb:Status>
-			<hb:Version>X</hb:Version>
-			<hb:Creation>YYYY-MM-DD</hb:Creation>
-			<hb:Modified>YYYY-MM-DD</hb:Modified>
-			<hb:Revision>
-				V1 : YYYY-MM-DD : Creation
-			   V2 : YYYY-MM-DD : CatModified1 ; CatModified2
-            V3 : YYYY-MM-DD : CatModified3
-         </hb:Revision>
-		</hb:RuleHist>
-		<hb:RuleContent>
-			<hb:Name>Rule name</hb:Name>
-			<hb:IsParent>false</hb:IsParent>
-			<hb:IsSon>false</hb:IsSon>
-			<hb:ParentUID xsi:nil="true" />
-			<hb:Technology>Technology</hb:Technology>
-			<hb:ApplicationFields>ApplicationFields</hb:ApplicationFields>
-			<hb:Category>Category</hb:Category>
-			<hb:SubCategory>SubCategory</hb:SubCategory>
-			<hb:Severity>Severity</hb:Severity>
-			<hb:Rationale>Some rationale related to the rule.</hb:Rationale>
-			<hb:ShortDesc>A Short description of the rule.</hb:ShortDesc>
-			<hb:LongDesc>A longer description in which you can do some formatting that will be kept</hb:LongDesc>
-		</hb:RuleContent>
-		<hb:RuleDesc>
-			<hb:GoodExDesc>A description of the good example (leave empty if none needed)</hb:GoodExDesc>
-			<hb:GoodExample>GoodExampleFileName</hb:GoodExample>
-			<hb:BadExDesc>A description of the bad example (leave empty if none needed)</hb:BadExDesc>
-			<hb:BadExample>BadExampleFileName</hb:BadExample>
-			<hb:FigureDesc>A description of the figure illustrating the rule</hb:FigureDesc>
-			<hb:Figure>TheFileNameOfTheFigure</hb:Figure>
-		</hb:RuleDesc>
-	</hb:Rule>
+	<hb:RuleUID>LLL_DDDDD</hb:RuleUID>
+	<hb:RuleHist>
+		<hb:Status>Status</hb:Status>
+		<hb:Version>X</hb:Version>
+		<hb:Creation>YYYY-MM-DD</hb:Creation>
+		<hb:Modified>YYYY-MM-DD</hb:Modified>
+		<hb:Revision>
+			V1 : YYYY-MM-DD : Creation
+			V2 : YYYY-MM-DD : CatModified1 ; CatModified2
+            		V3 : YYYY-MM-DD : CatModified3
+        	</hb:Revision>
+	</hb:RuleHist>
+	<hb:RuleContent>
+		<hb:Name>Rule name</hb:Name>
+		<hb:IsParent>false</hb:IsParent>
+		<hb:IsSon>false</hb:IsSon>
+		<hb:ParentUID xsi:nil="true" />
+		<hb:Technology>Technology</hb:Technology>
+		<hb:ApplicationFields>ApplicationFields</hb:ApplicationFields>
+		<hb:Category>Category</hb:Category>
+		<hb:SubCategory>SubCategory</hb:SubCategory>
+		<hb:Severity>Severity</hb:Severity>
+		<hb:Rationale>Some rationale related to the rule.</hb:Rationale>
+		<hb:ShortDesc>A Short description of the rule.</hb:ShortDesc>
+		<hb:LongDesc>A longer description in which you can do some formatting that will be kept</hb:LongDesc>
+	</hb:RuleContent>
+	<hb:RuleDesc>
+		<hb:GoodExDesc>A description of the good example (leave empty if none needed)</hb:GoodExDesc>
+		<hb:GoodExample>GoodExampleFileName</hb:GoodExample>
+		<hb:BadExDesc>A description of the bad example (leave empty if none needed)</hb:BadExDesc>
+		<hb:BadExample>BadExampleFileName</hb:BadExample>
+		<hb:FigureDesc>A description of the figure illustrating the rule</hb:FigureDesc>
+		<hb:Figure>TheFileNameOfTheFigure</hb:Figure>
+	</hb:RuleDesc>
+</hb:Rule>
+```
 
 ## License
 

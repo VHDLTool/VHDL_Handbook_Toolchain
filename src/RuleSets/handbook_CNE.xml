@@ -261,10 +261,10 @@ The separation by uppercase (NameOfTheCustomtype) is not used.</hb:LongDesc>
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExample >CNE_01400_good</hb:GoodExample>
+			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExample >CNE_01400_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -297,10 +297,10 @@ The separation by uppercase (NameOfTheCustomtype) is not used.</hb:LongDesc>
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExample >CNE_01500_good</hb:GoodExample>
+			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExample >CNE_01500_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -334,10 +334,10 @@ The separation by uppercase (NameOfTheCustomtype) is not used.</hb:LongDesc>
 			<hb:LongDesc> By default, all signals are considered as active high signals.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExample >CNE_00100_good</hb:GoodExample>
+			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExample >CNE_00100_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -409,10 +409,10 @@ The separation by uppercase (NameOfTheCustomtype) is not used.</hb:LongDesc>
 Thus, a signal that represents a rising edge of a signal named My_Sig is My_Sig_re.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExample >CNE_01700_good</hb:GoodExample>
+			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExample >CNE_01700_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -446,10 +446,10 @@ Thus, a signal that represents a rising edge of a signal named My_Sig is My_Sig_
 Thus, a signal that represents a falling edge of a signal named My_Sig is My_Sig_fe.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExample >CNE_01800_good</hb:GoodExample>
+			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExample >CNE_01800_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -484,10 +484,10 @@ Thus, a signal that represents a falling edge of a signal named My_Sig is My_Sig
 			<hb:LongDesc>The clock relation for derivative clock, like mainclk_div2 for mainclk with a frequency divided by two, is a good way to show relation between clocks.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExample >CNE_00200_good</hb:GoodExample>
+			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExample >CNE_00200_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -521,10 +521,10 @@ Thus, a signal that represents a falling edge of a signal named My_Sig is My_Sig
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExample >CNE_00300_good</hb:GoodExample>
+			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExample >CNE_00300_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -558,11 +558,11 @@ Thus, a signal that represents a falling edge of a signal named My_Sig is My_Sig
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
-			<hb:FigureDesc>To be done for next release</hb:FigureDesc>
+			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExample >CNE_02000_good</hb:GoodExample>
+			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExample >CNE_02000_bad</hb:BadExample>
+			<hb:FigureDesc></hb:FigureDesc>
 			<hb:Figure />
 		</hb:RuleDesc>
 	</hb:Rule>
@@ -598,10 +598,10 @@ Thus, a signal that represents a falling edge of a signal named My_Sig is My_Sig
 				"b_" for bidirectional port.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExample >CNE_01100_good</hb:GoodExample>
+			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExample >CNE_01100_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -635,10 +635,10 @@ Thus, a signal that represents a falling edge of a signal named My_Sig is My_Sig
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExample >CNE_01200_good</hb:GoodExample>
+			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExample >CNE_01200_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -712,11 +712,11 @@ If a small number of registration of a same signal is used (less or equal to 3),
 If a significant number of registration of a same signal is used, use an array for registration level instead of different signals.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
-			<hb:FigureDesc>To be done for next release</hb:FigureDesc>
+			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExample >CNE_01900_good</hb:GoodExample>
+			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExample >CNE_01900_bad</hb:BadExample>
+			<hb:FigureDesc></hb:FigureDesc>
 			<hb:Figure />
 		</hb:RuleDesc>
 	</hb:Rule>
@@ -749,10 +749,10 @@ If a significant number of registration of a same signal is used, use an array f
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExample >CNE_02100_good</hb:GoodExample>
+			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExample >CNE_02100_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -859,11 +859,11 @@ If a significant number of registration of a same signal is used, use an array f
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
-			<hb:FigureDesc>To be done for next release</hb:FigureDesc>
+			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExample >CNE_04700_good</hb:GoodExample>
+			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExample ></hb:BadExample>
+			<hb:FigureDesc></hb:FigureDesc>
 			<hb:Figure />
 		</hb:RuleDesc>
 	</hb:Rule>
@@ -896,11 +896,11 @@ If a significant number of registration of a same signal is used, use an array f
 			<hb:LongDesc>FSM coding style use one synchronous process for state registration and one asynchronous process for states and outputs assertion.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
-			<hb:FigureDesc>To be done for next release</hb:FigureDesc>
+			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExample >CNE_04800_good</hb:GoodExample>
+			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExample ></hb:BadExample>
+			<hb:FigureDesc></hb:FigureDesc>
 			<hb:Figure />
 		</hb:RuleDesc>
 	</hb:Rule>
@@ -933,10 +933,10 @@ If a significant number of registration of a same signal is used, use an array f
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExample >CNE_04900_good</hb:GoodExample>
+			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExample >CNE_04900_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -1007,11 +1007,11 @@ If a significant number of registration of a same signal is used, use an array f
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
+			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExample >CNE_05100_good</hb:GoodExample>
+			<hb:BadExDesc></hb:BadExDesc>
 			<hb:BadExample />
-			<hb:FigureDesc>To be done for next release</hb:FigureDesc>
+			<hb:FigureDesc></hb:FigureDesc>
 			<hb:Figure />
 		</hb:RuleDesc>
 	</hb:Rule>
@@ -1044,9 +1044,9 @@ If a significant number of registration of a same signal is used, use an array f
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
+			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExample >CNE_05200_good</hb:GoodExample>
+			<hb:BadExDesc></hb:BadExDesc>
 			<hb:BadExample />
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -1979,10 +1979,10 @@ Isolating them from initialized signal improves identification of these signals 
 It is also best practice to keep the clock name the same between entity ports within a project.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExample >CNE_02300_good</hb:GoodExample>
+			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExample >CNE_02300_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -2015,10 +2015,10 @@ It is also best practice to keep the clock name the same between entity ports wi
 It is also best practice to keep the reset name the same between entity ports within a project.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExample >CNE_02400_good</hb:GoodExample>
+			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExample >CNE_02400_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>

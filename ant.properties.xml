@@ -48,7 +48,7 @@
 	
     
     <!-- Libraries path -->
-	<property name="saxon.lib.dir" value="${folder.home}/lib/SaxonHE9-6-0-1J" />
+	<property name="saxon.lib.dir" value="${folder.home}/lib/SaxonHE9-6-0-5J" />
 	<property name="fop.home" value="${folder.home}/lib/fop-1.1" />
 
 	

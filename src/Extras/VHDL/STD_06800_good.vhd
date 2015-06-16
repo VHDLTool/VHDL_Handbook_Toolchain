@@ -6,15 +6,15 @@
 -------------------------------------------------------------------------------------------------
 -- Version         : V1
 -- Version history : 
---    V1 : 2015-04-08 : Mickael Carl (CNES): Creation
+--    V1 : 2015-04-09 : Mickael Carl (CNES): Creation
 -------------------------------------------------------------------------------------------------
--- File name          : STD_04500_good.vhd
--- File Creation date : 2015-04-08
+-- File name          : STD_06800_good.vhd
+-- File Creation date : 2015-04-09
 -- Project name       : VHDL Handbook CNES Edition 
 -------------------------------------------------------------------------------------------------
 -- Softwares             :  Microsoft Windows (Windows 7) - Editor (Eclipse + VEditor)
 -------------------------------------------------------------------------------------------------
--- Description : Handbook example: Clock reassignment: good example
+-- Description : Handbook example: Unsuitability of signal initialization in declaration section: good example
 --
 -- Limitations : This file is an example of the VHDL handbook made by CNES. It is a stub aimed at
 --               demonstrating good practices in VHDL and as such, its design is minimalistic.
@@ -49,40 +49,31 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
---CODE
-entity STD_04500_good is
+entity STD_06800_good is
    port  (
       i_Clock     : in std_logic;   -- Clock signal
       i_Reset_n   : in std_logic;   -- Reset signal
-      -- D Flip-Flop A
-      i_DA        : in std_logic;   -- Input signal
-      o_QA        : out std_logic;  -- Output signal
-      -- D Flip-Flop B
-      i_DB        : in std_logic;   -- Input signal
-      o_QB        : out std_logic   -- Output signal
+      i_D         : in std_logic;   -- D Flip-Flop input signal
+      o_Q         : out std_logic   -- D Flip-Flop output signal
    );
-end STD_04500_good;
+end STD_06800_good;
 
-architecture Behavioral of STD_04500_good is
+--CODE
+architecture Behavioral of STD_06800_good is
+   signal Q : std_logic;   -- D Flip-Flop output
 begin
-   -- First Flip-Flop
-   DFF1:DFlipFlop
-   port map (
-      i_Clock     => i_Clock,
-      i_Reset_n   => i_Reset_n,
-      i_D         => i_DA,
-      o_Q         => o_QA,
-      o_Q_n       => open
-   );
+   -- D FlipFlop process
+   P_FlipFlop:process(i_Clock, i_Reset_n)
+   begin
+      if (i_Reset_n='0') then
+         Q <= '0';
+      else
+         if (rising_edge(i_Clock)) then
+            Q <= i_D;
+         end if;
+      end if;
+   end process;
    
-   -- Second Flip-Flop
-   DFF2:DFlipFlop
-   port map (
-      i_Clock     => i_Clock,
-      i_Reset_n   => i_Reset_n,
-      i_D         => i_DB,
-      o_Q         => o_QB,
-      o_Q_n       => open
-   );
+   o_Q <= Q;
 end Behavioral;
 --CODE

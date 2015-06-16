@@ -182,12 +182,12 @@ The extension ".vhdl" is not permitted.</hb:LongDesc>
 			<hb:LongDesc>A signal is considered as a "CLOCK" whenever it is used to synchronize other signals to its rising or falling edge within a synchronous process with one of the following VHDL functions ('event, rising_edge or falling_edge), or when it is mapped on an IP clock input.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_00200_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_00200_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_00200_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_00200_bad</hb:BadExample>
 			<hb:FigureDesc />
-			<hb:Figure />
+			<hb:Figure ></hb:Figure>
 		</hb:RuleDesc>
 	</hb:Rule>
 	
@@ -221,9 +221,9 @@ The extension ".vhdl" is not permitted.</hb:LongDesc>
 If several reset signals are used, each reset is identified with a different name.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_00300_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_00300_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_00300_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_00300_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -257,9 +257,9 @@ If several reset signals are used, each reset is identified with a different nam
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_00400_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_00400_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_00400_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_00400_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -294,9 +294,9 @@ If several reset signals are used, each reset is identified with a different nam
 For example a control signal (chip-select, write enable, read/output enable), an address, a counter, an enable, a pulse, a flag, acknowledge, ...</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_00500_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_00500_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_00500_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_00500_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -333,9 +333,9 @@ Moreover, changing a signal name which is not altered makes the understanding of
 It is best practice for other signals not to change their name if they are not altered by any kind of logic.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_00700_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_00700_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_00700_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_00700_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -369,9 +369,9 @@ It is best practice for other signals not to change their name if they are not a
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_01100_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_01100_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_01100_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_01100_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -405,9 +405,9 @@ It is best practice for other signals not to change their name if they are not a
 			<hb:LongDesc>A statement could be an affectation sequence, a conditional test, a declaration or a VHDL beginning sequence like case, process...).</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_01200_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_01200_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_01200_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_01200_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -482,9 +482,9 @@ It reduces risks of inconsistency between the entity definition and the componen
 This rule does not apply to instantiations made within IP cores would they be coming auto generated from a tool or provided by any IP core provider.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_01400_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_01400_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_01400_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_01400_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -519,9 +519,9 @@ This rule does not apply to instantiations made within IP cores would they be co
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_01000_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_01000_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_01000_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_01000_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -556,9 +556,9 @@ This rule does not apply to instantiations made within IP cores would they be co
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_01900_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_01900_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_01900_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_01900_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -666,9 +666,9 @@ This rule does not apply to instantiations made within IP cores would they be co
 Within an interface group, ports could then be sorted by direction (input, output, bidirectional).</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_01600_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_01600_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_01600_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_01600_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -703,9 +703,9 @@ Within an interface group, ports could then be sorted by direction (input, outpu
 			<hb:LongDesc>Special input ports like clock(s), reset and global enable are the first to be written in an entity.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_01700_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_01700_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_01700_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_01700_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -866,9 +866,9 @@ Understanding the last modifications allows integrator to know if a bug was corr
 Large VHDL project could use version control software (like SVN). If this is the case a tag identifying the version is also included.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_02200_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_02200_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_02200_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_02200_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -977,9 +977,9 @@ Large VHDL project could use version control software (like SVN). If this is the
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_02900_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_02900_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_02900_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_02900_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -1014,9 +1014,9 @@ Large VHDL project could use version control software (like SVN). If this is the
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_03000_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_03000_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_03000_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_03000_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -1090,9 +1090,9 @@ Nevertheless, never mix these two library families.</hb:LongDesc>
 			<hb:LongDesc>Unused declared signals and constants are deleted. Inactive or wrong code is deleted. Pieces of code commented out doesn't appear in HDL sources.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_03100_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_03100_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_03100_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_03100_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -1126,9 +1126,9 @@ Nevertheless, never mix these two library families.</hb:LongDesc>
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_03200_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_03200_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_03200_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_03200_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -1163,9 +1163,9 @@ Manufacturers of synthesis software do not recommend "buffer" type usage because
 			<hb:LongDesc>Reading an output signal inside an entity can be achieved by creating an internal signal.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_03300_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_03300_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_03300_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_03300_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -1199,9 +1199,9 @@ Manufacturers of synthesis software do not recommend "buffer" type usage because
 			<hb:LongDesc>When designing the TOP level, the designer uses only types which are allowed. Every types which are not in the allowed list are prohibited to use.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
+			<hb:GoodExDesc></hb:GoodExDesc>
 			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
+			<hb:BadExDesc></hb:BadExDesc>
 			<hb:BadExample />
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -1236,9 +1236,9 @@ Manufacturers of synthesis software do not recommend "buffer" type usage because
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_03500_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_03500_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_03500_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_03500_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -1273,9 +1273,9 @@ Manufacturers of synthesis software do not recommend "buffer" type usage because
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_03600_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_03600_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_03600_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_03600_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -1312,9 +1312,9 @@ Synchronous deassertion ensures that the component startup sequence is reproduci
 			<hb:LongDesc>If several clock domains are used then several reset signals are created to be deasserted synchronously with each targeted clock domain.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_03700_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_03700_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_03700_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_03700_bad</hb:BadExample>
 			<hb:FigureDesc></hb:FigureDesc>
 			<hb:Figure fileref="STD_03700.svg" height="250px"
@@ -1362,9 +1362,9 @@ Benefits of changing resets to synchronous :
 - More predictable timing and circuit operation</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_03800_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_03800_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_03800_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_03800_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -1398,9 +1398,9 @@ Benefits of changing resets to synchronous :
 			<hb:LongDesc>Other type of state machine definition like vectors or integer are forbidden.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_03900_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_03900_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_03900_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_03900_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -1435,9 +1435,9 @@ Benefits of changing resets to synchronous :
 "when others" instruction handles the default condition when none of the previous case statements are met.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_04000_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_04000_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_04000_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_04000_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -1651,10 +1651,10 @@ Such a practice isolates all vendor-specific clocking	elements such as PLLs, clo
 			<hb:LongDesc>Any clock element inserted in any clock path is instantiated inside the same design entity. Clock elements are clock buffers, clock multiplexers, PLLs, DCMs, fractional dividers, gapped clock logic, enabled clock logic...</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:GoodExDesc>Extracted from STD_04400_good.vhd</hb:GoodExDesc>
+			<hb:GoodExample >STD_04400_good</hb:GoodExample>
+			<hb:BadExDesc>Extracted from STD_04400_bad.vhd</hb:BadExDesc>
+			<hb:BadExample >STD_04400_bad</hb:BadExample>
 			<hb:FigureDesc></hb:FigureDesc>
 			<hb:Figure fileref="STD_04400.svg" height="400px"
 				width="450px" />
@@ -1692,12 +1692,13 @@ When a slower clock version is needed, use an enable signal instead of a derived
 When a faster clock version is needed, promote that faster clock as the single clock domain used if the design and or re-design consequences are not prohibitive prior to creating a derived clock domain.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
+			<hb:GoodExDesc></hb:GoodExDesc>
 			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
+			<hb:BadExDesc></hb:BadExDesc>
 			<hb:BadExample />
 			<hb:FigureDesc />
-			<hb:Figure />
+			<hb:Figure fileref="STD_04600.svg" height="450px"
+				width="450px" />
 		</hb:RuleDesc>
 	</hb:Rule>
 	
@@ -1768,9 +1769,9 @@ Moreover, this practice risks adding combinational blocks on clock and reset tre
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_05000_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_05000_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_05000_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_05000_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -1808,9 +1809,9 @@ Not doing so causes issues in Finite State Machines. For example, the FSM can se
 signals generated without clock and signals generated in another time domain.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_05100_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_05100_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_05100_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_05100_bad</hb:BadExample>
 			<hb:FigureDesc></hb:FigureDesc>
 			<hb:Figure fileref="STD_05100.svg" height="150px"
@@ -1848,9 +1849,9 @@ This mechanism involves a real design clock, at least one D Flip-Flop to delay t
 			</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_04900_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_04900_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_04900_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_04900_bad</hb:BadExample>
 			<hb:FigureDesc></hb:FigureDesc>
 			<hb:Figure fileref="STD_04900.svg" height="450px"
@@ -1862,13 +1863,14 @@ This mechanism involves a real design clock, at least one D Flip-Flop to delay t
 		<hb:RuleUID>STD_05200</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>3</hb:Version>
+			<hb:Version>4</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
 			<hb:Modified>2015-02-17</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Technology
 				V3 : 2015-02-17 : Figure
+				V4 : 2015-06-16 : Rationale, ShortDesc, LongDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -1881,17 +1883,17 @@ This mechanism involves a real design clock, at least one D Flip-Flop to delay t
 			<hb:Category>Design</hb:Category>
 			<hb:SubCategory>Synchronous</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>All outputs of a design are coming from output registers whenever possible and from regular registers when not possible. The clock used is the same as the one used in the signal source clock domain.
-Doing so suppresses all glitches on the outputs	whenever a signal level change occurs and enables control of the clocks to outputs delays of the design so that the time borrowed by any signal to propagate from its respective launching clock edge to its assigned device output is controlled and less than a given maximum allowed time.
+			<hb:Rationale>All outputs of an integrated circuit are coming from output registers whenever possible and from regular registers when not possible. The clock used is the same as the one used in the signal source clock domain.
+Doing so suppresses all glitches on the outputs	whenever a signal level change occurs and enables control of the clocks to outputs delays of the circuit so that the time borrowed by any signal to propagate from its respective launching clock edge to its assigned device output is controlled and less than a given maximum allowed time.
 With controlled clocks to outputs delays, enough PCB propagation time and inputs to clocks delays is left for those outputs to be captured using the same clock in a remote device.</hb:Rationale>
-			<hb:ShortDesc>All outputs signal from an entity are registered.</hb:ShortDesc>
-			<hb:LongDesc>Combinational outputs are forbidden. Outputs belong to the timing domain in which they are generated at top and modules level. Whenever it is possible, use I/O blocks register instead of internal register for top level outputs.
-Unless specified and approved, a combinational signal is never used directly as an output.</hb:LongDesc>
+			<hb:ShortDesc>All outputs signal from a top level entity are registered.</hb:ShortDesc>
+			<hb:LongDesc>Combinational outputs at top level are forbidden. Those outputs belong to the timing domain in which they are generated at top level. Whenever it is possible, use I/O blocks register instead of internal register for top level outputs.
+Unless specified and approved, a combinational signal is never used directly as a top level output.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
+			<hb:GoodExDesc></hb:GoodExDesc>
 			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
+			<hb:BadExDesc></hb:BadExDesc>
 			<hb:BadExample />
 			<hb:FigureDesc></hb:FigureDesc>
 			<hb:Figure fileref="STD_05200.svg" height="450px"
@@ -1927,9 +1929,9 @@ Unless specified and approved, a combinational signal is never used directly as 
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_05300_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_05300_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_05300_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_05300_bad</hb:BadExample>
 			<hb:FigureDesc></hb:FigureDesc>
 			<hb:Figure fileref="STD_05300.svg" height="450px"
@@ -1965,9 +1967,9 @@ Unless specified and approved, a combinational signal is never used directly as 
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_05500_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_05500_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_05500_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_05500_bad</hb:BadExample>
 			<hb:FigureDesc></hb:FigureDesc>
 			<hb:Figure fileref="STD_05500.svg" height="600px"
@@ -2004,9 +2006,9 @@ Indeed, at every step of the way through the backend, the timing loops provoked 
 			<hb:LongDesc>When synthesis reports that a timing loop is broken in a combinational process, check your design for asynchronous signals appearing on both sides of a combinational assignment statement. Once isolated break the timing loop.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_05600_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_05600_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_05600_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_05600_bad</hb:BadExample>
 			<hb:FigureDesc></hb:FigureDesc>
 			<hb:Figure fileref="STD_05600.svg" height="300px"
@@ -2044,13 +2046,13 @@ Thus, gated clock usage is prohibited inside FPGA.</hb:Rationale>
 When the synthesis reports that a gated clock was created, turn off the synthesis tool "auto convert gated clock" option, so that the tool uses the Flip-Flops clock enable instead.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:GoodExDesc>Extracted from STD_05700_good.vhd</hb:GoodExDesc>
+			<hb:GoodExample >STD_05700_good</hb:GoodExample>
+			<hb:BadExDesc>Extracted from STD_05700_bad.vhd</hb:BadExDesc>
+			<hb:BadExample >STD_05700_bad</hb:BadExample>
 			<hb:FigureDesc></hb:FigureDesc>
 			<hb:Figure fileref="STD_05700.svg" height="300px"
-				width="450px" />
+				width="450px" ></hb:Figure>
 		</hb:RuleDesc>
 	</hb:Rule>
 	
@@ -2084,9 +2086,9 @@ For that reason, it is prohibited.</hb:Rationale>
 Do not hesitate to pipeline the structure according to the targeted clock frequency and targeted technology.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_05400_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_05400_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_05400_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_05400_bad</hb:BadExample>
 			<hb:FigureDesc></hb:FigureDesc>
 			<hb:Figure fileref="STD_05400.svg" height="400px"
@@ -2157,12 +2159,12 @@ Do not hesitate to pipeline the structure according to the targeted clock freque
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
-			<hb:FigureDesc />
-			<hb:Figure />
+			<hb:GoodExDesc>Extracted from STD_06000_good.vhd</hb:GoodExDesc>
+			<hb:GoodExample >STD_06000_good</hb:GoodExample>
+			<hb:BadExDesc>Extracted from STD_06000_bad.vhd</hb:BadExDesc>
+			<hb:BadExample >STD_06000_bad</hb:BadExample>
+			<hb:FigureDesc ></hb:FigureDesc>
+			<hb:Figure ></hb:Figure>
 		</hb:RuleDesc>
 	</hb:Rule>
 	
@@ -2303,10 +2305,10 @@ Enumerate is allowed for FSMs and boolean for generics.</hb:LongDesc>
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:GoodExDesc>Extracted from STD_06200_good.vhd</hb:GoodExDesc>
+			<hb:GoodExample >STD_06200_good</hb:GoodExample>
+			<hb:BadExDesc>Extracted from STD_06200_bad.vhd</hb:BadExDesc>
+			<hb:BadExample >STD_06200_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -2414,9 +2416,9 @@ For a down counter, use the less than or equal (&lt;=) comparison sign instead o
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_06700_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_06700_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_06700_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_06700_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -2487,9 +2489,9 @@ Procedures and functions are not provided for synthesis approach but for testben
 			<hb:LongDesc>Signals are not initialized to a default value in declaration level but only during a reset sequence.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_06800_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_06800_bad.vhd</hb:BadExDesc>
 			<hb:BadExample />
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -2563,9 +2565,9 @@ The testbench instructions inside a process are then sequential which is coheren
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_07300_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_07300_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_07300_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_07300_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -2599,9 +2601,9 @@ The testbench instructions inside a process are then sequential which is coheren
 			<hb:LongDesc>The simulation stop automatically without any human action in the simulator. This can be done by external scripts, event starvation (like freezing the main clocks) in the testbench.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_07100_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_07100_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_07100_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_07100_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -2701,9 +2703,9 @@ The testbench instructions inside a process are then sequential which is coheren
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_04500_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_04500_good</hb:GoodExample>
-			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_04500_bad.vhd</hb:BadExDesc>
 			<hb:BadExample >STD_04500_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />

@@ -49,34 +49,48 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
+library Work;
+use Work.pkg_HBK.all;
+
 --CODE
 entity STD_04500_bad is
    port  (
       i_Clock     : in std_logic;   -- Clock signal
       i_Reset_n   : in std_logic;   -- Reset signal
-      i_D         : in std_logic;   -- D Flip-Flop input signal
-      o_Q         : out std_logic   -- D Flip-Flop output signal
+      -- D Flip-Flop A
+      i_DA        : in std_logic;   -- Input signal
+      o_QA        : out std_logic;  -- Output signal
+      -- D Flip-Flop B
+      i_DB        : in std_logic;   -- Input signal
+      o_QB        : out std_logic   -- Output signal
    );
 end STD_04500_bad;
 
 architecture Behavioral of STD_04500_bad is
-   signal Q       : std_logic; -- D Flip-Flop output
-   signal Clockg  : std_logic; -- Clock input
+   signal ClockA  : std_logic; -- Clock input for A Flip-Flop
+   signal ClockB  : std_logic; -- Clock input for B Flip-Flop
 begin
-   Clockg <= i_Clock;
+   ClockA <= i_Clock;
+   ClockB <= i_Clock;
    
-   -- D FlipFlop process
-   P_FlipFlop:process(Clockg, i_Reset_n)
-   begin
-      if (i_Reset_n='0') then
-         Q <= '0';
-      else
-         if (rising_edge(Clockg)) then
-            Q <= i_D;
-         end if;
-      end if;
-   end process;
+   -- First Flip-Flop
+   DFF1:DFlipFlop
+   port map (
+      i_Clock     => ClockA,
+      i_Reset_n   => i_Reset_n,
+      i_D         => i_DA,
+      o_Q         => o_QA,
+      o_Q_n       => open
+   );
    
-   o_Q <= Q;
+   -- Second Flip-Flop
+   DFF2:DFlipFlop
+   port map (
+      i_Clock     => ClockB,
+      i_Reset_n   => i_Reset_n,
+      i_D         => i_DB,
+      o_Q         => o_QB,
+      o_Q_n       => open
+   );
 end Behavioral;
 --CODE

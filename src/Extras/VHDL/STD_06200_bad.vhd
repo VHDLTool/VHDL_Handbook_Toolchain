@@ -6,15 +6,15 @@
 -------------------------------------------------------------------------------------------------
 -- Version         : V1
 -- Version history : 
---    V1 : 2015-04-08 : Mickael Carl (CNES): Creation
+--    V1 : 2015-04-20 : Mickael Carl (CNES): Creation
 -------------------------------------------------------------------------------------------------
--- File name          : STD_04500_good.vhd
--- File Creation date : 2015-04-08
+-- File name          : STD_06200_bad.vhd
+-- File Creation date : 2015-04-20
 -- Project name       : VHDL Handbook CNES Edition 
 -------------------------------------------------------------------------------------------------
 -- Softwares             :  Microsoft Windows (Windows 7) - Editor (Eclipse + VEditor)
 -------------------------------------------------------------------------------------------------
--- Description : Handbook example: Clock reassignment: good example
+-- Description : Handbook example: Management of numeric values: bad example
 --
 -- Limitations : This file is an example of the VHDL handbook made by CNES. It is a stub aimed at
 --               demonstrating good practices in VHDL and as such, its design is minimalistic.
@@ -50,39 +50,18 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 --CODE
-entity STD_04500_good is
+entity STD_06200_bad is
    port  (
-      i_Clock     : in std_logic;   -- Clock signal
-      i_Reset_n   : in std_logic;   -- Reset signal
-      -- D Flip-Flop A
-      i_DA        : in std_logic;   -- Input signal
-      o_QA        : out std_logic;  -- Output signal
-      -- D Flip-Flop B
-      i_DB        : in std_logic;   -- Input signal
-      o_QB        : out std_logic   -- Output signal
+      i_D0  : in std_logic_vector(3 downto 0);
+      i_D1  : in std_logic_vector(3 downto 0);
+      i_Sel : in std_logic;
+      o_D   : out std_logic_vector(3 downto 0)
    );
-end STD_04500_good;
+end STD_06200_bad;
 
-architecture Behavioral of STD_04500_good is
+architecture Behavioral of STD_06200_bad is
 begin
-   -- First Flip-Flop
-   DFF1:DFlipFlop
-   port map (
-      i_Clock     => i_Clock,
-      i_Reset_n   => i_Reset_n,
-      i_D         => i_DA,
-      o_Q         => o_QA,
-      o_Q_n       => open
-   );
-   
-   -- Second Flip-Flop
-   DFF2:DFlipFlop
-   port map (
-      i_Clock     => i_Clock,
-      i_Reset_n   => i_Reset_n,
-      i_D         => i_DB,
-      o_Q         => o_QB,
-      o_Q_n       => open
-   );
+   o_D <= i_D1 when i_Sel='1'
+     else i_D0;
 end Behavioral;
 --CODE

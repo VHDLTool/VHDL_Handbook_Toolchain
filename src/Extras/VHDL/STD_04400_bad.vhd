@@ -8,13 +8,13 @@
 -- Version history : 
 --    V1 : 2015-04-08 : Mickael Carl (CNES): Creation
 -------------------------------------------------------------------------------------------------
--- File name          : STD_04500_good.vhd
+-- File name          : STD_04400_bad.vhd
 -- File Creation date : 2015-04-08
 -- Project name       : VHDL Handbook CNES Edition 
 -------------------------------------------------------------------------------------------------
 -- Softwares             :  Microsoft Windows (Windows 7) - Editor (Eclipse + VEditor)
 -------------------------------------------------------------------------------------------------
--- Description : Handbook example: Clock reassignment: good example
+-- Description : Handbook example: Clock management module: bad example
 --
 -- Limitations : This file is an example of the VHDL handbook made by CNES. It is a stub aimed at
 --               demonstrating good practices in VHDL and as such, its design is minimalistic.
@@ -50,39 +50,63 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 --CODE
-entity STD_04500_good is
+entity STD_04400_bad is
    port  (
-      i_Clock     : in std_logic;   -- Clock signal
-      i_Reset_n   : in std_logic;   -- Reset signal
-      -- D Flip-Flop A
-      i_DA        : in std_logic;   -- Input signal
-      o_QA        : out std_logic;  -- Output signal
-      -- D Flip-Flop B
-      i_DB        : in std_logic;   -- Input signal
-      o_QB        : out std_logic   -- Output signal
+      i_Clock     : in std_logic;   -- Main clock signal
+      i_Reset_n   : in std_logic;   -- Main reset signal
+      -- A clock domain:
+      i_DataA     : in std_logic;   -- Input data for A clock domain
+      o_DataA     : out std_logic;  -- Output data in A clock domain
+      o_ClockA    : out std_logic;  -- Clock in A domain
+      -- B clock domain:
+      i_DataB     : in std_logic;   -- Input data for B clock domain
+      o_DataB     : out std_logic;  -- Output data in B clock domain
+      o_ClockB    : out std_logic   -- Clock in B domain
    );
-end STD_04500_good;
+end STD_04400_bad;
 
-architecture Behavioral of STD_04500_good is
+architecture Behavioral of STD_04400_bad is
+   component DFlipFlop_With_CMM
+   -- Generates a slower clock signal and uses it to synchronize its input
+   port (
+      i_Clock     : in std_logic;   -- Main clock signal
+      i_Reset_n   : in std_logic;   -- Main reset signal
+      i_Data      : in std_logic;   -- Data to sync
+      o_Data      : out std_logic;  -- Data signal synced
+      o_Clock     : out std_logic   -- Generated clock signal
+   );
+   end component;
+   
+   -- First module:
+   signal DataA   : std_logic;      -- Data output
+   signal ClockA  : std_logic;      -- Clock output
+   -- Second module:
+   signal DataB   : std_logic;      -- Data output
+   signal ClockB  : std_logic;      -- Clock output
 begin
-   -- First Flip-Flop
-   DFF1:DFlipFlop
+   FlipFlopA:DFlipFlop_With_CMM
    port map (
       i_Clock     => i_Clock,
       i_Reset_n   => i_Reset_n,
-      i_D         => i_DA,
-      o_Q         => o_QA,
-      o_Q_n       => open
+      i_Data      => i_DataA,
+      o_Data      => DataA,
+      o_Clock     => ClockA
    );
    
-   -- Second Flip-Flop
-   DFF2:DFlipFlop
+   FlipFlopB:DFlipFlop_With_CMM
    port map (
       i_Clock     => i_Clock,
       i_Reset_n   => i_Reset_n,
-      i_D         => i_DB,
-      o_Q         => o_QB,
-      o_Q_n       => open
+      i_Data      => i_DataB,
+      o_Data      => DataB,
+      o_Clock     => ClockB
    );
+   
+   -- A clock domain outputs:
+   o_DataA <= DataA;
+   o_ClockA <= ClockA;
+   -- B clock domain outputs:
+   o_DataB <= DataB;
+   o_ClockB <= ClockB;
 end Behavioral;
 --CODE

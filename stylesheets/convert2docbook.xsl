@@ -11,8 +11,8 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:hb="HANDBOOK"
 	xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:d="http://docbook.org/ns/docbook">
 
-   <xsl:import href="../stylesheets/docbook-xsl-ns-1.78.1/fo/docbook.xsl" />
-	<xsl:import href="../stylesheets/docbook-xsl-ns-1.78.1/fo/highlight.xsl" />
+   <xsl:import href="../stylesheets/docbook/fo/docbook.xsl" />
+	<xsl:import href="../stylesheets/docbook/fo/highlight.xsl" />
 
 	<xsl:key name="cat" match="hb:RuleSet/hb:Rule" use="hb:RuleContent/hb:Category" />
 	<xsl:key name="subcat" match="hb:RuleSet/hb:Rule" use="hb:RuleContent/hb:SubCategory" />

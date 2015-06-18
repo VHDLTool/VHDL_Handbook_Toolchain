@@ -43,7 +43,7 @@
 	<property name="file.xsl.convert2docbook" value="${folder.stylesheet}/convert2docbook.xsl" /> <!-- stylesheet for the script: sorting -->
 	
  	<!-- docbook stylesheet -->
-	<property name="docbook.xsl.dir" value="${folder.stylesheet}/docbook-xsl-ns-1.78.1" />
+	<property name="docbook.xsl.dir" value="${folder.stylesheet}/docbook" />
 	<property name="fo.stylesheet" value="${docbook.xsl.dir}/fo/docbook.xsl" /> <!-- FO stylesheet for docbook -->
 	
     

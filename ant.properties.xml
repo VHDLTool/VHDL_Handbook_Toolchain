@@ -42,12 +42,12 @@
 	<property name="file.xsl.convert2docbook" value="${folder.stylesheet}/convert2docbook.xsl" /> <!-- stylesheet for the script: sorting -->
 
 	<!-- docbook stylesheet -->
-	<property name="docbook.xsl.dir" value="${folder.stylesheet}/docbook-xsl-ns-1.78.1" />
+	<property name="docbook.xsl.dir" value="${folder.stylesheet}/docbook" />
 	<property name="fo.stylesheet" value="${docbook.xsl.dir}/fo/docbook.xsl" /> <!-- FO stylesheet for docbook -->
 
 
 	<!-- Libraries path -->
-	<property name="saxon.lib.dir" value="${folder.home}/lib/SaxonHE9-6-0-1J" />
+	<property name="saxon.lib.dir" value="${folder.home}/lib/SaxonHE9-6-0-5J" />
 	<property name="fop.home" value="${folder.home}/lib/fop-1.1" />
 
 

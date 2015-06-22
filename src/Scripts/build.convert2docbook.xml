@@ -18,7 +18,7 @@
 				force="yes">
 			<classpath refid="saxon.classpath" />
 			<!-- Define parameters for the XSLT transformation -->
-	   		<param name="VHDL_folder" expression="${folder.vhdl}"/>
+			<param name="VHDL_folder" expression="${folder.vhdl}"/>
 			<param name="Text_folder" expression="${folder.text}"/>
 			<param name="Images_folder" expression="${folder.images}"/>
 			<param name="Standart_to_pdf" expression="${file.export_std_rules_pdf}"/>	

@@ -19,7 +19,7 @@ To generate a PDF file from the sources, you will need the following software:
 
 - [Apache FOP](https://xmlgraphics.apache.org/fop/)
  
-- [Docbook XSL Stylesheets](http://sourceforge.net/projects/docbook/files/docbook-xsl/)
+- [Docbook XSL Stylesheets](http://sourceforge.net/projects/docbook/files/docbook-xsl/) (which is included as a Git submodule, available [here](https://github.com/VHDLTool/docbook)
 
 ## Project structure
 
@@ -49,7 +49,7 @@ The project is structured as follows :
 
 ## Building
 
-You may first modify your `ant.properties` according to your development environment (changing path of Saxon, FOP and the Docbook stylesheets) and put your handbook xml files (including an addtionnal xml to customize the revision of your pdf release) in the dedicated folder. You may also need to change the path of the Docbook stylesheets in the `stylesheets/convert2docbook.xsl` if needed.
+You may first modify your `ant.properties` according to your development environment (changing path of Saxon and FOP) and put your handbook xml files (including an addtionnal xml to customize the revision of your pdf release) in the dedicated folder. 
 
 ### Project settings
 

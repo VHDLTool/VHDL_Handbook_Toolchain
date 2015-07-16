@@ -8,13 +8,14 @@
 		<hb:RuleUID>CNE_01000</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>3</hb:Version>
+			<hb:Version>4</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-02-17</hb:Modified>
+			<hb:Modified>2015-07-16</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Status ; Name ; Rationale ; Severity  
 				V3 : 2015-02-17 : Technology
+				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -236,13 +237,14 @@ The separation by uppercase (NameOfTheCustomtype) is not used.</hb:LongDesc>
 		<hb:RuleUID>CNE_01400</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>3</hb:Version>
+			<hb:Version>4</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-02-17</hb:Modified>
+			<hb:Modified>2015-07-16</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Status ; Name ; Severity 
 				V3 : 2015-02-17 : Technology
+				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -274,13 +276,14 @@ The separation by uppercase (NameOfTheCustomtype) is not used.</hb:LongDesc>
 		<hb:RuleUID>CNE_01500</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>3</hb:Version>
+			<hb:Version>4</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-02-17</hb:Modified>
+			<hb:Modified>2015-07-16</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Status ; Name ; Severity   
-				V3 : 2015-02-17 : Technology</hb:Revision>
+				V3 : 2015-02-17 : Technology
+				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
 			<hb:Name>Identification of custom type name</hb:Name>
@@ -310,13 +313,14 @@ The separation by uppercase (NameOfTheCustomtype) is not used.</hb:LongDesc>
 		<hb:RuleUID>CNE_00100</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>3</hb:Version>
+			<hb:Version>4</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-02-17</hb:Modified>
+			<hb:Modified>2015-07-16</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Status ; Name   
 				V3 : 2015-02-17 : Technology
+				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -347,13 +351,14 @@ The separation by uppercase (NameOfTheCustomtype) is not used.</hb:LongDesc>
 		<hb:RuleUID>CNE_01600</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>3</hb:Version>
+			<hb:Version>4</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-02-17</hb:Modified>
+			<hb:Modified>2015-07-16</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Status ; Name ; Rationale 
 				V3 : 2015-02-17 : Technology ; Severity ; ShortDesc
+				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -384,13 +389,14 @@ The separation by uppercase (NameOfTheCustomtype) is not used.</hb:LongDesc>
 		<hb:RuleUID>CNE_01700</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>3</hb:Version>
+			<hb:Version>4</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-02-17</hb:Modified>
+			<hb:Modified>2015-07-16</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Status ; Name ; Rationale ; ShortDesc ; LongDesc
 				V3 : 2015-02-17 : Technology ; Severity
+				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -422,12 +428,13 @@ Thus, a signal that represents a rising edge of a signal named My_Sig is My_Sig_
 		<hb:RuleUID>CNE_01800</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>2</hb:Version>
+			<hb:Version>3</hb:Version>
 			<hb:Creation>2014-12-01</hb:Creation>
-			<hb:Modified>2015-02-17</hb:Modified>
+			<hb:Modified>2015-07-16</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2015-02-17 : Technology ; Severity
+				V3 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -459,13 +466,14 @@ Thus, a signal that represents a falling edge of a signal named My_Sig is My_Sig
 		<hb:RuleUID>CNE_00200</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>3</hb:Version>
+			<hb:Version>4</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-02-17</hb:Modified>
+			<hb:Modified>2015-07-16</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Status ; ShortDesc ; LongDesc ; GoodExDesc ; BadExDesc 
 				V3 : 2015-02-17 : Technology
+				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -497,13 +505,14 @@ Thus, a signal that represents a falling edge of a signal named My_Sig is My_Sig
 		<hb:RuleUID>CNE_00300</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>3</hb:Version>
+			<hb:Version>4</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-02-17</hb:Modified>
+			<hb:Modified>2015-07-16</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Status ; Rationale ; GoodExDesc ; BadExDesc 
 				V3 : 2015-02-17 : Technology
+				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -534,13 +543,14 @@ Thus, a signal that represents a falling edge of a signal named My_Sig is My_Sig
 		<hb:RuleUID>CNE_02000</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>3</hb:Version>
+			<hb:Version>4</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-02-17</hb:Modified>
+			<hb:Modified>2015-07-16</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Status ; Rationale ; ShortDesc ; Severity  
 				V3 : 2015-02-17 : Technology ; ShortDesc
+				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -571,13 +581,14 @@ Thus, a signal that represents a falling edge of a signal named My_Sig is My_Sig
 		<hb:RuleUID>CNE_01100</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>3</hb:Version>
+			<hb:Version>4</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-02-17</hb:Modified>
+			<hb:Modified>2015-07-16</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Status ; Name ; Severity ; Rationale ; ShortDesc ; LongDesc 
 				V3 : 2015-02-17 : Technology ; Severity
+				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -611,13 +622,14 @@ Thus, a signal that represents a falling edge of a signal named My_Sig is My_Sig
 		<hb:RuleUID>CNE_01200</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>3</hb:Version>
+			<hb:Version>4</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-02-17</hb:Modified>
+			<hb:Modified>2015-07-16</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Status ; Name ; Rationale 
 				V3 : 2015-02-17 : Technology
+				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -648,13 +660,14 @@ Thus, a signal that represents a falling edge of a signal named My_Sig is My_Sig
 		<hb:RuleUID>CNE_01300</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>3</hb:Version>
+			<hb:Version>4</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-02-17</hb:Modified>
+			<hb:Modified>2015-07-16</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Status ; Name ; Rationale 
 				V3 : 2015-02-17 : Technology
+				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -685,13 +698,14 @@ Thus, a signal that represents a falling edge of a signal named My_Sig is My_Sig
 		<hb:RuleUID>CNE_01900</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>3</hb:Version>
+			<hb:Version>4</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-02-17</hb:Modified>
+			<hb:Modified>2015-07-16</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Status ; Name ; Severity ; Rationale ; LongDesc
 				V3 : 2015-02-17 : Technology ; Severity
+				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -725,13 +739,14 @@ If a significant number of registration of a same signal is used, use an array f
 		<hb:RuleUID>CNE_02100</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>3</hb:Version>
+			<hb:Version>4</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-02-17</hb:Modified>
+			<hb:Modified>2015-07-16</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Status 
 				V3 : 2015-02-17 : Technology
+				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -835,13 +850,14 @@ If a significant number of registration of a same signal is used, use an array f
 		<hb:RuleUID>CNE_04700</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>3</hb:Version>
+			<hb:Version>4</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-02-17</hb:Modified>
+			<hb:Modified>2015-07-16</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Status ; Rationale ; ShortDesc ; Severity  
 				V3 : 2015-02-17 : Technology
+				V4 : 2015-07-16 : GoodExample ; GoodExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -872,13 +888,14 @@ If a significant number of registration of a same signal is used, use an array f
 		<hb:RuleUID>CNE_04800</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>3</hb:Version>
+			<hb:Version>4</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-02-17</hb:Modified>
+			<hb:Modified>2015-07-16</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Status ; Rationale ; ShortDesc ; LongDesc ; Severity 
 				V3 : 2015-02-17 : Technology
+				V4 : 2015-07-16 : GoodExample ; GoodExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -909,13 +926,14 @@ If a significant number of registration of a same signal is used, use an array f
 		<hb:RuleUID>CNE_04900</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>3</hb:Version>
+			<hb:Version>4</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-02-17</hb:Modified>
+			<hb:Modified>2015-07-16</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2: Status ; Severity ; Rationale  
 				V3 : 2015-02-17 : Technology
+				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -983,13 +1001,14 @@ If a significant number of registration of a same signal is used, use an array f
 		<hb:RuleUID>CNE_05100</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>3</hb:Version>
+			<hb:Version>4</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-02-17</hb:Modified>
+			<hb:Modified>2015-07-16</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Status ; Rationale ; ShortDesc ; Severity 
 				V3 : 2015-02-17 : Technology
+				V4 : 2015-07-16 : GoodExample ; GoodExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -1020,13 +1039,14 @@ If a significant number of registration of a same signal is used, use an array f
 		<hb:RuleUID>CNE_05200</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>3</hb:Version>
+			<hb:Version>4</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-02-17</hb:Modified>
+			<hb:Modified>2015-07-16</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Status ; Rationale ; Severity 
 				V3 : 2015-02-17 : Technology
+				V4 : 2015-07-16 : GoodExample ; GoodExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -1920,11 +1940,12 @@ Understanding the last modifications allows integrator to know if a bug was corr
 		<hb:RuleUID>CNE_04500</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>1</hb:Version>
+			<hb:Version>2</hb:Version>
 			<hb:Creation>2015-02-17</hb:Creation>
-			<hb:Modified>2015-02-17</hb:Modified>
+			<hb:Modified>2015-07-16</hb:Modified>
 			<hb:Revision>
 				V1 : 2015-02-17 : Creation
+				V2 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -1956,11 +1977,12 @@ Isolating them from initialized signal improves identification of these signals 
 		<hb:RuleUID>CNE_02300</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>1</hb:Version>
+			<hb:Version>2</hb:Version>
 			<hb:Creation>2015-02-17</hb:Creation>
-			<hb:Modified>2015-02-17</hb:Modified>
+			<hb:Modified>2015-07-16</hb:Modified>
 			<hb:Revision>
 				V1 : 2015-02-17 : Creation
+				V2 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -1992,11 +2014,12 @@ It is also best practice to keep the clock name the same between entity ports wi
 		<hb:RuleUID>CNE_02400</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>1</hb:Version>
+			<hb:Version>2</hb:Version>
 			<hb:Creation>2015-02-17</hb:Creation>
-			<hb:Modified>2015-02-17</hb:Modified>
+			<hb:Modified>2015-07-16</hb:Modified>
 			<hb:Revision>
 				V1 : 2015-02-17 : Creation
+				V2 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -2025,12 +2048,13 @@ It is also best practice to keep the reset name the same between entity ports wi
 	</hb:Rule>
   
 	<hb:RuleSetHist>
-		<hb:Version>3</hb:Version>
+		<hb:Version>4</hb:Version>
 		<hb:Creation>2014-11-13</hb:Creation>
-		<hb:Modified>2015-02-17</hb:Modified>
+		<hb:Modified>2015-07-16</hb:Modified>
 		<hb:Revision>V1 : 2014-11-13 : Creation
 V2 : 2014-12-01 : Update rules with results from CNES poll and 1st draft review.
-V3 : 2015-02-17 : Update of rules with remarks from partners about V2 revision.</hb:Revision>
+V3 : 2015-02-17 : Update of rules with remarks from partners about V2 revision.
+V4 : 2015-07-16 : Update rules with examples</hb:Revision>
 	</hb:RuleSetHist>	
 
 </hb:RuleSet>

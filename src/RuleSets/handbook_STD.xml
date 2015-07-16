@@ -442,9 +442,9 @@ It is best practice for other signals not to change their name if they are not a
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
+			<hb:GoodExDesc>Extracted from STD_01300_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample ></hb:GoodExample>
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
+			<hb:BadExDesc>Extracted from STD_01300_bad.vhd</hb:BadExDesc>
 			<hb:BadExample ></hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -1473,9 +1473,9 @@ Benefits of changing resets to synchronous :
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
+			<hb:GoodExDesc></hb:GoodExDesc>
 			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
+			<hb:BadExDesc></hb:BadExDesc>
 			<hb:BadExample />
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -1558,10 +1558,10 @@ The source clock domain should continue to assert the "transmit request" control
 The sender should not assert a new "transmit request" until the acknowledgement for the previous transfer is deasserted in the source clock domain.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:GoodExDesc>Extracted from STD_04200_good.vhd</hb:GoodExDesc>
+			<hb:GoodExample >STD_04200_good</hb:GoodExample>
+			<hb:BadExDesc>Extracted from STD_04200_bad.vhd</hb:BadExDesc>
+			<hb:BadExample >STD_04200_bad</hb:BadExample>
 			<hb:FigureDesc></hb:FigureDesc>
 			<hb:Figure fileref="STD_04200.svg" height="450px"
 				width="450px" />
@@ -1732,9 +1732,9 @@ The only module that can handle several clocks are the clock management module a
 Other modules can include different clocks but the data exchange between them is done through the approved clock domain crossing module.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
+			<hb:GoodExDesc></hb:GoodExDesc>
 			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
+			<hb:BadExDesc></hb:BadExDesc>
 			<hb:BadExample />
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -2123,10 +2123,10 @@ Do not hesitate to pipeline the structure according to the targeted clock freque
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:GoodExDesc>Extracted from STD_05900_good.vhd</hb:GoodExDesc>
+			<hb:GoodExample >STD_05900_good</hb:GoodExample>
+			<hb:BadExDesc>Extracted from STD_05900_bad.vhd</hb:BadExDesc>
+			<hb:BadExample >STD_05900_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -2196,10 +2196,10 @@ Do not hesitate to pipeline the structure according to the targeted clock freque
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:GoodExDesc>Extracted from STD_06100_good.vhd</hb:GoodExDesc>
+			<hb:GoodExample >STD_06100_good</hb:GoodExample>
+			<hb:BadExDesc>Extracted from STD_06100_bad.vhd</hb:BadExDesc>
+			<hb:BadExample >STD_06100_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -2233,9 +2233,9 @@ Do not hesitate to pipeline the structure according to the targeted clock freque
 Enumerate is allowed for FSMs and boolean for generics.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
+			<hb:GoodExDesc></hb:GoodExDesc>
 			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
+			<hb:BadExDesc></hb:BadExDesc>
 			<hb:BadExample />
 			<hb:FigureDesc />
 			<hb:Figure />
@@ -2379,10 +2379,10 @@ For an up counter, use the greater than or equal to (&gt;=) comparison sign inst
 For a down counter, use the less than or equal (&lt;=) comparison sign instead of the equals sign (=).</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done fort next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done fort next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:GoodExDesc>Extracted from STD_06500_good.vhd</hb:GoodExDesc>
+			<hb:GoodExample >STD_06500_good</hb:GoodExample>
+			<hb:BadExDesc>Extracted from STD_06500_bad.vhd</hb:BadExDesc>
+			<hb:BadExample >STD_06500_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -2736,10 +2736,10 @@ The testbench instructions inside a process are then sequential which is coheren
 			<hb:LongDesc>Using of unsigned or signed type to insure comparison between two elements is a best practice.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:GoodExDesc>Extracted from STD_06600_good.vhd</hb:GoodExDesc>
+			<hb:GoodExample >STD_06600_good</hb:GoodExample>
+			<hb:BadExDesc>Extracted from STD_06600_bad.vhd</hb:BadExDesc>
+			<hb:BadExample >STD_06600_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>

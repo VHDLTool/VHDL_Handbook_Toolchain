@@ -33,10 +33,10 @@ With this convention, designer will be able to track synthesis of variable and e
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:GoodExDesc>Extracted from CNE_01000_good.vhd</hb:GoodExDesc>
+			<hb:GoodExample >CNE_01000_good</hb:GoodExample>
+			<hb:BadExDesc>Extracted from CNE_01000_bad.vhd</hb:BadExDesc>
+			<hb:BadExample >CNE_01000_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -672,10 +672,10 @@ Thus, a signal that represents a falling edge of a signal named My_Sig is My_Sig
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:GoodExDesc>Extracted from CNE_01300_good.vhd</hb:GoodExDesc>
+			<hb:GoodExample >CNE_01300_good</hb:GoodExample>
+			<hb:BadExDesc>Extracted from CNE_01300_bad.vhd</hb:BadExDesc>
+			<hb:BadExample >CNE_01300_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -1943,10 +1943,10 @@ Isolating them from initialized signal improves identification of these signals 
 			<hb:LongDesc>Signal registers which are not initialized (by a reset signal) within a synchronous process are not located in the same process as initialized register signals.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>To be done for next release</hb:GoodExDesc>
-			<hb:GoodExample />
-			<hb:BadExDesc>To be done for next release</hb:BadExDesc>
-			<hb:BadExample />
+			<hb:GoodExDesc>Extracted from CNE_04500_good.vhd</hb:GoodExDesc>
+			<hb:GoodExample >CNE_04500_good</hb:GoodExample>
+			<hb:BadExDesc>Extracted from CNE_04500_bad.vhd</hb:BadExDesc>
+			<hb:BadExample >CNE_04500_bad</hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>

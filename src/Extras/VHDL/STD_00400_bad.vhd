@@ -63,8 +63,8 @@ architecture Behavioral of STD_00400_bad is
 begin
    -- D FlipFlop process
    --CODE
+   -- UNLABELLED PROCESS
    process(i_Clock, i_Reset_n)
-   --CODE
    begin
       if (i_Reset_n='0') then
          Q <= '0';
@@ -74,6 +74,6 @@ begin
          end if;
       end if;
    end process;
-   
+   --CODE
    o_Q <= Q;
 end Behavioral;

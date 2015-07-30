@@ -72,7 +72,6 @@ end STD_04200_good;
 architecture Behavioral of STD_04200_good is
    signal Request_r1 : std_logic;                              -- Request signal registered 1 time
    signal Request_r2 : std_logic;                              -- Request signal registered 2 times
-   signal Data       : std_logic_vector(g_width-1 downto 0);   -- Module output
    signal Grant_r1   : std_logic;                              -- Grant signal registered 1 time
    signal Grant_r2   : std_logic;                              -- Grant signal registered 2 times
 begin
@@ -95,21 +94,18 @@ begin
       if (i_ResetB_n='0') then
          Request_r1 <= '0';
          Request_r2 <= '0';
-         Data <= (others => '0');
       else
          if (rising_edge(i_ClockB)) then
             -- Synchronize i_Request to i_ClockB domain
+            -- Data is valid when Request_r2 is asserted
             Request_r1 <= i_Request;
             Request_r2 <= Request_r1;
-            if (Request_r2='1') then
-               Data <= i_Data;
-            end if;
          end if;
       end if;
    end process;
    
    o_Request_r2 <= Request_r2;
-   o_Data <= Data;
+   o_Data <= i_Data;
    o_Grant <= Grant_r2;
 end Behavioral;
 --CODE

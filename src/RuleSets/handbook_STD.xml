@@ -165,7 +165,7 @@ The extension ".vhdl" is not permitted.</hb:LongDesc>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Technology ; Rationale ; LongDesc
 				V3 : 2015-02-17 : ShortDesc ; LongDesc ; FigureDesc
-				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
+				V4 : 2015-07-16 : GoodExample ; GoodExDesc 
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -203,7 +203,7 @@ The extension ".vhdl" is not permitted.</hb:LongDesc>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Technology ; Rationale ; LongDesc
 				V3 : 2015-02-17 : ShortDesc ; FigureDesc
-				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
+				V4 : 2015-07-16 : GoodExample ; GoodExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -273,13 +273,12 @@ If several reset signals are used, each reset is identified with a different nam
 		<hb:RuleUID>STD_00500</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>3</hb:Version>
+			<hb:Version>2</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-07-16</hb:Modified>
+			<hb:Modified>2014-12-01</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Technology ; Rationale ; ShortDesc ; LongDesc
-				V3 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -351,13 +350,12 @@ It is best practice for other signals not to change their name if they are not a
 		<hb:RuleUID>STD_01100</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>3</hb:Version>
+			<hb:Version>2</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-07-16</hb:Modified>
+			<hb:Modified>2014-12-01</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Technology
-				V3 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -504,14 +502,13 @@ This rule does not apply to instantiations made within IP cores would they be co
 		<hb:RuleUID>STD_01000</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>4</hb:Version>
+			<hb:Version>3</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-07-16</hb:Modified>
+			<hb:Modified>2015-02-17</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Technology
 				V3 : 2015-02-17 : Rationale
-				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -1231,14 +1228,13 @@ Manufacturers of synthesis software do not recommend "buffer" type usage because
 		<hb:RuleUID>STD_03500</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>4</hb:Version>
+			<hb:Version>3</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-07-16</hb:Modified>
+			<hb:Modified>2015-02-17</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Technology ; LongDesc
 				V3 : 2015-02-17 : ShortDesc ; FigureDesc
-				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -1314,7 +1310,7 @@ Manufacturers of synthesis software do not recommend "buffer" type usage because
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Technology ; Name ; Rationale ; ShortDesc ; LongDesc
 				V3 : 2015-02-17 : Name ; Rationale ; ShortDesc; Figure
-				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
+				V4 : 2015-07-16 : GoodExample ; GoodExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -1556,7 +1552,7 @@ The use of a validated clock domain change mechanism reduces the risk of discrep
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Technology ; Severity ; GoodExDesc ; BadExDesc
 				V3 : 2015-02-17 : Figure
-				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
+				V4 : 2015-07-16 : GoodExample ; GoodExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -1652,14 +1648,13 @@ Here is a list of possible assertion checks for a FIFO design:
 		<hb:RuleUID>STD_04400</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>4</hb:Version>
+			<hb:Version>3</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-07-16</hb:Modified>
+			<hb:Modified>2015-02-17</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Technology ; ShortDesc
 				V3 : 2015-02-17 : Figure
-				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -1818,7 +1813,7 @@ Moreover, this practice risks adding combinational blocks on clock and reset tre
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Technology; Rationale ; LongDesc
 				V3 : 2015-02-17 : Figure
-				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
+				V4 : 2015-07-16 : GoodExample ; GoodExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -1860,7 +1855,7 @@ signals generated without clock and signals generated in another time domain.</h
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Technology ; Severity
 				V3 : 2015-02-17 : Figure
-				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
+				V4 : 2015-07-16 : GoodExample ; GoodExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -1943,7 +1938,7 @@ Unless specified and approved, a combinational signal is never used directly as 
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Technology
 				V3 : 2015-02-17 : Rationale ; Figure
-				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
+				V4 : 2015-07-16 : Figure
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -1961,10 +1956,10 @@ Unless specified and approved, a combinational signal is never used directly as 
 			<hb:LongDesc>No additional information.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>Extracted from STD_05300_good.vhd</hb:GoodExDesc>
-			<hb:GoodExample >STD_05300_good</hb:GoodExample>
-			<hb:BadExDesc>Extracted from STD_05300_bad.vhd</hb:BadExDesc>
-			<hb:BadExample >STD_05300_bad</hb:BadExample>
+			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExample ></hb:GoodExample>
+			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExample ></hb:BadExample>
 			<hb:FigureDesc></hb:FigureDesc>
 			<hb:Figure fileref="STD_05300.svg" height="450px"
 				width="450px" />
@@ -2061,7 +2056,7 @@ Indeed, at every step of the way through the backend, the timing loops provoked 
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Technology ; Rationale
 				V3 : 2015-02-17 : Technology ; Figure
-				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
+				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc ; Figure
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -2095,14 +2090,13 @@ When the synthesis reports that a gated clock was created, turn off the synthesi
 		<hb:RuleUID>STD_05400</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>4</hb:Version>
+			<hb:Version>3</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-07-16</hb:Modified>
+			<hb:Modified>2015-02-17</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Technology ; Severity ; Rationale ; ShortDesc
 				V3 : 2015-02-17 : Rationale ; ShortDesc ; Figure
-				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -2179,7 +2173,7 @@ Do not hesitate to pipeline the structure according to the targeted clock freque
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Technology ; Rationale
-				V3 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
+				V3 : 2015-07-16 : GoodExample ; GoodExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -2433,14 +2427,13 @@ For a down counter, use the less than or equal (&lt;=) comparison sign instead o
 		<hb:RuleUID>STD_06700</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>4</hb:Version>
+			<hb:Version>3</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-07-16</hb:Modified>
+			<hb:Modified>2015-02-17</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Technology
 				V3 ; 2015-02-17 : Rationale ; ShortDesc
-				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -2590,7 +2583,7 @@ Moreover, the testbench is more compact because identical instructions aren't re
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Technology ; Severity ; Rationale ; LongDesc ; GoodExDesc ; BadExDesc
 				V3 : 2015-02-17 : Rationale ; ShortDesc
-				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
+				V4 : 2015-07-16 : GoodExample ; GoodExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -2611,8 +2604,8 @@ The testbench instructions inside a process are then sequential which is coheren
 		<hb:RuleDesc>
 			<hb:GoodExDesc>Extracted from STD_07300_good.vhd</hb:GoodExDesc>
 			<hb:GoodExample >STD_07300_good</hb:GoodExample>
-			<hb:BadExDesc>Extracted from STD_07300_bad.vhd</hb:BadExDesc>
-			<hb:BadExample >STD_07300_bad</hb:BadExample>
+			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExample ></hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -2733,11 +2726,11 @@ The testbench instructions inside a process are then sequential which is coheren
 			<hb:Modified>2015-07-16</hb:Modified>
 			<hb:Revision>
 				V1 : 2015-02-17 : Creation
-				V2 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
+				V2 : 2015-07-16 : Name ; GoodExample ; BadExample ; GoodExDesc ; BadExDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
-			<hb:Name>Clock Reassignment</hb:Name>
+			<hb:Name>Unsuitability of Clock Reassignment</hb:Name>
 			<hb:IsParent>false</hb:IsParent>
 			<hb:IsSon>false</hb:IsSon>
 			<hb:ParentUID xsi:nil="true" />

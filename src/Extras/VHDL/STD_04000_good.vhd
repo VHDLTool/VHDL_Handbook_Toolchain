@@ -60,13 +60,13 @@ end STD_04000_good;
 
 --CODE
 architecture Behavioral of STD_04000_good is
-   constant c_Length : std_logic_vector(3 downto 0) := (others => '1'); -- How long we should count
-   type t_state      is (init, loading, enabled, finished);             -- Enumerated type for state encoding
-   signal sm_State   : t_state;                                         -- State signal
-   signal Raz        : std_logic;                                       -- Load the length value and initialize the counter
-   signal Enable     : std_logic;                                       -- Counter enable signal
-   signal Length     : std_logic_vector(3 downto 0);                    -- Counter length for counting
-   signal End_Count  : std_logic;                                       -- End signal of counter
+   constant c_Length    : std_logic_vector(3 downto 0) := (others => '1'); -- How long we should count
+   type t_state         is (init, loading, enabled, finished);             -- Enumerated type for state encoding
+   signal sm_State      : t_state;                                         -- State signal
+   signal Raz           : std_logic;                                       -- Load the length value and initialize the counter
+   signal Enable        : std_logic;                                       -- Counter enable signal
+   signal Count_Length  : std_logic_vector(3 downto 0);                    -- Counter length for counting
+   signal End_Count     : std_logic;                                       -- End signal of counter
 begin
    -- A simple counter with loading length and enable signal
    Counter:Counter
@@ -75,7 +75,7 @@ begin
       i_Reset_n   => i_Reset_n,
       i_Raz       => Raz,
       i_Enable    => Enable,
-      i_Length    => Length,
+      i_Length    => Count_Length,
       o_Done      => End_Count
    );
    
@@ -90,7 +90,7 @@ begin
             case sm_State is
                when init => 
                -- Set the length value
-                  Length <= c_Length;
+                  Count_Length <= c_Length;
                   sm_State <= loading;
                when loading =>
                -- Load the counter and initialize it

@@ -48,22 +48,27 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
+use work.pkg_HBK.all;
 
 --CODE
 entity STD_04500_good is
    port  (
       i_Clock     : in std_logic;   -- Clock signal
       i_Reset_n   : in std_logic;   -- Reset signal
+      -- D Flip-flop 3 stages pipeline
       -- D Flip-Flop A
       i_DA        : in std_logic;   -- Input signal
       o_QA        : out std_logic;  -- Output signal
-      -- D Flip-Flop B
-      i_DB        : in std_logic;   -- Input signal
-      o_QB        : out std_logic   -- Output signal
+      -- D Flip-flop B
+      o_QB        : out std_logic;  -- Output signal
+      -- D Flip-Flop C
+      o_QC        : out std_logic   -- Output signal
    );
 end STD_04500_good;
 
 architecture Behavioral of STD_04500_good is
+   signal QA : std_logic;
+   signal QB : std_logic;
 begin
    -- First Flip-Flop
    DFF1:DFlipFlop
@@ -71,7 +76,7 @@ begin
       i_Clock     => i_Clock,
       i_Reset_n   => i_Reset_n,
       i_D         => i_DA,
-      o_Q         => o_QA,
+      o_Q         => QA,
       o_Q_n       => open
    );
    
@@ -80,9 +85,22 @@ begin
    port map (
       i_Clock     => i_Clock,
       i_Reset_n   => i_Reset_n,
-      i_D         => i_DB,
-      o_Q         => o_QB,
+      i_D         => QA,
+      o_Q         => QB,
       o_Q_n       => open
    );
+   
+   -- Third Flip-Flop
+   DFF3:DFlipFlop
+   port map (
+      i_Clock     => i_Clock,
+      i_Reset_n   => i_Reset_n,
+      i_D         => QB,
+      o_Q         => o_QC,
+      o_Q_n       => open
+   );
+   
+   o_QA <= QA;
+   o_QB <= QB;
 end Behavioral;
 --CODE

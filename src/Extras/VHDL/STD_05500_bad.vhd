@@ -63,7 +63,7 @@ architecture Behavioral of STD_05500_bad is
    signal Q : std_logic;   -- Latch output
 begin
    -- Asynchronous memory latch
-   Q <= i_D when i_Enable='1' else Q;
+   Q <= i_D when i_Enable='1' else Q; --/!\ i_Enable is a common signal (not a clock)
    o_Q <= Q;
 end Behavioral;
 --CODE

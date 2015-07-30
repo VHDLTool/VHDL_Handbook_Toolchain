@@ -71,6 +71,7 @@ entity STD_01600_good is
       o_Q2        : out std_logic                     -- Mux output
    );
 end STD_01600_good;
+--CODE
 
 architecture Behavioral of STD_01600_good is
    signal Q1      : std_logic;   -- First module output
@@ -113,4 +114,3 @@ begin
    o_Q1 <= Q1;
    o_Q2 <= Q2;
 end Behavioral;
---CODE

@@ -51,18 +51,25 @@ use IEEE.numeric_std.all;
 
 --CODE
 entity STD_06200_good is
-   generic (g_Width : positive := 3);
    port  (
-      i_D0  : in std_logic_vector(g_Width downto 0);
-      i_D1  : in std_logic_vector(g_Width downto 0);
-      i_Sel : in std_logic;
-      o_D   : out std_logic_vector(g_Width downto 0)
+      i_D1  : in std_logic;
+      i_D2  : in std_logic;
+      i_D3  : in std_logic;
+      i_D4  : in std_logic;
+      i_Sel : in std_logic_vector(1 downto 0);
+      o_Q   : out std_logic
    );
 end STD_06200_good;
 
 architecture Behavioral of STD_06200_good is
+   constant c_Sel_D1 : std_logic_vector(1 downto 0) := "00";
+   constant c_Sel_D2 : std_logic_vector(1 downto 0) := "01";
+   constant c_Sel_D3 : std_logic_vector(1 downto 0) := "10";
+   constant c_Sel_D4 : std_logic_vector(1 downto 0) := "11";
 begin
-   o_D <= i_D1 when i_Sel='1'
-     else i_D0;
+   o_Q <= i_D1 when i_Sel=c_Sel_D1
+     else i_D2 when i_Sel=c_Sel_D2
+     else i_D3 when i_Sel=c_Sel_D3
+     else i_D4;
 end Behavioral;
 --CODE

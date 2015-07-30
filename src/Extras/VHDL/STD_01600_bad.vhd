@@ -68,6 +68,7 @@ entity STD_01600_bad is
       o_Q2        : out std_logic   -- Second module output
    );
 end STD_01600_bad;
+--CODE
 
 architecture Behavioral of STD_01600_bad is
    signal Q1      : std_logic;   -- First module output

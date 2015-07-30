@@ -49,11 +49,12 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
---CODE
 entity STD_00300_good is
    port  (
       i_Clock     : in std_logic;   -- Clock signal
+      --CODE
       i_Reset_n   : in std_logic;   -- Reset signal
+      --CODE
       i_D         : in std_logic;   -- D Flip-Flop input signal
       o_Q         : out std_logic   -- D Flip-Flop output signal
    );
@@ -76,4 +77,3 @@ begin
    
    o_Q <= Q;
 end Behavioral;
---CODE

@@ -6,19 +6,20 @@
 -------------------------------------------------------------------------------------------------
 -- Version         : V1
 -- Version history : 
---    V1 : 2015-04-03 : Mickael Carl (CNES): Creation
+--    V1 : 2015-04-09 : Mickael Carl (CNES): Creation
 -------------------------------------------------------------------------------------------------
--- File name          : STD_03200_good.vhd
--- File Creation date : 2015-04-03
+-- File name          : STD_06500_bad.vhd
+-- File Creation date : 2015-04-09
 -- Project name       : VHDL Handbook CNES Edition 
 -------------------------------------------------------------------------------------------------
 -- Softwares             :  Microsoft Windows (Windows 7) - Editor (Eclipse + VEditor)
 -------------------------------------------------------------------------------------------------
--- Description : Handbook example: Unused output ports components management: good example
+-- Description : Handbook example: Counters end of counting: bad example
 --
 -- Limitations : This file is an example of the VHDL handbook made by CNES. It is a stub aimed at
 --               demonstrating good practices in VHDL and as such, its design is minimalistic.
 --               It is provided as is, without any warranty.
+--               This example is compliant with the Handbook version 1.
 --
 -------------------------------------------------------------------------------------------------
 -- Naming conventions: 
@@ -48,28 +49,40 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-library work;
-use work.pkg_HBK.all;
-
-entity STD_03200_good is
-   port  (
-      i_Clock     : in std_logic;   -- Clock signal
-      i_Reset_n   : in std_logic;   -- Reset signal
-      i_D         : in std_logic;   -- D Flip-Flop input signal
-      o_Q         : out std_logic   -- D Flip-Flop output signal
+entity STD_06500_bad is
+   port (
+      i_Clock     : in std_logic;                     -- Main clock signal
+      i_Reset_n   : in std_logic;                     -- Main reset signal
+      i_Enable    : in std_logic;                     -- Enables the counter
+      i_Length    : in std_logic_vector(3 downto 0);  -- Unsigned Value for Counter Period
+      o_Count     : out std_logic_vector(3 downto 0)  -- Counter (unsigned value)
    );
-end STD_03200_good;
+end STD_06500_bad;
 
 --CODE
-architecture Behavioral of STD_03200_good is
+architecture Behavioral of STD_06500_bad is
+   signal Count         : unsigned(3 downto 0); -- Counter output signal (unsigned converted)
+   signal Count_Length  : unsigned(3 downto 0); -- Length input signal (unsigned converted)
 begin
-   FlipFlop:DFlipFlop
-   port map (
-      i_Clock     => i_Clock,
-      i_Reset_n   => i_Reset_n,
-      i_D         => i_D,
-      o_Q         => o_Q,
-      o_Q_n       => open
-   );
+
+Count_Length <= unsigned(i_Length);
+
+   -- Will count undefinitely from 0 to i_Length while i_Enable is asserted
+   P_Count:process(i_Reset_n, i_Clock)
+   begin
+      if (i_Reset_n='0') then
+         Count <= (others => '0');
+      else
+         if (rising_edge(i_Clock)) then
+            if (Count=Count_Length) then -- Counter restarts from 0
+               Count <= (others => '0');
+            elsif (i_Enable='1') then -- Increment counter value
+               Count <= Count + 1;
+            end if;
+         end if;
+      end if;
+   end process;
+
+o_Count <= std_logic_vector(Count);
 end Behavioral;
 --CODE

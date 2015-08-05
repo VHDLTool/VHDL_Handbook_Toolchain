@@ -70,6 +70,8 @@ architecture Behavioral of STD_04500_bad is
    signal ClockA  : std_logic; -- Clock input for A Flip-Flop
    signal ClockB  : std_logic; -- Clock input for B Flip-Flop
    signal ClockC  : std_logic; -- Clock input for C Flip-Flop
+   signal QA : std_logic;
+   signal QB : std_logic;
 begin
    ClockA <= i_Clock;
    ClockB <= i_Clock;

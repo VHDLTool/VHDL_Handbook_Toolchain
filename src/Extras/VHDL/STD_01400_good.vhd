@@ -64,7 +64,7 @@ end STD_01400_good;
 architecture Behavioral of STD_01400_good is
 begin
    -- instantiate Mux
-   Mux1: pkg_Mux
+   Mux1: Mux
    port map (
       i_A => i_Mux_Input1,
       i_B => i_Mux_Input2,

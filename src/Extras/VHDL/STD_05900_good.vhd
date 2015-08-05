@@ -49,7 +49,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity STD_05900_bad is
+entity STD_05900_good is
    port (
       i_Clock     : in std_logic;                     -- Main clock signal
       i_Reset_n   : in std_logic;                     -- Main reset signal
@@ -57,9 +57,9 @@ entity STD_05900_bad is
       i_Length    : in std_logic_vector(7 downto 0);  -- Unsigned Value for Counter Period
       o_Count     : out std_logic_vector(7 downto 0)  -- Counter (unsigned value)
    );
-end STD_05900_bad;
+end STD_05900_good;
 
-architecture Behavioral of STD_05900_bad is
+architecture Behavioral of STD_05900_good is
    signal Count         : integer range 0 to 255;  -- Counter output signal
    signal Count_Length  : integer range 0 to 255;  -- Length input signal
 begin

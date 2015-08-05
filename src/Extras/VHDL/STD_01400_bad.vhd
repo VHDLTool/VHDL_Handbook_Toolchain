@@ -63,7 +63,7 @@ end STD_01400_bad;
 --CODE
 architecture Behavioral of STD_01400_bad is
 begin
-   Mux1: pkg_Mux
+   Mux1: Mux
    port map (i_Mux_Input1, i_Mux_Input2, i_Sel, o_Mux_Output);
 end Behavioral;
 --CODE

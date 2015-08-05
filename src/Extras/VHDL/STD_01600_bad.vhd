@@ -98,8 +98,8 @@ begin
    P_SyncMux:process(i_Reset_n, i_Clock)
    begin
       if (i_Reset_n='0') then
-         Q1 <= (others => '0');
-         Q2 <= (others => '0');
+         Q1 <= '0';
+         Q2 <= '0';
       else
          if (rising_edge(i_Clock)) then
             Q1 <= OutMux1;

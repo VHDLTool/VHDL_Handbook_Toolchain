@@ -76,15 +76,6 @@ package pkg_HBK is
    end component;
    
    component DFlipFlop
-   port (
-      i_Clock     : in std_logic;   -- Clock signal
-      i_Reset_n   : in std_logic;   -- Reset signal
-      i_D         : in std_logic;   -- D Flip-Flop input signal
-      o_Q         : out std_logic   -- D Flip-Flop output signal
-   );
-   end component;
-   
-   component DFlipFlop2Out
       port (
       i_Clock     : in std_logic;   -- Clock signal
       i_Reset_n   : in std_logic;   -- Reset signal

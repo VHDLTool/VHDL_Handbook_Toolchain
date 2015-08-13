@@ -50,39 +50,37 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 entity STD_06000_good is
-port  (
-      i_Reset_n   : in std_logic;                     -- Reset signal
-      i_Clock     : in std_logic;                     -- Clock signal
-      i_Addr      : in std_logic_vector(1 downto 0);  -- Address to read from or write to
-      i_Rd        : in std_logic;                     -- Read signal
-      i_Wr        : in std_logic;                     -- Write signal
-      i_Data      : in std_logic;                     -- Incoming data to write
-      o_Data      : out std_logic                     -- Data read
+   generic(
+      g_Data_Width : positive := 4;
+      g_Pipeline_Length : positive := 4
+   );
+   port  (
+      i_Reset_n   : in std_logic;                              -- Reset signal
+      i_Clock     : in std_logic;                              -- Clock signal
+      i_Data      : in std_logic_vector(g_Data_Width-1 downto 0);   -- Incoming data to write
+      o_Data      : out std_logic_vector(g_Data_Width-1 downto 0)   -- Data read
    );
 end STD_06000_good;
 
 --CODE
 architecture Behavioral of STD_06000_good is
-   type t_register is array (0 to 3) of std_logic; -- Array for signal registration
-   signal D    : t_register;                       -- Actual signal
-   signal Data : std_logic;                        -- Output signal
+   type t_Pipeline is array (0 to g_Pipeline_Length-1) of std_logic_vector(g_Data_Width-1 downto 0); -- Array for signal registration
+   signal D    : t_Pipeline;  -- Actual signal
 begin
    P_Register_Bank:process(i_Reset_n, i_Clock)
    begin
       if (i_Reset_n='0') then
-         D <= (others => '0');
-         Data <= '0';
+         D <= (others => (others => '0'));
       else
          if (rising_edge(i_Clock)) then
-            if (i_Rd='1') then
-               Data <= D(to_integer(unsigned(i_Addr)));
-            elsif (i_Wr='1') then
-               D(to_integer(unsigned(i_Addr))) <= i_Data;
-            end if;
+            D(0) <= i_Data;
+            for i in 1 to g_Pipeline_Length-1 loop
+               D(i) <= D(i-1);
+            end loop;
          end if;
       end if;
    end process;
    
-   o_Data <= Data;
+   o_Data <= D(g_Pipeline_Length-1);
 end Behavioral;
 --CODE

@@ -50,22 +50,21 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 entity STD_05900_bad is
-   generic (g_Width : positive);                            -- Bus width for the module
    port (
-      i_Clock     : in std_logic;                           -- Main clock signal
-      i_Reset_n   : in std_logic;                           -- Main reset signal
-      i_Enable    : in std_logic;                           -- Enables the counter
-      i_Length    : in std_logic_vector(g_Width downto 0);  -- Unsigned Value for Counter Period
-      o_Count     : out std_logic_vector(g_Width downto 0)  -- Counter (unsigned value)
+      i_Clock     : in std_logic;                     -- Main clock signal
+      i_Reset_n   : in std_logic;                     -- Main reset signal
+      i_Enable    : in std_logic;                     -- Enables the counter
+      i_Length    : in std_logic_vector(7 downto 0);  -- Unsigned Value for Counter Period
+      o_Count     : out std_logic_vector(7 downto 0)  -- Counter (unsigned value)
    );
 end STD_05900_bad;
 
 architecture Behavioral of STD_05900_bad is
-   signal Count  : integer;   -- Counter output signal
-   signal Length : integer;   -- Length input signal
+   signal Count         : integer;   -- Counter output signal
+   signal Count_Length  : integer;   -- Length input signal
 begin
 
-Length <= to_integer(unsigned(i_Length));
+Count_Length <= to_integer(unsigned(i_Length));
 
    -- Will count undefinitely from 0 to i_Length while i_Enable is asserted
    P_Count:process(i_Reset_n, i_Clock)
@@ -74,7 +73,7 @@ Length <= to_integer(unsigned(i_Length));
          Count <= 0;
       else
          if (rising_edge(i_Clock)) then
-            if (Count>=Length) then -- Counter restarts from 0
+            if (Count>=Count_Length) then -- Counter restarts from 0
                Count <= 0;
             elsif (i_Enable='1') then -- Increment counter value
                Count <= Count + 1;

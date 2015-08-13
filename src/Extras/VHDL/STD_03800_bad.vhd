@@ -48,7 +48,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity STD_03800_good is
+entity STD_03800_bad is
    port  (
       i_Clock     : in std_logic;   -- Clock signal
       i_Reset_n   : in std_logic;   -- Reset signal
@@ -56,10 +56,10 @@ entity STD_03800_good is
       o_Q         : out std_logic;  -- D Flip-Flop output signal
       o_Q_n       : out std_logic   -- D Flip-Flop output signal, inverted
    );
-end STD_03800_good;
+end STD_03800_bad;
 
 --CODE
-architecture Behavioral of STD_03800_good is
+architecture Behavioral of STD_03800_bad is
    signal Q    : std_logic := '0';   -- D Flip-Flop output
    signal Q_n  : std_logic := '1';   -- Same as Q, inverted
 begin

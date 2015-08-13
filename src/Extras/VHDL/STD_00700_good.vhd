@@ -65,12 +65,13 @@ architecture Behavioral of STD_00700_good is
    signal D       : std_logic;      -- First Flip-Flop output 
    signal Q       : std_logic;      -- Block output
 begin
-   DFlipFlop1:pkg_DFlipFlop
+   DFlipFlop1:DFlipFlop
    port map (
       i_Clock     => i_Clock,
       i_Reset_n   => i_Reset_n,
       i_D         => i_D,
-      o_Q         => D
+      o_Q         => D,
+      o_Q_n       => open
    );
    
    P_FlipFlop:process(i_Reset_n, i_Clock)

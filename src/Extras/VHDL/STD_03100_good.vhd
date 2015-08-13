@@ -48,7 +48,6 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
---CODE
 entity STD_03100_good is
    port  (
       i_Clock     : in std_logic;   -- Clock signal
@@ -58,6 +57,7 @@ entity STD_03100_good is
    );
 end STD_03100_good;
 
+--CODE
 architecture Behavioral of STD_03100_good is
    signal Q : std_logic;     -- D Flip-Flop output
 begin

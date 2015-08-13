@@ -54,22 +54,22 @@ entity STD_03700_good is
    port  (
       i_Clock           : in std_logic;   -- Clock signal
       i_Reset_Input_n   : in std_logic;   -- Reset input
-      o_Main_Reset_n    : out std_logic   -- Global reset signal
+      o_Main_Reset_n    : out std_logic   -- Global reset signal active low
    );
 end STD_03700_good;
 
 architecture Behavioral of STD_03700_good is
-   signal Main_Reset_n    : std_logic;   -- Internal signal between FlipFlops
-   signal Main_Reset_n_r  : std_logic;   -- Assertion block output
+   signal Main_Reset_n    : std_logic; -- Internal signal between FlipFlops
+   signal Main_Reset_n_r  : std_logic; -- Assertion block output
 begin
    P_Reset_Assert:process(i_Reset_Input_n, i_Clock)
    begin
       if (i_Reset_Input_n='0') then
-         Main_Reset_n <= '0';
+         Main_Reset_n <= '0';    -- Output reset signal is active low
          Main_Reset_n_r <= '0';
       else
          if rising_edge(i_Clock) then
-            Main_Reset_n <= '1';
+            Main_Reset_n <= '1'; -- Reset is deasserted. Since it is active low, the inactive value is 1
             Main_Reset_n_r <= Main_Reset_n;
          end if;
       end if;

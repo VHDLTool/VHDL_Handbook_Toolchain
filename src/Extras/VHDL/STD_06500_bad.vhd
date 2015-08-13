@@ -59,12 +59,13 @@ entity STD_06500_bad is
    );
 end STD_06500_bad;
 
+--CODE
 architecture Behavioral of STD_06500_bad is
-   signal Count  : unsigned(3 downto 0); -- Counter output signal (unsigned converted)
-   signal Length : unsigned(3 downto 0); -- Length input signal (unsigned converted)
+   signal Count         : unsigned(3 downto 0); -- Counter output signal (unsigned converted)
+   signal Count_Length  : unsigned(3 downto 0); -- Length input signal (unsigned converted)
 begin
 
-Length <= unsigned(i_Length);
+Count_Length <= unsigned(i_Length);
 
    -- Will count undefinitely from 0 to i_Length while i_Enable is asserted
    P_Count:process(i_Reset_n, i_Clock)
@@ -73,7 +74,7 @@ Length <= unsigned(i_Length);
          Count <= (others => '0');
       else
          if (rising_edge(i_Clock)) then
-            if (Count=Length) then -- Counter restarts from 0
+            if (Count=Count_Length) then -- Counter restarts from 0
                Count <= (others => '0');
             elsif (i_Enable='1') then -- Increment counter value
                Count <= Count + 1;
@@ -83,5 +84,5 @@ Length <= unsigned(i_Length);
    end process;
 
 o_Count <= std_logic_vector(Count);
-
 end Behavioral;
+--CODE

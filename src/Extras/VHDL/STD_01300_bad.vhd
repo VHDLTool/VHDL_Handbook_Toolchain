@@ -47,6 +47,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
+use work.pkg_HBK.all;
 
 --CODE
 entity STD_01300_bad is
@@ -57,16 +58,10 @@ entity STD_01300_bad is
 end STD_01300_bad;  
 
 architecture Behavioral of STD_01300_bad is
-   component DFlipFlop
-   port (
-      i_Clock, i_Reset_n, i_D : in std_logic;   -- Clock, reset & D Flip-Flop input signal
-      o_Q                     : out std_logic   -- D Flip-Flop output signal
-   );
-   end component;
 begin
    DFlipFlop1:DFlipFlop
    port map (
-      i_Clock => i_Clock, i_Reset_n => i_Reset_n, i_D => i_D, o_Q => o_Q
+      i_Clock => i_Clock, i_Reset_n => i_Reset_n, i_D => i_D, o_Q => o_Q, o_Q_n => open
    );
 end Behavioral;
 --CODE

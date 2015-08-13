@@ -52,16 +52,20 @@ use IEEE.numeric_std.all;
 --CODE
 entity STD_06200_bad is
    port  (
-      i_D0  : in std_logic_vector(3 downto 0);
-      i_D1  : in std_logic_vector(3 downto 0);
-      i_Sel : in std_logic;
-      o_D   : out std_logic_vector(3 downto 0)
+      i_D1  : in std_logic;
+      i_D2  : in std_logic;
+      i_D3  : in std_logic;
+      i_D4  : in std_logic;
+      i_Sel : in std_logic_vector(1 downto 0);
+      o_Q   : out std_logic
    );
 end STD_06200_bad;
 
 architecture Behavioral of STD_06200_bad is
 begin
-   o_D <= i_D1 when i_Sel='1'
-     else i_D0;
+   o_Q <= i_D1 when i_Sel="00"
+     else i_D2 when i_Sel="01"
+     else i_D3 when i_Sel="10"
+     else i_D4;
 end Behavioral;
 --CODE

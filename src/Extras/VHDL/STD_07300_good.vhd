@@ -85,9 +85,10 @@ begin
    -- Clock process
    P_Clock:process
    begin
-      if (End_Sim/='1') then
+      while (End_Sim/='1') loop
          Clock <= not Clock after 5 ns;
-      end if;
+      end loop;
+      wait;
    end process;
    
    --CODE
@@ -104,6 +105,7 @@ begin
       D_Signal <= '0';
       
       End_Sim <= '1';
+      wait;
       -- Or if your simulator supports VHDL-2008:
       -- finish(2);
    end process;

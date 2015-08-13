@@ -48,6 +48,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
+use work.pkg_HBK.all;
 
 --CODE
 entity STD_05700_bad is
@@ -56,28 +57,42 @@ entity STD_05700_bad is
       i_Reset_n   : in std_logic;   -- Reset signal
       i_Enable    : in std_logic;   -- Enable signal
       i_Data      : in std_logic;   -- Input data
-      o_Data      : out std_logic   -- Output data
+      o_Data      : out std_logic;  -- Output data
+      o_Gated_Clock : out std_logic -- Gated clock
    );
 end STD_05700_bad;
 
 architecture Behavioral of STD_05700_bad is
-   signal Data : std_logic; -- Data signal registered
-   signal Clock2 : std_logic;
+   signal Enable_r      : std_logic;
+   signal Gated_Clock   : std_logic;
+   signal Data_r        : std_logic; -- Data signal registered
+   signal Data_r2       : std_logic; -- Data signal registered twice
+   
 begin
+   DFF_En:DFlipFlop
+   port map (
+      i_Clock     => i_Clock,
+      i_Reset_n   => i_Reset_n,
+      i_D         => i_Enable,
+      o_Q         => Enable_r,
+      o_Q_n       => open
+   );
    -- Make the Flip-Flop work when Enable signal is at 1
-   -- Enable signal in sensitivity list and on clock path
-   Clock2 <= i_Clock and i_Enable;
-   P_Sync_Data:process(i_Reset_n, Clock2)
+   -- Enable signal on clock path
+   Gated_Clock <= i_Clock and Enable_r;
+   P_Sync_Data:process(i_Reset_n, Gated_Clock)
    begin
       if (i_Reset_n='0') then
-         Data <= '0';
+         Data_r <= '0';
+         Data_r2 <= '0';
       else
-         if (rising_edge(Clock2)) then
-            Data <= i_Data;
+         if (rising_edge(Gated_Clock)) then
+            Data_r <= i_Data;
+            Data_r2 <= Data_r;
          end if;
       end if;
    end process;
    
-   o_Data <= Data;
+   o_Data <= Data_r2;
 end Behavioral;
 --CODE

@@ -49,10 +49,11 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
---CODE
 entity STD_00200_good is
    port  (
+      --CODE
       i_Clock     : in std_logic;   -- Clock signal
+      --CODE
       i_Reset_n   : in std_logic;   -- Reset signal
       i_D         : in std_logic;   -- D Flip-Flop input signal
       o_Q         : out std_logic   -- D Flip-Flop output signal

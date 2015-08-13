@@ -54,17 +54,17 @@ entity STD_06100_bad is
       i_Clock     : in std_logic;                     -- Main clock signal
       i_Reset_n   : in std_logic;                     -- Main reset signal
       i_Enable    : in std_logic;                     -- Enables the counter
-      i_Length    : in std_logic_vector(0 to 3);  -- Unsigned Value for Counter Period
-      o_Count     : out std_logic_vector(0 to 3)  -- Counter (unsigned value)
+      i_Length    : in std_logic_vector(0 downto 3);  -- Unsigned Value for Counter Period
+      o_Count     : out std_logic_vector(0 downto 3)  -- Counter (unsigned value)
    );
 end STD_06100_bad;
 
 architecture Behavioral of STD_06100_bad is
    signal Count  : unsigned(0 to 3); -- Counter output signal (unsigned converted)
-   signal Length : unsigned(0 to 3); -- Length input signal (unsigned converted)
+   signal Count_Length : unsigned(0 to 3); -- Length input signal (unsigned converted)
 begin
 
-Length <= unsigned(i_Length);
+Count_Length <= unsigned(i_Length);
 
    -- Will count undefinitely from 0 to i_Length while i_Enable is asserted
    P_Count:process(i_Reset_n, i_Clock)
@@ -73,7 +73,7 @@ Length <= unsigned(i_Length);
          Count <= (others => '0');
       else
          if (rising_edge(i_Clock)) then
-            if (Count>=Length) then -- Counter restarts from 0
+            if (Count>=Count_Length) then -- Counter restarts from 0
                Count <= (others => '0');
             elsif (i_Enable='1') then -- Increment counter value
                Count <= Count + 1;

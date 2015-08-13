@@ -68,12 +68,13 @@ architecture Behavioral of STD_00700_bad is
 begin
    temp <= i_D;
    
-   DFlipFlop1:pkg_DFlipFlop
+   DFlipFlop1:DFlipFlop
    port map (
       i_Clock     => i_Clock,
       i_Reset_n   => i_Reset_n,
       i_D         => temp,
-      o_Q         => D
+      o_Q         => D,
+      o_Q_n       => open
    );
    
    P_FlipFlop:process(i_Reset_n, i_Clock)

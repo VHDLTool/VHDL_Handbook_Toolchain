@@ -63,7 +63,7 @@ end STD_03200_good;
 --CODE
 architecture Behavioral of STD_03200_good is
 begin
-   FlipFlop:pkg_DFlipFlop2Out
+   FlipFlop:DFlipFlop
    port map (
       i_Clock     => i_Clock,
       i_Reset_n   => i_Reset_n,

@@ -71,6 +71,7 @@ entity STD_01600_good is
       o_Q2        : out std_logic                     -- Mux output
    );
 end STD_01600_good;
+--CODE
 
 architecture Behavioral of STD_01600_good is
    signal Q1      : std_logic;   -- First module output
@@ -100,8 +101,8 @@ begin
    P_SyncMux:process(i_Reset_n, i_Clock)
    begin
       if (i_Reset_n='0') then
-         Q1 <= (others => '0');
-         Q2 <= (others => '0');
+         Q1 <= '0';
+         Q2 <= '0';
       else
          if (rising_edge(i_Clock)) then
             Q1 <= OutMux1;
@@ -113,4 +114,3 @@ begin
    o_Q1 <= Q1;
    o_Q2 <= Q2;
 end Behavioral;
---CODE

@@ -64,7 +64,7 @@ end STD_03200_bad;
 architecture Behavioral of STD_03200_bad is
    signal Q_n     : std_logic;
 begin
-   FlipFlop:pkg_DFlipFlop2Out
+   FlipFlop:DFlipFlop
    port map (
       i_Clock     => i_Clock,
       i_Reset_n   => i_Reset_n,

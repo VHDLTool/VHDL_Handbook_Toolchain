@@ -305,18 +305,19 @@ For example a control signal (chip-select, write enable, read/output enable), an
 			<hb:Figure />
 		</hb:RuleDesc>
 	</hb:Rule>
+	
 	<hb:Rule UID="STD_00700">
 		<hb:RuleUID>STD_00700</hb:RuleUID>
 		<hb:RuleHist>
-			<hb:Status>Validated</hb:Status>
+			<hb:Status>Deleted</hb:Status>
 			<hb:Version>4</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-07-16</hb:Modified>
+			<hb:Modified>2015-07-31</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Technology ; Name ; IsParent ; Rationale ; LongDesc
 				V3 : 2015-02-17 : LongDesc
-				V4 : 2015-07-16 : GoodExample ; BadExample ; GoodExDesc ; BadExDesc
+				V4 : 2015-07-31 : Status
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -337,10 +338,48 @@ Moreover, changing a signal name which is not altered makes the understanding of
 It is best practice for other signals not to change their name if they are not altered by any kind of logic.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
-			<hb:GoodExDesc>Extracted from STD_00700_good.vhd</hb:GoodExDesc>
-			<hb:GoodExample >STD_00700_good</hb:GoodExample>
-			<hb:BadExDesc>Extracted from STD_00700_bad.vhd</hb:BadExDesc>
-			<hb:BadExample >STD_00700_bad</hb:BadExample>
+			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExample ></hb:GoodExample>
+			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExample ></hb:BadExample>
+			<hb:FigureDesc />
+			<hb:Figure />
+		</hb:RuleDesc>
+	</hb:Rule>
+	
+	<hb:Rule UID="STD_00701">
+		<hb:RuleUID>STD_00701</hb:RuleUID>
+		<hb:RuleHist>
+			<hb:Status>Validated</hb:Status>
+			<hb:Version>1</hb:Version>
+			<hb:Creation>2015-07-31</hb:Creation>
+			<hb:Modified>2015-07-31</hb:Modified>
+			<hb:Revision>
+				V1 : 2014-09-30 : Creation
+			</hb:Revision>
+		</hb:RuleHist>
+		<hb:RuleContent>
+			<hb:Name>Preservation of signal name inside an entity</hb:Name>
+			<hb:IsParent>true</hb:IsParent>
+			<hb:IsSon>false</hb:IsSon>
+			<hb:ParentUID xsi:nil="true" />
+			<hb:Technology>VLSI</hb:Technology>
+			<hb:ApplicationFields>General</hb:ApplicationFields>
+			<hb:Category>Formatting</hb:Category>
+			<hb:SubCategory>Naming</hb:SubCategory>
+			<hb:Severity>Minor</hb:Severity>
+			<hb:Rationale>There is no need to change a signal name if this signal isn't modified.
+Renaming important signals (like clock or reset) can lead to simulation mismatch.
+Moreover, changing a signal name which is not altered makes the understanding of the code more difficult.</hb:Rationale>
+			<hb:ShortDesc>A non-modified signal keeps its name within its entity.</hb:ShortDesc>
+			<hb:LongDesc>Critical signals like reset or clock have to keep their name. 
+			It is best practice not to change signals name if they are not altered by any kind of logic. They should also keep their meaning (e.g. an enable should contain "en", a write "wr" etc.)</hb:LongDesc>
+		</hb:RuleContent>
+		<hb:RuleDesc>
+			<hb:GoodExDesc></hb:GoodExDesc>
+			<hb:GoodExample ></hb:GoodExample>
+			<hb:BadExDesc></hb:BadExDesc>
+			<hb:BadExample ></hb:BadExample>
 			<hb:FigureDesc />
 			<hb:Figure />
 		</hb:RuleDesc>
@@ -2297,7 +2336,7 @@ Enumerate is allowed for FSMs and boolean for generics.</hb:LongDesc>
 			<hb:Category>Design</hb:Category>
 			<hb:SubCategory>Type</hb:SubCategory>
 			<hb:Severity>Minor</hb:Severity>
-			<hb:Rationale>VHDL signal is the object used to describe a electrical wire connection or a register. It is the way to have a communication between VHDL processes, whereas variable is restricted inside a VHDL process. Its physical implementation depends on the way of using it. Using variable can lead to simulation and synthesis mismatch.</hb:Rationale>
+			<hb:Rationale>VHDL signal is the object used to describe an electrical wire connection or a register. VHDL signal is the way to have a communication between VHDL processes, whereas variable were meant to store a value inside a VHDL process. A variable is assigned without any delay whereas signal assignment lead to an event after a delta delay. This difference can induce design errors or simulation and synthesis mismatch</hb:Rationale>
 			<hb:ShortDesc>Variables are prohibited in the RTL design.</hb:ShortDesc>
 			<hb:LongDesc>Only signal type is allowed in RTL design.</hb:LongDesc>
 		</hb:RuleContent>

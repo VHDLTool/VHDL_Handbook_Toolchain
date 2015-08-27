@@ -77,4 +77,3 @@ begin
    
    o_Q <= Q;
 end Behavioral;
---CODE

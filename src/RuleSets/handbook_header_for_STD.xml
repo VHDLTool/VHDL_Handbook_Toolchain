@@ -3,7 +3,6 @@
 <hb:RuleSet xmlns:hb="HANDBOOK"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	
-	 
 	<hb:RuleSetHist>
 		<hb:Version>1.1</hb:Version>
 		<hb:Creation>2015-03-04</hb:Creation>

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 2015-02-17 : Update of rules with remarks from partners about V2 revision -->
 <hb:RuleSet xmlns:hb="HANDBOOK"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="HANDBOOK ../XSD/handbook.xsd">

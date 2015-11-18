@@ -48,7 +48,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
-
+--CODE
 entity STD_05900_bad is
    port (
       i_Clock     : in std_logic;                     -- Main clock signal
@@ -63,7 +63,7 @@ architecture Behavioral of STD_05900_bad is
    signal Count         : integer;   -- Counter output signal
    signal Count_Length  : integer;   -- Length input signal
 begin
-
+--CODE
 Count_Length <= to_integer(unsigned(i_Length));
 
    -- Will count undefinitely from 0 to i_Length while i_Enable is asserted

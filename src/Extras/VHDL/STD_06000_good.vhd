@@ -1,16 +1,16 @@
 -------------------------------------------------------------------------------------------------
 -- Company   : CNES
 -- Author    : Mickael Carl (CNES)
--- Copyright : Copyright (c) CNES. 
+-- Copyright : Copyright (c) CNES.
 -- Licensing : GNU GPLv3
 -------------------------------------------------------------------------------------------------
 -- Version         : V1
--- Version history : 
+-- Version history :
 --    V1 : 2015-04-13 : Mickael Carl (CNES): Creation
 -------------------------------------------------------------------------------------------------
 -- File name          : STD_06000_good.vhd
 -- File Creation date : 2015-04-13
--- Project name       : VHDL Handbook CNES Edition 
+-- Project name       : VHDL Handbook CNES Edition
 -------------------------------------------------------------------------------------------------
 -- Softwares             :  Microsoft Windows (Windows 7) - Editor (Eclipse + VEditor)
 -------------------------------------------------------------------------------------------------
@@ -22,14 +22,14 @@
 --               This example is compliant with the Handbook version 1.
 --
 -------------------------------------------------------------------------------------------------
--- Naming conventions: 
+-- Naming conventions:
 --
 -- i_Port: Input entity port
 -- o_Port: Output entity port
 -- b_Port: Bidirectional entity port
 -- g_My_Generic: Generic entity port
 --
--- c_My_Constant: Constant definition 
+-- c_My_Constant: Constant definition
 -- t_My_Type: Custom type definition
 --
 -- My_Signal_n: Active low signal
@@ -51,25 +51,25 @@ use IEEE.numeric_std.all;
 
 entity STD_06000_good is
    generic(
-      g_Data_Width : positive := 4;
+      g_Data_Width      : positive := 4;
       g_Pipeline_Length : positive := 4
-   );
-   port  (
-      i_Reset_n   : in std_logic;                              -- Reset signal
-      i_Clock     : in std_logic;                              -- Clock signal
-      i_Data      : in std_logic_vector(g_Data_Width-1 downto 0);   -- Incoming data to write
-      o_Data      : out std_logic_vector(g_Data_Width-1 downto 0)   -- Data read
-   );
+      );
+   port (
+      i_Reset_n : in  std_logic;        -- Reset signal
+      i_Clock   : in  std_logic;        -- Clock signal
+      i_Data    : in  std_logic_vector(g_Data_Width-1 downto 0);  -- Incoming data to write
+      o_Data    : out std_logic_vector(g_Data_Width-1 downto 0)   -- Data read
+      );
 end STD_06000_good;
 
 --CODE
 architecture Behavioral of STD_06000_good is
-   type t_Pipeline is array (0 to g_Pipeline_Length-1) of std_logic_vector(g_Data_Width-1 downto 0); -- Array for signal registration
-   signal D    : t_Pipeline;  -- Actual signal
+   type t_Pipeline is array (0 to g_Pipeline_Length-1) of std_logic_vector(g_Data_Width-1 downto 0);  -- Array for signal registration
+   signal D : t_Pipeline;               -- Actual signal
 begin
-   P_Register_Bank:process(i_Reset_n, i_Clock)
+   P_Register_Bank : process(i_Reset_n, i_Clock)
    begin
-      if (i_Reset_n='0') then
+      if (i_Reset_n = '0') then
          D <= (others => (others => '0'));
       else
          if (rising_edge(i_Clock)) then
@@ -80,7 +80,7 @@ begin
          end if;
       end if;
    end process;
-   
+
    o_Data <= D(g_Pipeline_Length-1);
 end Behavioral;
 --CODE

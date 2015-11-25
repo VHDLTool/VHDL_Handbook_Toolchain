@@ -1,16 +1,16 @@
 -------------------------------------------------------------------------------------------------
 -- Company   : CNES
 -- Author    : Mickael Carl (CNES)
--- Copyright : Copyright (c) CNES. 
+-- Copyright : Copyright (c) CNES.
 -- Licensing : GNU GPLv3
 -------------------------------------------------------------------------------------------------
 -- Version         : V1
--- Version history : 
+-- Version history :
 --    V1 : 2015-04-10 : Mickael Carl (CNES): Creation
 -------------------------------------------------------------------------------------------------
 -- File name          : DFlipFlop2Out.vhd
 -- File Creation date : 2015-04-10
--- Project name       : VHDL Handbook CNES Edition 
+-- Project name       : VHDL Handbook CNES Edition
 -------------------------------------------------------------------------------------------------
 -- Softwares             :  Microsoft Windows (Windows 7) - Editor (Eclipse + VEditor)
 -------------------------------------------------------------------------------------------------
@@ -22,14 +22,14 @@
 --               This example is compliant with the Handbook version 1.
 --
 -------------------------------------------------------------------------------------------------
--- Naming conventions: 
+-- Naming conventions:
 --
 -- i_Port: Input entity port
 -- o_Port: Output entity port
 -- b_Port: Bidirectional entity port
 -- g_My_Generic: Generic entity port
 --
--- c_My_Constant: Constant definition 
+-- c_My_Constant: Constant definition
 -- t_My_Type: Custom type definition
 --
 -- My_Signal_n: Active low signal
@@ -50,22 +50,22 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 entity DFlipFlop is
-   port  (
-      i_Clock     : in std_logic;   -- Clock signal
-      i_Reset_n   : in std_logic;   -- Reset signal
-      i_D         : in std_logic;   -- D Flip-Flop input signal
-      o_Q         : out std_logic;  -- D Flip-Flop output signal
-      o_Q_n       : out std_logic   -- D Flip-Flop output signal, inverted
-   );
+   port (
+      i_Clock   : in  std_logic;        -- Clock signal
+      i_Reset_n : in  std_logic;        -- Reset signal
+      i_D       : in  std_logic;        -- D Flip-Flop input signal
+      o_Q       : out std_logic;        -- D Flip-Flop output signal
+      o_Q_n     : out std_logic         -- D Flip-Flop output signal, inverted
+      );
 end DFlipFlop;
 
 architecture Behavioral of DFlipFlop is
-   signal Q   : std_logic; -- D Flip-Flop output
+   signal Q : std_logic;                -- D Flip-Flop output
 begin
    -- D FlipFlop process
-   P_FlipFlop:process(i_Clock, i_Reset_n)
+   P_FlipFlop : process(i_Clock, i_Reset_n)
    begin
-      if (i_Reset_n='0') then
+      if (i_Reset_n = '0') then
          Q <= '0';
       else
          if (rising_edge(i_Clock)) then
@@ -73,7 +73,7 @@ begin
          end if;
       end if;
    end process;
-   
-   o_Q <= Q;
+
+   o_Q   <= Q;
    o_Q_n <= not Q;
 end Behavioral;

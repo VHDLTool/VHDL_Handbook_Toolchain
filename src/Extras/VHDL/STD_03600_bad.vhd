@@ -1,16 +1,16 @@
 -------------------------------------------------------------------------------------------------
 -- Company   : CNES
 -- Author    : Mickael Carl (CNES)
--- Copyright : Copyright (c) CNES. 
+-- Copyright : Copyright (c) CNES.
 -- Licensing : GNU GPLv3
 -------------------------------------------------------------------------------------------------
 -- Version         : V1
--- Version history : 
+-- Version history :
 --    V1 : 2015-04-07 : Mickael Carl (CNES): Creation
 -------------------------------------------------------------------------------------------------
 -- File name          : STD_03600_bad.vhd
 -- File Creation date : 2015-04-07
--- Project name       : VHDL Handbook CNES Edition 
+-- Project name       : VHDL Handbook CNES Edition
 -------------------------------------------------------------------------------------------------
 -- Softwares             :  Microsoft Windows (Windows 7) - Editor (Eclipse + VEditor)
 -------------------------------------------------------------------------------------------------
@@ -21,14 +21,14 @@
 --               It is provided as is, without any warranty.
 --
 -------------------------------------------------------------------------------------------------
--- Naming conventions: 
+-- Naming conventions:
 --
 -- i_Port: Input entity port
 -- o_Port: Output entity port
 -- b_Port: Bidirectional entity port
 -- g_My_Generic: Generic entity port
 --
--- c_My_Constant: Constant definition 
+-- c_My_Constant: Constant definition
 -- t_My_Type: Custom type definition
 --
 -- My_Signal_n: Active low signal
@@ -49,24 +49,24 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 entity STD_03600_bad is
-   port  (
-      i_Reset_n   : in std_logic;   -- Reset signal
-      i_Clock     : in std_logic;   -- Clock signal
-      i_D         : in std_logic;   -- Async signal
-      o_Q         : out std_logic   -- Rising edge of i_D
-   );
+   port (
+      i_Reset_n : in  std_logic;        -- Reset signal
+      i_Clock   : in  std_logic;        -- Clock signal
+      i_D       : in  std_logic;        -- Async signal
+      o_Q       : out std_logic         -- Rising edge of i_D
+      );
 end STD_03600_bad;
 
 --CODE
 architecture Behavioral of STD_03600_bad is
-   signal D_r1    : std_logic; -- D signal registered 1 time
-   signal D_r2    : std_logic; -- D signal registered 2 times
-   signal D_re    : std_logic; -- Module output
-   signal Reset   : std_logic; -- Reset signal (active high)
+   signal D_r1  : std_logic;            -- D signal registered 1 time
+   signal D_r2  : std_logic;            -- D signal registered 2 times
+   signal D_re  : std_logic;            -- Module output
+   signal Reset : std_logic;            -- Reset signal (active high)
 begin
-   P_First_Register:process(i_Reset_n, i_Clock)
+   P_First_Register : process(i_Reset_n, i_Clock)
    begin
-      if (i_Reset_n='0') then
+      if (i_Reset_n = '0') then
          D_r1 <= '0';
       else
          if (rising_edge(i_Clock)) then
@@ -74,12 +74,12 @@ begin
          end if;
       end if;
    end process;
-   
+
    Reset <= not i_Reset_n;
-   
-   P_Second_Register:process(Reset, i_Clock)
+
+   P_Second_Register : process(Reset, i_Clock)
    begin
-      if (Reset='1') then
+      if (Reset = '1') then
          D_r2 <= '0';
       else
          if (rising_edge(i_Clock)) then
@@ -88,7 +88,7 @@ begin
          end if;
       end if;
    end process;
-   
+
    o_Q <= D_re;
 end Behavioral;
 --CODE

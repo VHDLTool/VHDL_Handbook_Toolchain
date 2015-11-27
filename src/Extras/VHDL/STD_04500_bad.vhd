@@ -1,16 +1,16 @@
 -------------------------------------------------------------------------------------------------
 -- Company   : CNES
 -- Author    : Mickael Carl (CNES)
--- Copyright : Copyright (c) CNES. 
+-- Copyright : Copyright (c) CNES.
 -- Licensing : GNU GPLv3
 -------------------------------------------------------------------------------------------------
 -- Version         : V1
--- Version history : 
+-- Version history :
 --    V1 : 2015-04-08 : Mickael Carl (CNES): Creation
 -------------------------------------------------------------------------------------------------
 -- File name          : STD_04500_bad.vhd
 -- File Creation date : 2015-04-08
--- Project name       : VHDL Handbook CNES Edition 
+-- Project name       : VHDL Handbook CNES Edition
 -------------------------------------------------------------------------------------------------
 -- Softwares             :  Microsoft Windows (Windows 7) - Editor (Eclipse + VEditor)
 -------------------------------------------------------------------------------------------------
@@ -22,14 +22,14 @@
 --               This example is compliant with the Handbook version 1.
 --
 -------------------------------------------------------------------------------------------------
--- Naming conventions: 
+-- Naming conventions:
 --
 -- i_Port: Input entity port
 -- o_Port: Output entity port
 -- b_Port: Bidirectional entity port
 -- g_My_Generic: Generic entity port
 --
--- c_My_Constant: Constant definition 
+-- c_My_Constant: Constant definition
 -- t_My_Type: Custom type definition
 --
 -- My_Signal_n: Active low signal
@@ -52,61 +52,61 @@ use work.pkg_HBK.all;
 
 --CODE
 entity STD_04500_bad is
-   port  (
-      i_Clock     : in std_logic;   -- Clock signal
-      i_Reset_n   : in std_logic;   -- Reset signal
+   port (
+      i_Clock   : in  std_logic;        -- Clock signal
+      i_Reset_n : in  std_logic;        -- Reset signal
       -- D Flip-flop 3 stages pipeline
       -- D Flip-Flop A
-      i_DA        : in std_logic;   -- Input signal
-      o_QA        : out std_logic;  -- Output signal
+      i_DA      : in  std_logic;        -- Input signal
+      o_QA      : out std_logic;        -- Output signal
       -- D Flip-flop B
-      o_QB        : out std_logic;  -- Output signal
+      o_QB      : out std_logic;        -- Output signal
       -- D Flip-Flop C
-      o_QC        : out std_logic   -- Output signal
-   );
+      o_QC      : out std_logic         -- Output signal
+      );
 end STD_04500_bad;
 
 architecture Behavioral of STD_04500_bad is
-   signal ClockA  : std_logic; -- Clock input for A Flip-Flop
-   signal ClockB  : std_logic; -- Clock input for B Flip-Flop
-   signal ClockC  : std_logic; -- Clock input for C Flip-Flop
-   signal QA : std_logic;
-   signal QB : std_logic;
+   signal ClockA : std_logic;           -- Clock input for A Flip-Flop
+   signal ClockB : std_logic;           -- Clock input for B Flip-Flop
+   signal ClockC : std_logic;           -- Clock input for C Flip-Flop
+   signal QA     : std_logic;
+   signal QB     : std_logic;
 begin
    ClockA <= i_Clock;
    ClockB <= i_Clock;
    ClockC <= i_Clock;
-   
+
    -- First Flip-Flop
-   DFF1:DFlipFlop
-   port map (
-      i_Clock     => ClockA,
-      i_Reset_n   => i_Reset_n,
-      i_D         => i_DA,
-      o_Q         => QA,
-      o_Q_n       => open
-   );
-   
+   DFF1 : DFlipFlop
+      port map (
+         i_Clock   => ClockA,
+         i_Reset_n => i_Reset_n,
+         i_D       => i_DA,
+         o_Q       => QA,
+         o_Q_n     => open
+         );
+
    -- Second Flip-Flop
-   DFF2:DFlipFlop
-   port map (
-      i_Clock     => ClockB,
-      i_Reset_n   => i_Reset_n,
-      i_D         => QA,
-      o_Q         => QB,
-      o_Q_n       => open
-   );
-   
-      -- Third Flip-Flop
-   DFF3:DFlipFlop
-   port map (
-      i_Clock     => ClockC,
-      i_Reset_n   => i_Reset_n,
-      i_D         => QB,
-      o_Q         => o_QC,
-      o_Q_n       => open
-   );
-   
+   DFF2 : DFlipFlop
+      port map (
+         i_Clock   => ClockB,
+         i_Reset_n => i_Reset_n,
+         i_D       => QA,
+         o_Q       => QB,
+         o_Q_n     => open
+         );
+
+   -- Third Flip-Flop
+   DFF3 : DFlipFlop
+      port map (
+         i_Clock   => ClockC,
+         i_Reset_n => i_Reset_n,
+         i_D       => QB,
+         o_Q       => o_QC,
+         o_Q_n     => open
+         );
+
    o_QA <= QA;
    o_QB <= QB;
 end Behavioral;

@@ -52,16 +52,16 @@ use IEEE.numeric_std.all;
 entity STD_00200_good is
    port (
       --CODE
-      i_Clock   : in  std_logic;  -- Clock signal
+      i_Clock   : in  std_logic;        -- Clock signal
       --CODE
-      i_Reset_n : in  std_logic;  -- Reset signal
-      i_D       : in  std_logic;  -- D Flip-Flop input signal
-      o_Q       : out std_logic  -- D Flip-Flop output signal
+      i_Reset_n : in  std_logic;        -- Reset signal
+      i_D       : in  std_logic;        -- D Flip-Flop input signal
+      o_Q       : out std_logic         -- D Flip-Flop output signal
       );
 end STD_00200_good;
 
 architecture Behavioral of STD_00200_good is
-   signal Q : std_logic;  -- D Flip-Flop output
+   signal Q : std_logic;                -- D Flip-Flop output
 begin
    -- D FlipFlop process
    P_FlipFlop : process(i_Clock, i_Reset_n)

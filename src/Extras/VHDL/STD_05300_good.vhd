@@ -1,16 +1,16 @@
 -------------------------------------------------------------------------------------------------
 -- Company   : CNES
 -- Author    : Mickael Carl (CNES)
--- Copyright : Copyright (c) CNES. 
+-- Copyright : Copyright (c) CNES.
 -- Licensing : GNU GPLv3
 -------------------------------------------------------------------------------------------------
 -- Version         : V1
--- Version history : 
+-- Version history :
 --    V1 : 2015-04-07 : Mickael Carl (CNES): Creation
 -------------------------------------------------------------------------------------------------
 -- File name          : STD_05300_good.vhd
 -- File Creation date : 2015-04-07
--- Project name       : VHDL Handbook CNES Edition 
+-- Project name       : VHDL Handbook CNES Edition
 -------------------------------------------------------------------------------------------------
 -- Softwares             :  Microsoft Windows (Windows 7) - Editor (Eclipse + VEditor)
 -------------------------------------------------------------------------------------------------
@@ -21,14 +21,14 @@
 --               It is provided as is, without any warranty.
 --
 -------------------------------------------------------------------------------------------------
--- Naming conventions: 
+-- Naming conventions:
 --
 -- i_Port: Input entity port
 -- o_Port: Output entity port
 -- b_Port: Bidirectional entity port
 -- g_My_Generic: Generic entity port
 --
--- c_My_Constant: Constant definition 
+-- c_My_Constant: Constant definition
 -- t_My_Type: Custom type definition
 --
 -- My_Signal_n: Active low signal
@@ -49,22 +49,22 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 entity STD_05300_good is
-   port  (
-      i_A   : in std_logic;   -- First Mux input
-      i_B   : in std_logic;   -- Second Mux input
-      i_S   : in std_logic;   -- Mux selector
-      o_O   : out std_logic   -- Mux output
-   );
+   port (
+      i_A : in  std_logic;              -- First Mux input
+      i_B : in  std_logic;              -- Second Mux input
+      i_S : in  std_logic;              -- Mux selector
+      o_O : out std_logic               -- Mux output
+      );
 end STD_05300_good;
 
 architecture Behavioral of STD_05300_good is
-   signal O : std_logic; -- Mux output
+   signal O : std_logic;                -- Mux output
 begin
 --CODE
    -- Simple Mux asynchronous process with complete sensitivity list
-   P_Mux:process(i_S, i_A, i_B)
+   P_Mux : process(i_S, i_A, i_B)
    begin
-      if (i_S='1') then
+      if (i_S = '1') then
          O <= i_B;
       else
          O <= i_A;

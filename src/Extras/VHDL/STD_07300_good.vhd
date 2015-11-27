@@ -1,16 +1,16 @@
 -------------------------------------------------------------------------------------------------
 -- Company   : CNES
 -- Author    : Mickael Carl (CNES)
--- Copyright : Copyright (c) CNES. 
+-- Copyright : Copyright (c) CNES.
 -- Licensing : GNU GPLv3
 -------------------------------------------------------------------------------------------------
 -- Version         : V1
--- Version history : 
+-- Version history :
 --    V1 : 2015-04-09 : Mickael Carl (CNES): Creation
 -------------------------------------------------------------------------------------------------
 -- File name          : STD_07300_good.vhd
 -- File Creation date : 2015-04-09
--- Project name       : VHDL Handbook CNES Edition 
+-- Project name       : VHDL Handbook CNES Edition
 -------------------------------------------------------------------------------------------------
 -- Softwares             :  Microsoft Windows (Windows 7) - Editor (Eclipse + VEditor)
 -------------------------------------------------------------------------------------------------
@@ -22,14 +22,14 @@
 --               This example is compliant with the Handbook version 1.
 --
 -------------------------------------------------------------------------------------------------
--- Naming conventions: 
+-- Naming conventions:
 --
 -- i_Port: Input entity port
 -- o_Port: Output entity port
 -- b_Port: Bidirectional entity port
 -- g_My_Generic: Generic entity port
 --
--- c_My_Constant: Constant definition 
+-- c_My_Constant: Constant definition
 -- t_My_Type: Custom type definition
 --
 -- My_Signal_n: Active low signal
@@ -54,60 +54,60 @@ end STD_07300_good;
 
 architecture Simulation of STD_07300_good is
    -- All signals for tested modules inputs/outputs
-   signal Clock      : std_logic := '0';
-   signal Reset_n    : std_logic;
-   signal D_Signal   : std_logic;
-   signal Q_Signal   : std_logic;
-   
+   signal Clock    : std_logic := '0';
+   signal Reset_n  : std_logic;
+   signal D_Signal : std_logic;
+   signal Q_Signal : std_logic;
+
    -- Used to stop simulation when no more stimulus are present
-   signal End_Sim    : std_logic;
-   
+   signal End_Sim : std_logic;
+
    component DFlipFlop
-   port (
-      i_Clock     : in std_logic;   -- Clock signal
-      i_Reset_n   : in std_logic;   -- Reset signal
-      i_D         : in std_logic;   -- D Flip-Flop input signal
-      o_Q         : out std_logic;  -- D Flip-Flop output signal
-      o_Q_n       : out std_logic   -- D Flip-Flop output signal, inverted
-   );
+      port (
+         i_Clock   : in  std_logic;     -- Clock signal
+         i_Reset_n : in  std_logic;     -- Reset signal
+         i_D       : in  std_logic;     -- D Flip-Flop input signal
+         o_Q       : out std_logic;     -- D Flip-Flop output signal
+         o_Q_n     : out std_logic      -- D Flip-Flop output signal, inverted
+         );
    end component;
 begin
    -- The D Flip-Flop to test
-   T_DFlipFlop: DFlipFlop
-   port map (
-      i_Clock     => Clock,
-      i_Reset_n   => Reset_n,
-      i_D         => D_Signal,
-      o_Q         => Q_Signal,
-      o_Q_n       => open
-   );
-   
+   T_DFlipFlop : DFlipFlop
+      port map (
+         i_Clock   => Clock,
+         i_Reset_n => Reset_n,
+         i_D       => D_Signal,
+         o_Q       => Q_Signal,
+         o_Q_n     => open
+         );
+
    -- Clock process
-   P_Clock:process
+   P_Clock : process
    begin
-      while (End_Sim/='1') loop
+      while (End_Sim /= '1') loop
          Clock <= not Clock after 5 ns;
       end loop;
       wait;
    end process;
-   
+
    --CODE
    -- Test process
-   P_Test:process
+   P_Test : process
    begin
-      Reset_n <= '0';
+      Reset_n  <= '0';
       D_Signal <= '0';
       wait until rising_edge(Clock);
-      Reset_n <= '1';
+      Reset_n  <= '1';
       wait until rising_edge(Clock);
       D_Signal <= '1';
       wait until rising_edge(Clock);
       D_Signal <= '0';
-      
+
       End_Sim <= '1';
       wait;
-      -- Or if your simulator supports VHDL-2008:
-      -- finish(2);
+   -- Or if your simulator supports VHDL-2008:
+   -- finish(2);
    end process;
-   --CODE
+--CODE
 end Simulation;

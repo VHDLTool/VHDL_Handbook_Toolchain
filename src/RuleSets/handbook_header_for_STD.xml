@@ -6,10 +6,11 @@
 	<hb:RuleSetHist>
 		<hb:Version>1.1</hb:Version>
 		<hb:Creation>2015-03-04</hb:Creation>
-		<hb:Modified>2015-07-16</hb:Modified>
+		<hb:Modified>2015-12-01</hb:Modified>
 		<hb:Revision>
-			V1 : 2015-03-04 : Creation based on STD rule set V3 (2015-02-17)
+			V1      : 2015-03-04 : Creation based on STD rule set V3 (2015-02-17)
 			V1.1RC1 : 2015-07-16 : Update with examples, based on STD rule set V4 (2015-07-16)
+			V1.1    : 2015-12-01 : Final release for handbook version 1.1 
 		</hb:Revision>
 	</hb:RuleSetHist>
 	

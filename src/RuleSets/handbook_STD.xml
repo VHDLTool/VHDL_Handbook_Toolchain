@@ -195,14 +195,15 @@ The extension ".vhdl" is not permitted.</hb:LongDesc>
 		<hb:RuleUID>STD_00300</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>4</hb:Version>
+			<hb:Version>5</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-07-16</hb:Modified>
+			<hb:Modified>2015-11-18</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Technology ; Rationale ; LongDesc
 				V3 : 2015-02-17 : ShortDesc ; FigureDesc
 				V4 : 2015-07-16 : GoodExample ; GoodExDesc
+				V5 : 2015-11-18 : LongDesc
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -218,7 +219,7 @@ The extension ".vhdl" is not permitted.</hb:LongDesc>
 			<hb:Rationale>The reset signal is critical. This signal needs 
 			to be easily found through the design.</hb:Rationale>
 			<hb:ShortDesc>The reset signal name includes "rst", "reset" or "clr".</hb:ShortDesc>
-			<hb:LongDesc>A signal is considered as a "RESET" whenever it is used asynchronously inside a clocked-process or mapped on a IP reset input.
+			<hb:LongDesc>A signal is considered as a "RESET" whenever it is used inside a clocked-process to initialize signals value to a known state (most of the time zero) or mapped on a IP reset input.
 If several reset signals are used, each reset is identified with a different name.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
@@ -1100,7 +1101,7 @@ Large VHDL project could use version control software (like SVN). If this is the
 			<hb:Rationale>Using libraries standardized by the IEEE improves code portability.
 "std_logic_arith", "std_logic_signed" and "std_logic_unsigned" libraries are not standardized.</hb:Rationale>
 			<hb:ShortDesc>Use the following IEEE libraries : "std_logic_1164" and "numeric_std"</hb:ShortDesc>
-			<hb:LongDesc>Do not use deprecated Synopsis libraries "std_logic_arith", "std_logic_signed" and "std_logic_unsigned" except if you are targeting specifically a Synopsys synthesizer (like for an ASIC for instance).
+			<hb:LongDesc>Do not use deprecated Synopsys libraries "std_logic_arith", "std_logic_signed" and "std_logic_unsigned" except if you are targeting specifically a Synopsys synthesizer (like for an ASIC for instance).
 Nevertheless, never mix these two library families.</hb:LongDesc>
 		</hb:RuleContent>
 		<hb:RuleDesc>
@@ -1341,14 +1342,15 @@ Manufacturers of synthesis software do not recommend "buffer" type usage because
 		<hb:RuleUID>STD_03700</hb:RuleUID>
 		<hb:RuleHist>
 			<hb:Status>Validated</hb:Status>
-			<hb:Version>4</hb:Version>
+			<hb:Version>5</hb:Version>
 			<hb:Creation>2014-09-30</hb:Creation>
-			<hb:Modified>2015-07-16</hb:Modified>
+			<hb:Modified>2015-11-18</hb:Modified>
 			<hb:Revision>
 				V1 : 2014-09-30 : Creation
 				V2 : 2014-12-01 : Technology ; Name ; Rationale ; ShortDesc ; LongDesc
 				V3 : 2015-02-17 : Name ; Rationale ; ShortDesc; Figure
 				V4 : 2015-07-16 : GoodExample ; GoodExDesc
+				V5 : 2015-11-18 : Rationale
 			</hb:Revision>
 		</hb:RuleHist>
 		<hb:RuleContent>
@@ -1363,7 +1365,9 @@ Manufacturers of synthesis software do not recommend "buffer" type usage because
 			<hb:Severity>Major</hb:Severity>
 			<hb:Rationale>Synchronous design uses the principle that all registers in a same clock domain leave the reset state at the same time. 
 Asynchronous assertion ensures that the design could be reset even if the input clock is not yet functional.
-Synchronous deassertion ensures that the component startup sequence is reproducible.</hb:Rationale>
+Synchronous deassertion ensures that the component startup sequence is reproducible and that the clock is ready and stable before the deassertion of the reset inside the component.
+Doing so, if there is a glitch on the external reset, it will produce an internal reset that is active at least one clock period and guarantees a correct reset of the internal logic.
+</hb:Rationale>
 			<hb:ShortDesc>Internal reset is asserted asynchronously and deasserted synchronously.</hb:ShortDesc>
 			<hb:LongDesc>If several clock domains are used then several reset signals are created to be deasserted synchronously with each targeted clock domain.</hb:LongDesc>
 		</hb:RuleContent>
@@ -2867,8 +2871,10 @@ The testbench instructions inside a process are then sequential which is coheren
 		<hb:Creation>2014-09-30</hb:Creation>
 		<hb:Modified>2015-07-16</hb:Modified>
 		<hb:Revision>V1 : 2014-11-13 : Creation.
-V2 : 2014-12-01 : Update of rules with remarks from partners about V1 revision, rules have been transferred to CNES handbook.
-V3 : 2015-02-17 : Update of rules with remarks from partners about V2 revision
-V4 : 2015-07-16 : Update of rules with examples</hb:Revision>
+V2   : 2014-12-01 : Update of rules with remarks from partners about V1 revision, rules have been transferred to CNES handbook.
+V3   : 2015-02-17 : Update of rules with remarks from partners about V2 revision
+V4   : 2015-07-16 : Update of rules with examples
+V4.1 : 2015-11-18 : Correct several data from remarks
+</hb:Revision>
 	</hb:RuleSetHist>	
 </hb:RuleSet>

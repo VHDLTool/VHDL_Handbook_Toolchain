@@ -4,7 +4,7 @@
   -->
 
 <project name="handbook-merge">
-	<import file="..\..\ant.properties.xml" />
+	<import file="..\ant.properties.xml" />
 
 	<!--
 	- target:  merge

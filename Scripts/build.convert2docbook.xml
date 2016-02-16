@@ -3,7 +3,7 @@
   - Authors:  Florian JUGE <florian.juge@altran.com> / Baptiste CORVE <baptiste.corve@altran.com>
  -->
 <project name="handbook-convert2docbook" default="convert2docbook">
-	<import file="../../ant.properties.xml" />
+	<import file="../ant.properties.xml" />
 
 
 	<!--

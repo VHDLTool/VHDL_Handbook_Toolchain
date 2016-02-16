@@ -3,7 +3,7 @@
   - Author:  Baptiste CORVE <baptiste.corve@altran.com>
  -->
 <project name="handbook-docbook" default="docbook">
-	<import file="../../ant.properties.xml" />
+	<import file="../ant.properties.xml" />
 
 
 	<!--

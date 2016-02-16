@@ -6,16 +6,16 @@
 
 <project name="handbook"> 
 	<!-- Project settings -->
-	<property name="folder.src" value="src" /> <!-- input folder -->
+	<property name="folder.src" value="src_handbook" /> <!-- input folder -->
 	<property name="folder.out" value="output" /> <!-- output folder -->
-	<property name="folder.scripts" value="${folder.src}/Scripts" /> <!-- scripts folder -->
-	<property name="folder.home" value="../.." /> <!-- home folder - used for the individual builds-->
-	<property name="folder.vhdl" value="../${folder.src}/Extras/VHDL/" /> <!-- VHDL folder from stylesheet folder-->
-	<property name="folder.text" value="../${folder.src}/Extras/Text/" /> <!-- Text folder from stylesheet folder-->
-	<property name="folder.images" value="${folder.home}/${folder.src}/Extras/Images/" /> <!-- Images folder from script source folder-->
-	<property name="folder.ruleset" value="../${folder.src}/RuleSets" /> <!-- RuleSet folder from stylesheet folder-->
+	<property name="folder.scripts" value="Scripts" /> <!-- scripts folder -->
+	<property name="folder.home" value="../" /> <!-- home folder - used for the individual builds-->
+	<property name="folder.vhdl" value="../${folder.src}/STD/Extras/VHDL/" /> <!-- VHDL folder from stylesheet folder-->
+	<property name="folder.text" value="../Text/" /> <!-- Text folder from stylesheet folder-->
+	<property name="folder.images" value="${folder.home}/${folder.src}/STD/Extras/Images/" /> <!-- Images folder from script source folder-->
+	<property name="folder.ruleset" value="../${folder.src}/STD/RuleSets" /> <!-- RuleSet folder from stylesheet folder-->
 	<property name="folder.out.temp" value="${folder.home}/${folder.out}/TEMP" /> <!-- temp folder -->
-	<property name="folder.src.rulesets" value="${folder.home}/${folder.src}/RuleSets" /> <!-- RuleSet folder -->	
+	<property name="folder.src.rulesets" value="${folder.home}/${folder.src}/STD/RuleSets" /> <!-- RuleSet folder -->	
 	<property name="folder.stylesheet" value="${folder.home}/stylesheets" /> <!-- stylesheet folder -->	
 	
 	<!-- Tag between which is the VHDL code to be embedded in the handbook -->

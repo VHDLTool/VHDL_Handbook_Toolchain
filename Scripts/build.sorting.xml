@@ -4,7 +4,7 @@
   -->
 
 <project name="handbook-sorting" default="sorting">
-	<import file="../../ant.properties.xml" />
+	<import file="../ant.properties.xml" />
 
 
 	<!--

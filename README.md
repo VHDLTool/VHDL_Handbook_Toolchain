@@ -1,13 +1,9 @@
-# VHDLHandbook
-Design and VHDL handbook for VLSI development
+# VHDLHandbook Toolchain
+Design and VHDL handbook for VLSI development toolchain that convert XML to PDF.
 
 ## Introduction
 
-This handbook is a set of rules for VHDL code, with associated examples and figures. It is divided into two chapters :
-
-- The first one is called the "Standard Rules" which includes general rules or recommendations that are common between all companies working with VHDL. These rules share a general agreement between companies originally involved. Addition and changes to these rules have to be agreed by everyone.
-
-- The second one is called "Custom Rules" which includes specific company rules that are adapted/refined from standard rules or completely new. These custom rules allow third party companies to create their own version of the VHDL Handbook.
+This toolchain converts xml rules to PDF files including images, VHDL examples and additionnal texts.
 
 ## Dependencies
 
@@ -21,6 +17,8 @@ To generate a PDF file from the sources, you will need the following software:
  
 - [Docbook XSL Stylesheets](http://sourceforge.net/projects/docbook/files/docbook-xsl/) (which is included as a Git submodule, available [here](https://github.com/VHDLTool/docbook)
 
+- [VHDL Rules] which come as a git submodule included [here] (https://github.com/VHDLTool/VHDL_Handbook_STD) for the standard version.  
+
 ## Project structure
 
 The project is structured as follows :
@@ -31,21 +29,11 @@ The project is structured as follows :
 
 - A `stylesheets` folder containing XSLT stylesheets to transform the XML rulesets
 
-- A `src` folder containing:
+- A `src_handbook` folder containing a directory for each ruleset seen as a submodule.
 
-    - The XSD folder, in which you will find the handbook schema (`handbook.xsd`) describing how a rule is structured
-    
-    - The different Ant scripts called from the `build.xml` one
-    
-    - The rulesets
-    
-    - An Extras folder, in which can be found :
-    
-        + The images to be inserted to illustrate rules (only SVG format)
-        
-        + The text from introduction, glossary and some release info
-        
-        + The VHDL examples
+- A 'Text' folder including texts for introduction, glossary and some release info
+
+- A 'Scripts' folder including the different Ant scripts called from the `build.xml` one
 
 ## Building
 

@@ -1,6 +1,3 @@
-[submodule "stylesheets/docbook"]
-	path = stylesheets/docbook
-	url = https://github.com/VHDLTool/docbook
 [submodule "src_handbook/STD"]
 	path = src_handbook/STD
 	url = https://github.com/VHDLTool/VHDL_Handbook_STD

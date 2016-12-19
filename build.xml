@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project name="handbook-all">
-	<import file="ant.properties.xml" />
+	<property name="PropertiesFile" value="ant.properties.xml" />
+	<echo message="==> Using ${PropertiesFile}"/>
+	<import file="${PropertiesFile}" />
 	<!--
 	- target: build-docbook
 	- description: Merge XML files, sort rules, and generate PDF file associated
@@ -11,22 +13,27 @@
 
 		<sequential> <!-- Run the following actions, one by one -->
 			<subant target="merge" >
+				<property name="PropertiesFile" value="${PropertiesFile}"/>
 				<fileset dir="." includes="${folder.scripts}/build.merge.xml" />
 			</subant>
 			
 			<subant target="sorting" >
+				<property name="PropertiesFile" value="${PropertiesFile}"/>
 				<fileset dir="." includes="${folder.scripts}/build.sorting.xml" />
 			</subant>
 			
 			<subant target="convert2docbook" >
+				<property name="PropertiesFile" value="${PropertiesFile}"/>
 				<fileset dir="." includes="${folder.scripts}/build.convert2docbook.xml" />
 			</subant>
 			
 			<subant target="docbook" >
+				<property name="PropertiesFile" value="${PropertiesFile}"/>
 				<fileset dir="." includes="${folder.scripts}/build.docbook.xml" />
 			</subant>
 			
 			<subant target="fop" >
+				<property name="PropertiesFile" value="${PropertiesFile}"/>
 				<fileset dir="." includes="${folder.scripts}/build.fop.xml" />
 			</subant>
 		</sequential>

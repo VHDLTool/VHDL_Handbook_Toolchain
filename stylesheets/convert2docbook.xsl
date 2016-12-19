@@ -9,7 +9,9 @@
 
 <xsl:stylesheet version="2.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:hb="HANDBOOK"
-	xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:d="http://docbook.org/ns/docbook">
+	xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:d="http://docbook.org/ns/docbook"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="hb ../output/work/XSD/handbook.xsd">
 
    <xsl:import href="../stylesheets/docbook/fo/docbook.xsl" />
 	<xsl:import href="../stylesheets/docbook/fo/highlight.xsl" />
@@ -28,8 +30,11 @@
 	<xsl:param name="Custom_to_pdf">parameter given by apache ant</xsl:param>
 	<xsl:param name="Subtitle">parameter given by apache ant</xsl:param>
 	<xsl:param name="VHDL_tag">parameter given by apache ant</xsl:param>
-	
+
 	<xsl:output indent="yes" method="xml" />
+
+
+
 
 	<!-- ====================================================================== -->
 	<!-- Root Template -->
@@ -103,6 +108,7 @@
          	</xsl:if>
 
 		</book>
+
 	</xsl:template>
 	
 	
@@ -648,7 +654,7 @@
 					</d:tbody>
 				</d:tgroup>
 			</d:informaltable>
-			
+
 			<d:itemizedlist>
 				<d:listitem>
 					<d:para>
@@ -703,7 +709,195 @@
 				</xsl:if>
 			</d:itemizedlist>
 			
-			
+			<d:itemizedlist>
+				<d:listitem>
+					<d:para>
+                  		<d:emphasis role="bold">Technical debt:</d:emphasis>
+              		</d:para>
+					
+					<!-- Creation of table of 3 rows and 2 columns -->
+					<d:informaltable frame="all">
+						<d:tgroup cols="2" align="left">
+							<d:colspec colname="c1" colnum="1" colwidth="0.5*" />
+							<d:colspec colname="c2" colnum="2" colwidth="2.0*" />
+							<d:tbody>
+								<!-- 1st line : Remediation effort -->
+								<d:row valign="middle">
+									<d:entry>
+										<d:emphasis role="bold">Remediation effort
+										</d:emphasis>
+									</d:entry>
+									<d:entry>
+										<xsl:value-of select=".//hb:RuleDebt/hb:RemediationEffort" />
+										<xsl:if test=".//hb:RuleDebt/hb:RemediationEffort ='Trivial'">
+											 - 5 minutes 
+										</xsl:if>
+										<xsl:if test=".//hb:RuleDebt/hb:RemediationEffort ='Easy'">
+											 - 10 minutes 
+										</xsl:if>
+										<xsl:if test=".//hb:RuleDebt/hb:RemediationEffort ='Medium'">
+											 - 20 minutes 
+										</xsl:if>
+										<xsl:if test=".//hb:RuleDebt/hb:RemediationEffort ='Major'">
+											 - 1 hour 
+										</xsl:if>
+										<xsl:if test=".//hb:RuleDebt/hb:RemediationEffort ='High'">
+											 - 3 hours 
+										</xsl:if>
+										<xsl:if test=".//hb:RuleDebt/hb:RemediationEffort ='Complex'">
+											 - 1 day 
+										</xsl:if>
+									</d:entry>
+								</d:row>
+								<!-- 2nd line : Sonar severity -->
+								<d:row valign="middle">
+									<d:entry>
+										<d:emphasis role="bold">Sonar severity
+										</d:emphasis>
+									</d:entry>
+									<d:entry>
+										<xsl:value-of select=".//hb:RuleDebt/hb:SonarSeverity" />
+									</d:entry>
+								</d:row>
+								<xsl:if test=".//hb:RuleDebt/hb:SonarSeverity !='Major'">
+									<xsl:if test=".//hb:RuleDebt/hb:SonarSeverity !='Minor'">
+										<xsl:if test=".//hb:RuleDebt/hb:SonarSeverity !='Info'">
+											<!-- 3rd line : Tag -->
+											<d:row valign="middle">
+												<d:entry>
+													<d:emphasis role="bold">Tag
+													</d:emphasis>
+												</d:entry>
+												<d:entry>
+													<xsl:value-of select=".//hb:RuleDebt/hb:Tag" />
+												</d:entry>
+											</d:row>
+										</xsl:if>
+									</xsl:if>
+								</xsl:if>
+							</d:tbody>
+						</d:tgroup>
+					</d:informaltable>
+				</d:listitem>
+			</d:itemizedlist>
+
+			<xsl:if test=".//hb:RuleParams">
+				<d:itemizedlist>
+					<d:listitem>
+						<d:para>
+							<d:emphasis role="bold">Parameters:</d:emphasis>
+						</d:para>
+						<!-- Creation of table of n rows and 5 columns -->
+						<d:informaltable frame="all">
+							<d:tgroup cols="3" align="left">
+								<d:colspec colname="c1" colnum="1" colwidth="0.5*" />
+								<d:colspec colname="c2" colnum="2" colwidth="0.5*" />
+								<d:colspec colname="c3" colnum="3" colwidth="0.5*" />
+								<d:thead>
+									<!-- header of table : ParamId / Type / Relation or position / Value min / Value Max -->
+									<d:row valign="middle">
+									
+										<d:entry>
+											<xsl:text>Parameter ID</xsl:text>
+										</d:entry>
+										<d:entry>
+											<xsl:text>Type</xsl:text>
+										</d:entry>
+										<d:entry>
+											<xsl:text>Value</xsl:text>
+										</d:entry>
+									</d:row>
+								</d:thead>
+								<d:tbody>
+									<xsl:for-each select=".//hb:RuleParams/hb:IntParam">
+-										<d:row valign="middle">
+
+											<d:entry>
+												<xsl:value-of select="hb:ParamID" />
+											</d:entry>
+											<d:entry>
+												<xsl:text>Integer</xsl:text>
+											</d:entry>
+											<d:entry>
+												<!-- &le; = &#8804; -->
+												<xsl:choose>
+													<xsl:when test="hb:Relation = 'LT'">
+														&lt; <xsl:value-of select="hb:Value" />
+													</xsl:when>
+													<xsl:when test="hb:Relation = 'LET'">
+														&lt;= <xsl:value-of select="hb:Value" />
+													</xsl:when>
+													<xsl:when test="hb:Relation = 'E'">
+														= <xsl:value-of select="hb:Value" />
+													</xsl:when>
+													<xsl:when test="hb:Relation = 'GET'">
+														&gt;= <xsl:value-of select="hb:Value" />
+													</xsl:when>
+													<xsl:when test="hb:Relation = 'GT'">
+														&gt; <xsl:value-of select="hb:Value" />
+													</xsl:when>
+												</xsl:choose>
+											</d:entry>
+										</d:row>
+									</xsl:for-each>
+									<xsl:for-each select=".//hb:RuleParams/hb:StringParam">
+										<d:row valign="middle">
+											<d:entry>
+												<xsl:value-of select="hb:ParamID" />
+											</d:entry>
+											<d:entry>
+												<xsl:text>String</xsl:text>
+											</d:entry>
+											<d:entry>
+												<xsl:choose>
+													<xsl:when test="hb:Position = 'Prefix'">
+														<xsl:value-of select="hb:Value" />*
+													</xsl:when>
+													<xsl:when test="hb:Position = 'Contain'">
+														*<xsl:value-of select="hb:Value" />*
+													</xsl:when>
+													<xsl:when test="hb:Position = 'Equal'">
+														<xsl:value-of select="hb:Value" />
+													</xsl:when>
+													<xsl:when test="hb:Position = 'Suffix'">
+														<xsl:value-of select="hb:Value" />*
+													</xsl:when>
+												</xsl:choose>
+											</d:entry>
+										</d:row>
+									</xsl:for-each>
+									<xsl:for-each select=".//hb:RuleParams/hb:RangeParam">
+										<d:row valign="middle">
+											<d:entry >
+												<xsl:value-of select="hb:ParamID" />
+											</d:entry>
+											<d:entry>
+												<xsl:text>Integer range</xsl:text>
+											</d:entry>
+											<d:entry>
+												<xsl:choose>
+													<xsl:when test="hb:Range = 'LT_GT'">
+														<xsl:value-of select="hb:ValueMin" /> &lt; _ &lt; <xsl:value-of select="hb:ValueMax" /> 
+													</xsl:when>
+													<xsl:when test="hb:Range = 'LET_GT'">
+														<xsl:value-of select="hb:ValueMin" /> &lt; _ &lt;= <xsl:value-of select="hb:ValueMax" /> 
+													</xsl:when>
+													<xsl:when test="hb:Range = 'LET_GET'">
+														<xsl:value-of select="hb:ValueMin" /> &lt;= _ &lt;= <xsl:value-of select="hb:ValueMax" /> 
+													</xsl:when>
+													<xsl:when test="hb:Range = 'LT_GET'">
+														<xsl:value-of select="hb:ValueMin" /> &lt;= _ &lt; <xsl:value-of select="hb:ValueMax" /> 
+													</xsl:when>
+												</xsl:choose>
+											</d:entry>
+										</d:row>
+									</xsl:for-each>
+								</d:tbody>
+							</d:tgroup>
+						</d:informaltable>
+					</d:listitem>
+				</d:itemizedlist>
+			</xsl:if>
         	<xsl:processing-instruction name="linebreak" />
 			<xsl:processing-instruction name="linebreak" />
 		</d:sect3>

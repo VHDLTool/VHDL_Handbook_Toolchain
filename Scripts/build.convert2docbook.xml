@@ -3,7 +3,9 @@
   - Authors:  Florian JUGE <florian.juge@altran.com> / Baptiste CORVE <baptiste.corve@altran.com>
  -->
 <project name="handbook-convert2docbook" default="convert2docbook">
-	<import file="../ant.properties.xml" />
+	<property name="ConvPropertiesFile" value="${PropertiesFile}" />
+	<echo message="==> Handbook conversion to docbook uses ${ConvPropertiesFile}"/>
+	<import file="../${ConvPropertiesFile}" />
 
 
 	<!--

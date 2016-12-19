@@ -9,7 +9,11 @@
 
 <xsl:stylesheet version="2.0"
  	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:hb="HANDBOOK"
-	xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:d="http://docbook.org/ns/docbook" >  
+	xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:d="http://docbook.org/ns/docbook" 
+	xmlns:exsl="http://exslt.org/common"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="hb ../output/work/XSD/handbook.xsd">
+	  
 	
 	
 	<!--<xsl:namespace-alias result-prefix="hb" stylesheet-prefix="xsi" />-->

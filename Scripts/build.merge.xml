@@ -3,17 +3,205 @@
   - Author:  Florian JUGE <florian.juge@altran.com>
   -->
 
-<project name="handbook-merge">
-	<import file="..\ant.properties.xml" />
-
+<project name="handbook_merge">
+	<property name="MergePropertiesFile" value="${PropertiesFile}" />
+	<echo message="==> Handbook merge uses ${MergePropertiesFile}"/>
+	<import file="../${MergePropertiesFile}" />
 	<!--
 	- target:  merge
 	- description:  merge the source ${file.main_name}.${file.main_name_extension} with every other RuleSet from the Rulesets folder
 	-->
 	 <target name="merge" 
 	 description="Merge two handbook into one">
+	 	<!-- Clean arbo -->
+	 	<deltree dir="${folder.home}/${folder.out}"/>
+	 	
+	 	<!-- Recreate arbo -->
+	 	<mkdir dir="${folder.home}/${folder.out}"/>
+	 	<mkdir dir="${folder.home}/${folder.out}/${folder.work}"/>
+	 	<mkdir dir="${folder.out.temp}"/>
+	 	
+
+	 	<script language="javascript"> <![CDATA[
+	        var getInclude = function(list) {
+	            var o = {};
+	            for (i=0; i<list.length; i++) {
+	              var f = list[i];
+	              if(f.indexOf(inc_file) > 0) {
+	                  var folder = f.split("/").slice(0,-1).join("/");;
+	                  o[folder] = f;
+	              }
+	            }
+	            return o;
+	        }
+
+	 		prj      = project.getProperty("project.list");
+	 		homeF    = project.getProperty("folder.home");
+	 		srcF     = project.getProperty("folder.src");
+	 		setF     = project.getProperty("folder.partial.rulesets");
+	 		outputF  = project.getProperty("folder.out");
+	 		workF    = project.getProperty("folder.work");
+	 		xsdF     = project.getProperty("folder.xsd");
+	 		imgF     = project.getProperty("folder.partial.images");
+	 		vhdF     = project.getProperty("folder.partial.vhdl");
+    	    var lstPrj = prj.split(",");
+
+			// Copy RuleSets in work directory
+	 		for(i = 0; i < lstPrj.length; i++) {
+	 			echo = handbook_merge.createTask("echo");
+	 		    echo.setMessage("Processing XML from " + lstPrj[i] + "\n");
+	 		    echo.perform();
+
+	 			src = new java.io.File(outputF + "/../" + srcF + "/" + lstPrj[i] + "/" + setF);
+	 			dest = new java.io.File(outputF + "/" + workF + "/" + setF + "/");
+
+	 			fs = handbook_merge.createDataType("fileset");
+		    	fs.setDir( new java.io.File( src ) );
+		    	fs.setIncludes( "**.xml" );
+	 			
+				try {
+		        	ds = fs.getDirectoryScanner(handbook_merge); // Get the files (array) of that fileset
+		         	exist = ds.getIncludedFiles(); // Get only the files
+	
+		        	for (j=0; j<exist.length; j++) {
+		          		filename = exist[j];
+		          		folder = filename.split("/").slice(0,-1).join("/");
+		          		if(exist[folder]) {
+		              		f = new java.io.File(src, filename);
+		              		copy = project.createTask("copy");
+		              		copy.setTofile(new java.io.File(dest, filename));
+		              		copy.setFile(f);
+		              		copy.perform();
+		          		}
+		        	}	 		
+				} catch(Exception) {
+					echo = handbook_merge.createTask("echo");
+					echo.setMessage("Exception: "+ Exception + "\n");
+	    			echo.perform();
+		 		}
+			}
+	 		
+			// Copy XSD in work directory
+	 		for(i = 0; i < lstPrj.length; i++) {
+	 			echo = handbook_merge.createTask("echo");
+ 		    	echo.setMessage("Processing XSD from " + lstPrj[i] + "\n");
+	 		    echo.perform();
+
+	 			src = new java.io.File(outputF + "/../" + srcF + "/" + lstPrj[i] + "/" + xsdF);
+	 			dest = new java.io.File(outputF + "/" + workF + "/" + xsdF + "/");
+
+	 			srcFile = new java.io.File( src );
+	 			
+	 			if(srcFile) {
+		 			fs = handbook_merge.createDataType("fileset");
+			    	fs.setDir( srcFile );
+			    	fs.setIncludes( "**.xsd" );
+		 			
+					try {
+			        	ds = fs.getDirectoryScanner(handbook_merge); // Get the files (array) of that fileset
+			         	exist = ds.getIncludedFiles(); // Get only the files
+		
+			        	for (j=0; j<exist.length; j++) {
+			          		filename = exist[j];
+			          		folder = filename.split("/").slice(0,-1).join("/");
+			          		if(exist[folder]) {
+			              		f = new java.io.File(src, filename);
+			              		copy = project.createTask("copy");
+			              		copy.setTofile(new java.io.File(dest, filename));
+			              		copy.setFile(f);
+			              		copy.perform();
+			          		}
+			        	}	 	
+					} catch(Exception) {
+						echo = handbook_merge.createTask("echo");
+						echo.setMessage("Exception: "+ Exception + "\n");
+		    			echo.perform();
+		 			}
+				}
+	 		}
+
+			// Copy Images in work directory
+	 		for(i = 0; i < lstPrj.length; i++) {
+	 			echo = handbook_merge.createTask("echo");
+ 		    	echo.setMessage("Processing images from " + lstPrj[i] + "\n");
+	 		    echo.perform();
+
+ 				src = new java.io.File(outputF + "/../" + srcF + "/" + lstPrj[i] + "/" + imgF);
+	 		
+	 		
+	 			if(src) {
+		 			dest = new java.io.File(outputF + "/" + workF + "/" + imgF + "/");
+	
+	 				srcFile = new java.io.File( src );
+ 			
+		 			fs = handbook_merge.createDataType("fileset");
+			    	fs.setDir( srcFile );
+
+	 				fs.setIncludes( "**.svg" );
+		 			
+	 				try {
+		        		ds = fs.getDirectoryScanner(handbook_merge); // Get the files (array) of that fileset
+			         	exist = ds.getIncludedFiles(); // Get only the files
+		
+			        	for (j=0; j<exist.length; j++) {
+			          		filename = exist[j];
+			          		folder = filename.split("/").slice(0,-1).join("/");
+			          		if(exist[folder]) {
+			              		f = new java.io.File(src, filename);
+			              		copy = project.createTask("copy");
+			              		copy.setTofile(new java.io.File(dest, filename));
+			              		copy.setFile(f);
+			              		copy.perform();
+			          		}
+		 				}
+	 				} catch(Exception) {
+ 						echo = handbook_merge.createTask("echo");
+		    			echo.setMessage("Exception: "+ Exception + "\n");
+ 		    			echo.perform();
+	 				}
+	        	}	 		
+	 		}
+
+			// Copy VHDL samples in work directory
+	 		for(i = 0; i < lstPrj.length; i++) {
+	 			echo = handbook_merge.createTask("echo");
+ 		    	echo.setMessage("Processing VHDL samples from " + lstPrj[i] + "\n");
+	 		    echo.perform();
+
+	 			src = new java.io.File(outputF + "/../" + srcF + "/" + lstPrj[i] + "/" + vhdF);
+	 			dest = new java.io.File(outputF + "/" + workF + "/" + vhdF + "/");
+
+	 			fs = handbook_merge.createDataType("fileset");
+		    	fs.setDir( new java.io.File( src ) );
+		    	fs.setIncludes( "**.vhd" );
+	 			
+				try {
+		        	ds = fs.getDirectoryScanner(handbook_merge); // Get the files (array) of that fileset
+		         	exist = ds.getIncludedFiles(); // Get only the files
+	
+		        	for (j=0; j<exist.length; j++) {
+		          		filename = exist[j];
+		          		folder = filename.split("/").slice(0,-1).join("/");
+		          		if(exist[folder]) {
+		              		f = new java.io.File(src, filename);
+		              		copy = project.createTask("copy");
+		              		copy.setTofile(new java.io.File(dest, filename));
+		              		copy.setFile(f);
+		              		copy.perform();
+		          		}
+		        	}	 		
+				} catch(Exception) {
+					echo = handbook_merge.createTask("echo");
+    				echo.setMessage("Exception: "+ Exception + "\n");
+	    			echo.perform();
+				}
+	 		}
+
+	 		]]> 
+	 	</script>
+	 	
 		<xslt style="${file.xsl.merge}" extension=".merged.xml"
-			basedir="${folder.src.rulesets}" destdir="${folder.out.temp}"
+			basedir="${folder.ruleset}" destdir="${folder.out.temp}"
 			force="yes">
 			<classpath refid="saxon.classpath" />
 			<!-- Define parameters for the XSLT transformation -->

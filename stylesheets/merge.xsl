@@ -8,7 +8,7 @@
 <xsl:stylesheet version="2.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:hb="HANDBOOK"
 	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="hb ../src/XSD/handbook.xsd ">
+	xsi:schemaLocation="hb ../output/work/XSD/handbook.xsd">
 	
 	<!-- Parameters defined by apache ant -->
 	<xsl:param name="RuleSet_folder">parameter given by apache ant</xsl:param>
@@ -28,7 +28,7 @@
 		<xsl:comment>Rules added from ../src/RuleSets with merge.xsl</xsl:comment>
 		
 		<xsl:copy-of select="collection(concat($RuleSet_folder,'?select=*.xml;recurse=yes'))/*/hb:Rule" /> <!-- recurse means that sub-directories will also be included -->
-		
+
 		<xsl:copy-of select="." /> <!-- Copy of Input_File RuleSetHist -->
 	</xsl:template> 
 </xsl:stylesheet>

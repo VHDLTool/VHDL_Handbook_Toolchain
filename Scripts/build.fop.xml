@@ -4,7 +4,9 @@
   -->
 
 <project name="handbook-fop" default="fop">
-	<import file="../ant.properties.xml" />
+	<property name="FopPropertiesFile" value="${PropertiesFile}" />
+	<echo message="==> Conversion to PDF uses ${FopPropertiesFile}"/>
+	<import file="../${FopPropertiesFile}" />
 
 
 	<!--

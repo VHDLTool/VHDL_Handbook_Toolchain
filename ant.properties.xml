@@ -11,12 +11,12 @@
 	<!-- ============================================================================= -->
 	
 	<!-- List of projects: The first project has prioriy for XSD file (and other duplicate filenames) -->
-	<property name ="project.list" value="STD,CNE" /> <!--String containing the list of project to use for the PDF.
-	                                                      Projects are separated by a coma (no space)
+	<property name ="project.list" value="STD" /> <!--String containing the list of project to use for the PDF.
+	                                                      Projects are separated by a coma (no space) (for example value="STD,CNE" )
 														  Each project is a subfolder of src_handbook folder (set ind property "folder.src") -->
 														  
-	<property name="file.handbookPDF_name" value="handbook_Merged_Edition" /> <!-- Final name of the handbook, without extension .pdf -->
-	<property name="file.subtitle_edition" value="Merged Edition" /> <!-- Subtitle of PDF to indicate Standard Edition or Custom Edition Information -->
+	<property name="file.handbookPDF_name" value="handbook_STD_Edition" /> <!-- Final name of the handbook, without extension .pdf -->
+	<property name="file.subtitle_edition" value="Standard Edition" /> <!-- Subtitle of PDF to indicate Standard Edition or Custom Edition Information -->
 	
 	<!-- ============================================================================= -->
 	<!-- Project settings: Folders -->

@@ -23,6 +23,6 @@ Authors of this handbook wish to thank every (direct or indirect) contributor to
 -	People who agreed to share some of their internal knowledge to the benefit of everyone,
 -	People who participated to the review of this document,
 -	People who did the edition of this document,
--	People from W3C, Apache Software Foundation, Eclipse Foundation and creator of the Veditor plugin.
+-	People from W3C, Apache Software Foundation and Eclipse Foundation.
 
 Thank you all for being a precious part of this activity and making it exist. 

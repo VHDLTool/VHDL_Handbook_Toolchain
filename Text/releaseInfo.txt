@@ -3,4 +3,4 @@ All marks mentioned may be trademarks or registered trademarks of their respecti
 Apache FOP is licensed under the Apache License, Version 2.0.
 Saxon XSLT is licensed under the Mozilla Public License 1.0 (MPL), Mozilla Public License 2.0 (MPL 2.0)
 Eclipse Neon is licensed under the Eclipse Public License Version 1.0
-Veditor is licensed under the Eclipse Public License, GNU General Public License version 2.0 (GPLv2)
+Docbook Copyright (see stylesheets/docbook/COPYING file)

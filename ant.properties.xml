@@ -11,12 +11,12 @@
 	<!-- ============================================================================= -->
 	
 	<!-- List of projects: The first project has prioriy for XSD file (and other duplicate filenames) -->
-	<property name ="project.list" value="STD" /> <!--String containing the list of project to use for the PDF.
+	<property name ="project.list" value="STD,CNE" /> <!--String containing the list of project to use for the PDF.
 	                                                      Projects are separated by a coma (no space) (for example value="STD,CNE" )
 														  Each project is a subfolder of src_handbook folder (set ind property "folder.src") -->
 														  
-	<property name="file.handbookPDF_name" value="handbook_STD_Edition" /> <!-- Final name of the handbook, without extension .pdf -->
-	<property name="file.subtitle_edition" value="Standard Edition" /> <!-- Subtitle of PDF to indicate Standard Edition or Custom Edition Information -->
+	<property name="file.handbookPDF_name" value="handbook_CNE_Edition" /> <!-- Final name of the handbook, without extension .pdf -->
+	<property name="file.subtitle_edition" value="CNES Edition" /> <!-- Subtitle of PDF to indicate Standard Edition or Custom Edition Information -->
 	
 	<!-- ============================================================================= -->
 	<!-- Project settings: Folders -->
@@ -42,7 +42,7 @@
 	<property name="VHDL.tag" value="--CODE" />
 	
 	<!-- Input file settings -->
-	<property name="file.main_name" value="handbook_header_for_STD" /> <!-- input file, this file have to contain one RuleSetHist field, this RuleSetHist is the kept RuleSetHist after merging -->
+	<property name="file.main_name" value="handbook_header_for_CNE" /> <!-- input file, this file have to contain one RuleSetHist field, this RuleSetHist is the kept RuleSetHist after merging -->
 	<property name="file.main_name_extension" value="xml" /> <!-- Input file extension -->
 	<property name="file.export_std_rules_pdf" value="true" /> <!-- Standart rules present in RuleSet folder? -->
 	<property name="file.export_custom_rules_pdf" value="true" /> <!-- Custom rules present in RuleSet folder? -->

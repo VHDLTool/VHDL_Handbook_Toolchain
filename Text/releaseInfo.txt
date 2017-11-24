@@ -1,6 +1,6 @@
-This PDF file is automatically created with Apache FOP version 2.1 from XML handbooks transformed with Saxonica XSLT saxon opensource version HE9-7-0-10J through IDE Eclipse Luna version "Neon.1a Release (4.6.1)" from the Eclipse Foundation.
+This PDF file is automatically created with Apache FOP version 2.1 from XML handbooks transformed with Saxonica XSLT saxon opensource version HE9-7-0-10J through IDE Eclipse Oxygen version "Oxygen.1a Release (4.7.1a)" from the Eclipse Foundation.
 All marks mentioned may be trademarks or registered trademarks of their respective owners.
 Apache FOP is licensed under the Apache License, Version 2.0.
 Saxon XSLT is licensed under the Mozilla Public License 1.0 (MPL), Mozilla Public License 2.0 (MPL 2.0)
-Eclipse Neon is licensed under the Eclipse Public License Version 1.0
+Eclipse Oxygen is licensed under the Eclipse Public License Version 1.0
 Docbook Copyright (see stylesheets/docbook/COPYING file)

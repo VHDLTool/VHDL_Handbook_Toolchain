@@ -7,9 +7,13 @@ FF   :	On figure, it means Flip-Flop
 FOP  :	Formatting Objects Processor
 FPGA :	Field Programmable Gate Array
 
+N/A  :	Not Applicable
+
 PDF  :	Portable Document Format
 
 STD  :	Label for Standard Rules
+
+TBD  :	To Be Defined   
 
 VLSI :	Very Large Scale Integration
 VHDL :	VHSIC Hardware Description Language

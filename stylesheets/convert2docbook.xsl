@@ -30,6 +30,7 @@
 	<xsl:param name="Custom_to_pdf">parameter given by apache ant</xsl:param>
 	<xsl:param name="Subtitle">parameter given by apache ant</xsl:param>
 	<xsl:param name="VHDL_tag">parameter given by apache ant</xsl:param>
+	<xsl:param name="Sonarqube_enabled">parameter given by apache ant</xsl:param>
 
 	<xsl:output indent="yes" method="xml" />
 
@@ -47,8 +48,8 @@
 				<!-- For title page -->
 				<title>DESIGN AND VHDL HANDBOOK FOR VLSI DEVELOPMENT</title>
 				<subtitle><xsl:value-of select="$Subtitle" /></subtitle>
-				<legalnotice>Version <xsl:value-of select="hb:RuleSet/hb:RuleSetHist/hb:Version" /> - <xsl:value-of select="hb:RuleSet/hb:RuleSetHist/hb:Modified" /></legalnotice>
-      			<releaseinfo><d:literallayout><xsl:value-of select="unparsed-text(concat($Text_folder, 'releaseInfo.txt'), 'iso-8859-1')"/></d:literallayout></releaseinfo>
+				<legalnotice></legalnotice>
+      			<releaseinfo><d:literallayout><xsl:value-of select="unparsed-text(concat($Text_folder, 'releaseInfo.txt'), 'iso-8859-1')"/> Version <xsl:value-of select="hb:RuleSet/hb:RuleSetHist/hb:Version" /> - <xsl:value-of select="hb:RuleSet/hb:RuleSetHist/hb:Modified" /></d:literallayout></releaseinfo>
       			<!-- For headers -->
 				<revhistory>
 					<revision>
@@ -709,78 +710,96 @@
 				</xsl:if>
 			</d:itemizedlist>
 			
-			<d:itemizedlist>
-				<d:listitem>
-					<d:para>
-                  		<d:emphasis role="bold">Technical debt:</d:emphasis>
-              		</d:para>
+			<xsl:if test="contains($Sonarqube_enabled,'true')" >	                                 
+			
+				<d:itemizedlist>
+					<d:listitem>
+						<d:para>
+            	      		<d:emphasis role="bold">Sonarqube:</d:emphasis>
+        	      		</d:para>
 					
-					<!-- Creation of table of 3 rows and 2 columns -->
-					<d:informaltable frame="all">
-						<d:tgroup cols="2" align="left">
-							<d:colspec colname="c1" colnum="1" colwidth="0.5*" />
-							<d:colspec colname="c2" colnum="2" colwidth="2.0*" />
-							<d:tbody>
-								<!-- 1st line : Remediation effort -->
-								<d:row valign="middle">
-									<d:entry>
-										<d:emphasis role="bold">Remediation effort
-										</d:emphasis>
-									</d:entry>
-									<d:entry>
-										<xsl:value-of select=".//hb:RuleDebt/hb:RemediationEffort" />
-										<xsl:if test=".//hb:RuleDebt/hb:RemediationEffort ='Trivial'">
-											 - 5 minutes 
-										</xsl:if>
-										<xsl:if test=".//hb:RuleDebt/hb:RemediationEffort ='Easy'">
-											 - 10 minutes 
-										</xsl:if>
-										<xsl:if test=".//hb:RuleDebt/hb:RemediationEffort ='Medium'">
-											 - 20 minutes 
-										</xsl:if>
-										<xsl:if test=".//hb:RuleDebt/hb:RemediationEffort ='Major'">
-											 - 1 hour 
-										</xsl:if>
-										<xsl:if test=".//hb:RuleDebt/hb:RemediationEffort ='High'">
-											 - 3 hours 
-										</xsl:if>
-										<xsl:if test=".//hb:RuleDebt/hb:RemediationEffort ='Complex'">
-											 - 1 day 
-										</xsl:if>
-									</d:entry>
-								</d:row>
-								<!-- 2nd line : Sonar severity -->
-								<d:row valign="middle">
-									<d:entry>
-										<d:emphasis role="bold">Sonar severity
-										</d:emphasis>
-									</d:entry>
-									<d:entry>
-										<xsl:value-of select=".//hb:RuleDebt/hb:SonarSeverity" />
-									</d:entry>
-								</d:row>
-								<xsl:if test=".//hb:RuleDebt/hb:SonarSeverity !='Major'">
-									<xsl:if test=".//hb:RuleDebt/hb:SonarSeverity !='Minor'">
-										<xsl:if test=".//hb:RuleDebt/hb:SonarSeverity !='Info'">
-											<!-- 3rd line : Tag -->
-											<d:row valign="middle">
-												<d:entry>
-													<d:emphasis role="bold">Tag
-													</d:emphasis>
-												</d:entry>
-												<d:entry>
-													<xsl:value-of select=".//hb:RuleDebt/hb:Tag" />
-												</d:entry>
-											</d:row>
-										</xsl:if>
-									</xsl:if>
-								</xsl:if>
-							</d:tbody>
-						</d:tgroup>
-					</d:informaltable>
-				</d:listitem>
-			</d:itemizedlist>
-
+						<!-- Creation of table of 3 rows and 2 columns -->
+						<d:informaltable frame="all">
+							<d:tgroup cols="2" align="left">
+								<d:colspec colname="c1" colnum="1" colwidth="0.5*" />
+								<d:colspec colname="c2" colnum="2" colwidth="2.0*" />
+								<d:tbody>
+									<!-- 1st line : Sonar type effort -->
+									<d:row valign="middle">
+										<d:entry>
+											<d:emphasis role="bold">Type
+											</d:emphasis>
+										</d:entry>
+										<d:entry>
+											<xsl:if test=".//hb:Sonarqube/hb:SonarType ='Vulnerability'">
+												 Vulnerability 
+											</xsl:if>
+											<xsl:if test=".//hb:Sonarqube/hb:SonarType ='Bug'">
+												 Bug 
+											</xsl:if>
+											<xsl:if test=".//hb:Sonarqube/hb:SonarType ='Code_Smell'">
+												 Code Smell 
+											</xsl:if>
+												<!-- Add of TBD which is not an enum element, but is used -->
+											<xsl:if test=".//hb:Sonarqube/hb:SonarType ='TBD'">
+												 TBD 
+											</xsl:if>
+										</d:entry>
+									</d:row>
+									<!-- 1st line : Remediation effort -->
+									<d:row valign="middle">
+										<d:entry>
+											<d:emphasis role="bold">Remediation effort
+											</d:emphasis>
+										</d:entry>
+										<d:entry>
+											<xsl:value-of select=".//hb:Sonarqube/hb:RemediationEffort" />
+											<xsl:if test=".//hb:Sonarqube/hb:RemediationEffort ='Trivial'">
+												 - 5 minutes 
+											</xsl:if>
+											<xsl:if test=".//hb:Sonarqube/hb:RemediationEffort ='Easy'">
+												 - 10 minutes 
+											</xsl:if>
+											<xsl:if test=".//hb:Sonarqube/hb:RemediationEffort ='Medium'">
+												 - 20 minutes 
+											</xsl:if>
+											<xsl:if test=".//hb:Sonarqube/hb:RemediationEffort ='Major'">
+												 - 1 hour 
+											</xsl:if>
+											<xsl:if test=".//hb:Sonarqube/hb:RemediationEffort ='High'">
+												 - 3 hours 
+											</xsl:if>
+												<xsl:if test=".//hb:Sonarqube/hb:RemediationEffort ='Complex'">
+												 - 1 day 
+											</xsl:if>
+										</d:entry>
+									</d:row>
+									<!-- 2nd line : Sonar severity -->
+									<d:row valign="middle">
+										<d:entry>
+											<d:emphasis role="bold">Sonar severity
+											</d:emphasis>
+										</d:entry>
+										<d:entry>
+											<xsl:value-of select=".//hb:Sonarqube/hb:SonarSeverity" />
+										</d:entry>
+									</d:row>
+									<!-- 3rd line : Tag -->
+									<d:row valign="middle">
+										<d:entry>
+											<d:emphasis role="bold">Sonar tag
+											</d:emphasis>
+										</d:entry>
+										<d:entry>
+											<xsl:value-of select=".//hb:Sonarqube/hb:SonarTag" />
+										</d:entry>
+									</d:row>
+								</d:tbody>
+							</d:tgroup>
+						</d:informaltable>
+					</d:listitem>
+				</d:itemizedlist>
+			</xsl:if>
 			<xsl:if test=".//hb:RuleParams">
 				<d:itemizedlist>
 					<d:listitem>

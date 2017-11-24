@@ -17,6 +17,7 @@
 														  
 	<property name="file.handbookPDF_name" value="handbook_STD_Edition" /> <!-- Final name of the handbook, without extension .pdf -->
 	<property name="file.subtitle_edition" value="Standard Edition" /> <!-- Subtitle of PDF to indicate Standard Edition or Custom Edition Information -->
+	<property name="pdf.enable.sonarqube" value="true" />  <!-- This parameter enable or disable the export sonarqube part in the pdf -->
 	
 	<!-- ============================================================================= -->
 	<!-- Project settings: Folders -->

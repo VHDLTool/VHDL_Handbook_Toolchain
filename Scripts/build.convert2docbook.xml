@@ -27,6 +27,7 @@
 			<param name="Custom_to_pdf" expression="${file.export_custom_rules_pdf}"/>
 			<param name="Subtitle" expression="${file.subtitle_edition}"/>
 			<param name="VHDL_tag" expression="${VHDL.tag}"/>
+			<param name="Sonarqube_enabled" expression="${pdf.enable.sonarqube}"/>
 			
 			<include name="${file.main_name}.merged.sorted.${file.main_name_extension}" />
 		</xslt>

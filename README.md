@@ -38,6 +38,8 @@ You may first modify your `ant.properties` according to your development environ
 | project.list           | List of the projects folder to take into account for creating the handbook file       |
 | file.handbookPDF_name  | Final filename of the handbook file, without .pdf extension                           |
 | file.subtitle_edition  | Subtitle of PDF to indicate Standard Edition or Custom Edition Information            |
+| pdf.enable.sonarqube   | Enable or disable the display of sonarqube section in pdf file (value = true or false)|
+
 
 #### Folders
 
@@ -126,11 +128,12 @@ A rule has the following template :
 		<hb:ShortDesc>A Short description of the rule.</hb:ShortDesc>
 		<hb:LongDesc>A longer description in which you can do some formatting that will be kept</hb:LongDesc>
 	</hb:RuleContent>
-	<hb:RuleDebt>
-		<hb:RemediationEffort>RemediationEffort</hb:RemediationEffort>
-		<hb:SonarSeverity>SonarSeverity</hb:SonarSeverity>
-		<hb:Tag>Tag</hb:Tag>
-	</hb:RuleDebt>
+	<hb:Sonarqube>
+		<hb:SonarType>Type of problem</hb:SonarType>
+		<hb:SonarSeverity>Problem severity</hb:SonarSeverity>
+		<hb:RemediationEffort>Estimated effort for correction</hb:RemediationEffort>
+		<hb:SonarTag>Tag</hb:SonarTag>
+	</hb:Sonarqube>
 	<hb:RuleDesc>
 		<hb:GoodExDesc>A description of the good example (leave empty if none needed)</hb:GoodExDesc>
 		<hb:GoodExample>GoodExampleFileName</hb:GoodExample>
@@ -162,6 +165,8 @@ A rule has the following template :
 	<!-- End of optional element-->
 </hb:Rule>
 ```
+
+The Sonarqube section is optional.
 
 ## License
 

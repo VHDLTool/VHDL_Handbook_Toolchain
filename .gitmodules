@@ -4,3 +4,4 @@
 [submodule "src_handbook/CNE"]
 	path = src_handbook/CNE
 	url = https://github.com/VHDLTool/VHDL_Handbook_CNE.git
+	branch = CNE

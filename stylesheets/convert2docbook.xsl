@@ -603,7 +603,18 @@
                         		<xsl:value-of select=".//hb:RuleHist/hb:Modified" />
 							</d:entry>
 						</d:row>
-						<!-- 2nd line : Technology, Category and subcategory -->
+						<!-- 2nd t line : status  -->
+						<d:row valign="middle">
+							<d:entry>
+								<d:emphasis role="bold">Status / Engine
+								</d:emphasis>
+							</d:entry>
+							<d:entry namest="c2" nameend="c3">
+								<xsl:value-of select=".//hb:RuleHist/hb:Status" /> /
+                        		<xsl:value-of select=".//hb:RuleHist/hb:Engine" />
+							</d:entry>
+						</d:row>
+						<!-- "3rd line : Technology, Category and subcategory -->
 						<d:row valign="middle">
 							<d:entry>
 								<d:emphasis role="bold">Classification
@@ -615,7 +626,7 @@
 								<xsl:value-of select=".//hb:RuleContent/hb:SubCategory" />
 							</d:entry>
 						</d:row>
-						<!-- 3rd line : Application field -->
+						<!-- 4th line : Application field -->
 						<d:row valign="middle">
 							<d:entry>
 								<d:emphasis role="bold">Application Field
@@ -625,7 +636,7 @@
 								<xsl:value-of select=".//hb:RuleContent/hb:ApplicationFields" />
 							</d:entry>
 						</d:row>
-						<!-- 4th line : RuleUID of Parent rule -->
+						<!-- 5th line : RuleUID of Parent rule -->
                  		<d:row valign="middle">
 							<d:entry>
 								<d:emphasis role="bold">Parent Rule
@@ -642,7 +653,7 @@
                         		</xsl:choose>
 							</d:entry>
 						</d:row>
-						<!-- 5th line : Short Description -->
+						<!-- 6th line : Short Description -->
 						<d:row valign="middle">
 							<d:entry>
 								<d:emphasis role="bold">Description

@@ -132,6 +132,9 @@
 				<xsl:call-template name="checkCategory_STD">                                                
 					<xsl:with-param name="CatToCheck">Simulation</xsl:with-param>                       
 				</xsl:call-template>    
+				<xsl:call-template name="checkCategory_STD">                                                
+					<xsl:with-param name="CatToCheck">Implementation</xsl:with-param>                       
+				</xsl:call-template>   
 			</xsl:when>
 	<!-- //////////////////////////////  CUSTOM   /////////////////////////////////////////////////////////  -->
 			<xsl:when test="$sect2_rule='CUSTOM'">                                             
@@ -146,7 +149,10 @@
 				</xsl:call-template>                                                          
 				<xsl:call-template name="checkCategory_CUST">                                                 
 					<xsl:with-param name="CatToCheck">Simulation</xsl:with-param>                     
-				</xsl:call-template>       
+				</xsl:call-template>     
+				<xsl:call-template name="checkCategory_CUST">                                                 
+					<xsl:with-param name="CatToCheck">Implementation</xsl:with-param>                     
+				</xsl:call-template>      
 			</xsl:when>
             <xsl:otherwise>
 				<xsl:text>no rule are coming !!!!</xsl:text>
@@ -265,6 +271,20 @@
 						<xsl:call-template name="checkSubcategory_STD">                                               
 							<xsl:with-param name="CatToCheck">Simulation</xsl:with-param>                        
 							<xsl:with-param name="SubcatToCheck">Miscellaneous</xsl:with-param>                         
+						</xsl:call-template>      
+        			</xsl:when>
+        			<xsl:when test="$CatToCheck= 'Implementation'">    
+        				<xsl:call-template name="checkSubcategory_STD">                                               
+							<xsl:with-param name="CatToCheck">Implementation</xsl:with-param>                        
+							<xsl:with-param name="SubcatToCheck">Analysis</xsl:with-param>                         
+						</xsl:call-template>               
+						<xsl:call-template name="checkSubcategory_STD">                                               
+							<xsl:with-param name="CatToCheck">Implementation</xsl:with-param>                        
+							<xsl:with-param name="SubcatToCheck">Synthesis</xsl:with-param>                         
+						</xsl:call-template>                        
+						<xsl:call-template name="checkSubcategory_STD">                                               
+							<xsl:with-param name="CatToCheck">Implementation</xsl:with-param>                        
+							<xsl:with-param name="SubcatToCheck">Elaboration</xsl:with-param>                         
 						</xsl:call-template>      
         			</xsl:when>
         		</xsl:choose>
@@ -441,6 +461,21 @@
 						<xsl:call-template name="checkSubcategory_CUST">                                               
 							<xsl:with-param name="CatToCheck">Simulation</xsl:with-param>                        
 							<xsl:with-param name="SubcatToCheck">Miscellaneous</xsl:with-param>                         
+						</xsl:call-template>      
+        			</xsl:when>
+        			
+        			 <xsl:when test="$CatToCheck= 'Implementation'">  
+        			    <xsl:call-template name="checkSubcategory_CUST">                                               
+							<xsl:with-param name="CatToCheck">Implementation</xsl:with-param>                        
+							<xsl:with-param name="SubcatToCheck">Analysis</xsl:with-param>         
+						</xsl:call-template>                 
+						<xsl:call-template name="checkSubcategory_CUST">                                               
+							<xsl:with-param name="CatToCheck">Implementation</xsl:with-param>                        
+							<xsl:with-param name="SubcatToCheck">Synthesis</xsl:with-param>         
+						</xsl:call-template>                             
+						<xsl:call-template name="checkSubcategory_CUST">                                               
+							<xsl:with-param name="CatToCheck">Implementation</xsl:with-param>                        
+							<xsl:with-param name="SubcatToCheck">Elaboration</xsl:with-param>                         
 						</xsl:call-template>      
         			</xsl:when>
         		</xsl:choose>

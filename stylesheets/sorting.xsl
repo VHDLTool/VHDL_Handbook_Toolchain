@@ -124,6 +124,18 @@
                      <xsl:with-param name="sect_cat">Simulation</xsl:with-param>                       
                      <xsl:with-param name="sect_subcat">Miscellaneous</xsl:with-param>                 
                   </xsl:call-template>  
+                  <xsl:call-template name="subCategory_filter_std">                                                
+                     <xsl:with-param name="sect_cat">Implementation</xsl:with-param>                       
+                     <xsl:with-param name="sect_subcat">Analysis</xsl:with-param>                 
+                  </xsl:call-template>
+                  <xsl:call-template name="subCategory_filter_std">                                                
+                     <xsl:with-param name="sect_cat">Implementation</xsl:with-param>                       
+                     <xsl:with-param name="sect_subcat">Synthesis</xsl:with-param>                 
+                  </xsl:call-template>  
+                  <xsl:call-template name="subCategory_filter_std">                                                
+                     <xsl:with-param name="sect_cat">Implementation</xsl:with-param>                       
+                     <xsl:with-param name="sect_subcat">Elaboration</xsl:with-param>                 
+                  </xsl:call-template>  
             </xsl:when>
             
 	<!-- //////////////////////////////  CUSTOM   /////////////////////////////////////////////////////////  -->
@@ -198,6 +210,18 @@
                   <xsl:call-template name="subCategory_filter_cus">                                                 
                      <xsl:with-param name="sect_cat">Simulation</xsl:with-param>                       
                      <xsl:with-param name="sect_subcat">Miscellaneous</xsl:with-param>                 
+                  </xsl:call-template>
+                  <xsl:call-template name="subCategory_filter_cus">                                                 
+                     <xsl:with-param name="sect_cat">Implementation</xsl:with-param>                       
+                     <xsl:with-param name="sect_subcat">Analysis</xsl:with-param>                 
+                  </xsl:call-template>
+                   <xsl:call-template name="subCategory_filter_cus">                                                 
+                     <xsl:with-param name="sect_cat">Implementation</xsl:with-param>                       
+                     <xsl:with-param name="sect_subcat">Synthesis</xsl:with-param>                 
+                  </xsl:call-template>
+                   <xsl:call-template name="subCategory_filter_cus">                                                 
+                     <xsl:with-param name="sect_cat">Implementation</xsl:with-param>                       
+                     <xsl:with-param name="sect_subcat">Elaboration</xsl:with-param>                 
                   </xsl:call-template>
             </xsl:when>
             <xsl:otherwise>
